@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">US Air Force</name>
+      <fuselage>Liveries/USA/fuselage.png</fuselage>
+      <tail>Liveries/USA/htail.png</tail>
+      <misc>Liveries/USA/misc.png</misc>
+      <wings>Liveries/USA/wings.png</wings>
+      <conopy>Liveries/USA/conopy.png</conopy>
+      <armed>1</armed>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">EDA - 10</name>
+      <fuselage>Liveries/EDA/10/fuselage.png</fuselage>
+      <tail>Liveries/EDA/0/htail.png</tail>
+      <misc>Liveries/EDA/0/misc.png</misc>
+      <wings>Liveries/EDA/0/wings.png</wings>
+      <conopy>Liveries/EDA/0/conopy.png</conopy>
+      <armed>0</armed>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>

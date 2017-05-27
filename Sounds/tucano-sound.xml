@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <fx>
+
+  <engine>
+    <name>engine running</name>
+    <mode>looped</mode>
+    <path>Aircraft/AT-29/Sounds/xcarfltn22.wav</path>
+    <condition>
+     <or>
+       <greater-than>
+         <property>/engines/engine[0]/n2</property>
+         <value type="double">19.9</value>
+       </greater-than>
+       <and>
+         <not>
+          <property>/engines/engine[0]/starter</property>
+        </not>
+        <greater-than>
+          <property>/engines/engine[0]/n2</property>
+          <value type="double">19.9</value>
+        </greater-than>
+      </and>
+    </or>
+  </condition>
+  <volume>
+    <property>/engines/engine[0]/n2</property>
+    <type>log</type>
+    <factor>0.02</factor>
+    <offset>0.2</offset>
+  </volume>
+  <pitch>
+   <property>/engines/engine[0]/n2</property>
+   <factor>0.004</factor>
+   <offset>0.8</offset>
+ </pitch>
+</engine>
+
+<starter>
+  <name>engine startup</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/xcarfltn1strt.wav</path>
+  <condition>
+    <property>/engines/engine/starter</property>
+    <and>
+     <greater-than>
+      <property>/engines/engine/n2</property>
+      <value type="double">1</value>
+    </greater-than>
+    <less-than>
+      <property>/engines/engine/n2</property>
+      <value type="double">25</value>
+    </less-than>
+  </and>
+</condition>
+<volume>1</volume>
+</starter>
+
+<shutdown>
+  <name>engine shutdown</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/xcarfltn1shut.wav</path>
+  <condition>
+    <not>
+      <property>/engines/engine/starter</property>
+    </not>
+    <and>
+     <greater-than>
+      <property>/engines/engine/n2</property>
+      <value type="double">1</value>
+    </greater-than>
+    <not>
+      <property>/engines/engine/running</property>
+    </not>
+  </and>
+</condition>
+<volume>1</volume>
+</shutdown>
+
+
+<gear-up>
+  <name>gear up</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/carfltgearup.wav</path>
+  <condition>
+    <and>
+      <not>
+        <property>/controls/gear/gear-down</property>
+      </not>
+      <property>/gear/gear[0]/position-norm</property>
+    </and>
+  </condition>
+  <volume>1</volume>  
+</gear-up>
+
+<gear-down>
+  <name>gear down</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/carfltgeardn.wav</path>
+  <condition>
+    <and>
+      <property>/controls/gear/gear-down</property>
+      <not>
+        <equals>
+          <property>/gear/gear[0]/position-norm</property>
+          <value type="double">1</value>
+        </equals>
+      </not>
+    </and>
+  </condition>
+  <volume>1</volume> 
+</gear-down>
+
+<tire-rumble>
+ <name>tire-rumble</name>
+ <mode>looped</mode>
+ <path>Sounds/rumble.wav</path>
+ <condition>
+  <or>
+   <property>/gear/gear[0]/wow</property>
+   <property>/gear/gear[1]/wow</property>
+   <property>/gear/gear[2]/wow</property>
+ </or>
+</condition>
+<volume>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.004</factor>
+  <max>0.3</max>
+</volume>
+</tire-rumble>
+
+<gear-wind>
+ <name>gear-wind</name>
+ <mode>looped</mode>
+ <path>Sounds/rumble.wav</path>
+ <condition>
+   <greater-than>
+    <property>/gear/gear[1]/position-norm[0]</property>
+    <value>0.01</value>
+  </greater-than>
+</condition>
+<volume>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.004</factor>
+  <max>.3</max>
+</volume>
+</gear-wind>
+
+<gear-lock>
+ <name>gear-lock</name>
+ <path>Sounds/gear-lck.wav</path>
+ <condition>
+  <equals>
+   <property>/gear/gear[0]/position-norm</property>
+   <value>0</value>
+ </equals>
+</condition>
+</gear-lock>
+
+<squeal>
+ <name>squeal</name>
+ <path>Sounds/squeal.wav</path>
+ <condition>
+  <or>
+   <property>/gear/gear[0]/wow</property>
+   <property>/gear/gear[1]/wow</property>
+   <property>/gear/gear[2]/wow</property>
+ </or>
+</condition>
+<volume>
+  <property>/velocities/speed-down-fps</property>
+  <factor>0.05</factor>
+</volume>
+<volume>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.01</factor>
+</volume>
+<volume>
+  <internal>dt_stop</internal>
+  <factor>0.05</factor>
+  <max>1.0</max>
+</volume>
+<pitch>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.0025</factor>
+  <offset>1.2</offset>
+</pitch>
+</squeal>
+
+<wind>
+ <name>wind</name>
+ <mode>looped</mode>
+ <path>Sounds/wind.wav</path>
+ <property>/velocities/airspeed-kt</property>
+ <volume>
+  <property>/position/altitude-ft</property>
+  <factor>-0.000015</factor>
+  <offset>1.0</offset>
+  <min>0.1</min>
+  <max>1.0</max>
+</volume>
+<volume>
+ <property>/velocities/airspeed-kt</property>
+ <factor>0.0015</factor>
+ <min>0.03</min>
+ <max>0.25</max>
+</volume>
+<pitch>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.01</factor>
+  <offset>1.25</offset>
+</pitch>
+</wind>
+
+<buffet>
+ <name>alpha-buffet</name>
+ <mode>looped</mode>
+ <condition>
+   <property>/sim/current-view/internal</property>
+   <greater-than>
+     <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
+     <value>0.2</value>
+   </greater-than>
+ </condition>
+ <path>Sounds/rumble.wav</path>
+ <volume>
+  <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
+  <factor>15.0</factor>
+  <max>1.0</max>
+</volume>
+<pitch>
+  <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
+  <factor>0.005</factor>
+</pitch>
+</buffet>
+
+<speedbrake-buffet>
+ <name>speedbrake</name>
+ <mode>looped</mode>
+ <path>Sounds/rumble.wav</path>
+ <condition>
+   <property>/sim/current-view/internal</property>
+   <property>/surface-positions/speedbrake-pos-norm</property>
+ </condition>
+ <volume>
+  <property>/velocities/airspeed-kt</property>
+  <factor>0.0025</factor>
+  <max>0.3</max>
+</volume>
+</speedbrake-buffet>
+
+<guns>
+ <name>gunfire</name>
+ <mode>looped</mode>
+ <condition>
+  <property>controls/armament/trigger</property>
+</condition>
+<path>Aircraft/AT-29/Sounds/gunfire_1.wav</path>
+</guns>
+
+<rocket-salvo-left>
+ <name>firerockets-left</name>
+ <condition>
+   <property>controls/armament/trigger1</property>
+ </condition>
+ <path>Aircraft/AT-29/Sounds/rockets_ripple.wav</path>
+</rocket-salvo-left>
+
+<rocket-salvo-right>
+ <name>firerockets-right</name>
+ <condition>
+   <property>controls/armament/trigger5</property>
+ </condition>
+ <path>Aircraft/AT-29/Sounds/rockets_ripple.wav</path>
+</rocket-salvo-right>
+
+<crash>
+ <name>boing</name>
+ <condition>
+  <property>fdm/jsbsim/systems/crash-detect/crashed</property>
+</condition>
+<path>Aircraft/DavePack/Sounds/boing.wav</path>
+</crash>
+
+<canopy>
+	<name>canopy</name>
+	<mode>in-transit</mode>
+	<path>Aircraft/AT-29/Sounds/canopy-trans.wav</path>
+	<property>canopy/position-norm</property>
+	<volume>
+		<factor>0.5</factor>
+	</volume>
+</canopy>
+
+<canopy-close>
+	<name>canopy-close2</name>
+	<mode>once</mode>
+	<path>Aircraft/AT-29/Sounds/canopy-close2.wav</path>
+	<condition>
+		<less-than-equals>
+			<property>canopy/position-norm</property>
+			<value>0</value>
+		</less-than-equals>
+	</condition>
+	<volume>
+		<factor>0.5</factor>
+	</volume>
+</canopy-close>
+
+<flap>
+	<name>flaps</name>
+	<mode>in-transit</mode>
+	<path>Aircraft/AT-29/Sounds/carfltflap.wav</path>
+	<property>/surface-positions/flap-pos-norm</property>
+	<volume>1</volume>
+</flap>
+
+</fx>
+
+</PropertyList>

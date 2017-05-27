@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<name>lights-dlg</name>
+	<layout>vbox</layout>
+
+	<text>
+		<label>AT-29 Super Tucano Light Controller</label>
+	</text>
+
+	<hrule />
+
+	<group>
+		<layout>vbox</layout>
+
+		<text>
+			<label>Landing lights</label>
+		</text>
+
+		<group>
+			<layout>hbox</layout>
+
+			<checkbox>
+				<label>Left</label>
+				<property>controls/lighting/landing-lights</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</checkbox>
+
+			<checkbox>
+				<label>Right</label>
+				<property>controls/lighting/landing-lights</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</checkbox>
+		</group>
+
+		<hrule/>
+
+		<checkbox>
+			<label>Navigation lights</label>
+			<property>controls/lighting/nav-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
+			<label>Strobe lights</label>
+			<property>controls/lighting/strobe</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
+			<label>Beacon</label>
+			<property>controls/lighting/beacon</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
+			<label>Logo Lights</label>
+			<property>controls/lighting/logo-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<text>
+			<label>Panel Light</label>
+		</text>
+		<slider>
+			<row>0</row>
+			<col>2</col>
+			<min>0.0</min>
+			<max>1.0</max>
+			<property>/controls/lighting/panel-norm</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</slider>
+
+		<text>
+			<label>Instruments Light</label>
+		</text>
+		<slider>
+			<row>0</row>
+			<col>2</col>
+			<min>0.0</min>
+			<max>1.0</max>
+			<property>/controls/lighting/instruments-norm</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</slider>
+	</group>
+
+	<hrule />
+
+	<group>
+		<layout>vbox</layout>
+
+		<button>
+			<legend>Close</legend>
+			<default>true</default>
+			<key>Esc</key>
+			<padding>10</padding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+</PropertyList>

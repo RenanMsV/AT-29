@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<!-- Tucano gunsight, by Dave Culp -->
+
+<PropertyList>
+
+ <path>gunsight.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>switchbox</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>
+
+ <!-- pipper on/off -->
+ <animation>
+  <type>select</type>
+  <object-name>pipper</object-name>
+  <condition>
+   <property>controls/armament/gunsight/power-on</property>
+  </condition>
+ </animation>  
+
+ <!-- pipper brightness -->
+ <animation>
+  <type>material</type>
+  <object-name>pipper</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>1.0</green>
+   <blue>1.0</blue>
+   <factor-prop>controls/armament/gunsight/intensity</factor-prop>
+  </emission>
+ </animation>
+
+ <!-- pipper depression with g-load -->
+ <animation> 
+   <type>translate</type>
+    <object-name>pipper</object-name>
+    <property>accelerations/nlf</property>
+    <factor>-0.012</factor>
+    <min>0</min>
+    <axis> 
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>switch-on</object-name>
+    <condition>
+     <property>controls/armament/gunsight/power-on</property>
+    </condition>
+ </animation>
+
+ <animation> 
+   <type>select</type>
+    <object-name>switch-off</object-name>
+    <condition>
+     <not>
+      <property>controls/armament/gunsight/power-on</property>
+     </not>
+    </condition>
+ </animation>
+
+  <!-- Hot Spots -->
+  <animation>
+   <type>pick</type>
+   <object-name>switchbox</object-name>
+   <visible>true</visible>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-toggle</command>
+     <property>controls/armament/gunsight/power-on</property>
+    </binding>
+   </action>
+  </animation>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>50</max-m>
+ </animation>
+
+</PropertyList>
