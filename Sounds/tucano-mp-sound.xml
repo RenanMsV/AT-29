@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <fx>
+
+  <engine>
+    <name>engine running</name>
+    <mode>looped</mode>
+    <path>Aircraft/AT-29/Sounds/xcarfltn22.wav</path>
+    <condition>
+     <or>
+       <greater-than>
+         <property alias="/engines/engine[0]/n2"/>
+         <value type="double">19.9</value>
+       </greater-than>
+       <and>
+         <not>
+          <property alias="/engines/engine[0]/starter"/>
+        </not>
+        <greater-than>
+          <property alias="/engines/engine[0]/n2"/>
+          <value type="double">19.9</value>
+        </greater-than>
+      </and>
+    </or>
+  </condition>
+  <volume>
+    <property alias="/engines/engine[0]/n2"/>
+    <type>log</type>
+    <factor>0.02</factor>
+    <offset>0.2</offset>
+  </volume>
+  <pitch>
+   <property alias="/engines/engine[0]/n2"/>
+   <factor>0.004</factor>
+   <offset>0.8</offset>
+ </pitch>
+</engine>
+
+<starter>
+  <name>engine startup</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/xcarfltn1strt.wav</path>
+  <condition>
+    <property>/engines/engine/starter</property>
+    <and>
+     <greater-than>
+      <property>/engines/engine/n2</property>
+      <value type="double">1</value>
+    </greater-than>
+    <less-than>
+      <property>/engines/engine/n2</property>
+      <value type="double">25</value>
+    </less-than>
+  </and>
+</condition>
+<volume>1</volume>
+</starter>
+
+<shutdown>
+  <name>engine shutdown</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/xcarfltn1shut.wav</path>
+  <condition>
+    <not>
+      <property>/engines/engine/starter</property>
+    </not>
+    <and>
+     <greater-than>
+      <property>/engines/engine/n2</property>
+      <value type="double">1</value>
+    </greater-than>
+    <not>
+      <property>/engines/engine/running</property>
+    </not>
+  </and>
+</condition>
+<volume>1</volume>
+</shutdown>
+
+
+<gear-up>
+  <name>gear up</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/carfltgearup.wav</path>
+  <condition>
+    <and>
+      <not>
+        <property>/controls/gear/gear-down</property>
+      </not>
+      <property>/gear/gear[0]/position-norm</property>
+    </and>
+  </condition>
+  <volume>1</volume>  
+</gear-up>
+
+<gear-down>
+  <name>gear down</name>
+  <mode>once</mode>
+  <path>Aircraft/AT-29/Sounds/carfltgeardn.wav</path>
+  <condition>
+    <and>
+      <property>/controls/gear/gear-down</property>
+      <not>
+        <equals>
+          <property>/gear/gear[0]/position-norm</property>
+          <value type="double">1</value>
+        </equals>
+      </not>
+    </and>
+  </condition>
+  <volume>1</volume> 
+</gear-down>
+
+</fx>
+
+</PropertyList>
