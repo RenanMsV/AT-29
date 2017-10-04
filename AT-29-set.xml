@@ -106,6 +106,10 @@ License: Creative Commons "CC-BY-NC-SA"
   <name>s (lower case s)</name>
   <desc>Toggle starter valves</desc>
 </key>
+<key>
+  <name>o (lower case o)</name>
+  <desc>Toggle smoke</desc>
+</key>
    <!--key>
     <name>e (lower case e)</name>
     <desc>Release selected stores</desc>
