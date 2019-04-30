@@ -9499,6 +9499,7 @@ name "PropDisk"
 loc -3.57539 -0.0455142 0.001893
 data 13
 PropDisk.mesh
+texture "propdisk.png"
 crease 45.000000
 numvert 37
 -0.000887871 -0.000967056 0.000960498
