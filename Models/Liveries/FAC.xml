@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">FAC - Fuerza Aerea Colombiana</name>
+      <fuselage>Liveries/FAC/fuselage.png</fuselage>
+      <armed>1</armed>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>

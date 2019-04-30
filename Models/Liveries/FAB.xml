@@ -5,12 +5,8 @@
 <sim>
   <model>
     <livery>
-      <name type="string">FAB</name>
-      <fuselage>Liveries/FAB/FAB/fuselage.png</fuselage>
-      <tail>Liveries/FAB/FAB/htail.png</tail>
-      <misc>Liveries/FAB/FAB/misc.png</misc>
-      <wings>Liveries/FAB/FAB/wings.png</wings>
-      <conopy>Liveries/FAB/FAB/conopy.png</conopy>
+      <name type="string">FAB - Forca Aerea Brasileira</name>
+      <fuselage>Liveries/FAB/fuselage.png</fuselage>
       <armed>1</armed>
     </livery>
   </model>

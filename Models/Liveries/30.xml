@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">T-27 30anos</name>
+      <fuselage>Liveries/30/fuselage.png</fuselage>
+      <armed>0</armed>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>

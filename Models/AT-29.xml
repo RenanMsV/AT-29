@@ -17,7 +17,7 @@
     var livery_update = aircraft.livery_update.new("Aircraft/AT-29/Models/Liveries");
     ]]>
   </load>
-  
+
   <unload><![CDATA[
     livery_update.stop();
     ]]>
@@ -25,7 +25,7 @@
 </nasal>
 
 <sound>
- <path>Aircraft/AT-29/Sounds/tucano-mp-sound.xml</path>
+    <path>Aircraft/AT-29/Sounds/tucano-mp-sound.xml</path>
 </sound>
 
 
@@ -186,21 +186,42 @@
   </offsets>
 </model-->
 
-<model>
+<!--model>
   <path>Aircraft/AT-29/Models/Instruments/CHDD1/CHDD.xml</path>
   <offsets>
-   <x-m>-0.684</x-m>
-   <y-m>-0.172</y-m>
+   <x-m>-0.930</x-m>
+   <y-m>-0.178</y-m>
    <z-m>0.530</z-m>
  </offsets>
 </model>
 
 <model>
   <path>Aircraft/AT-29/Models/Instruments/CHDD2/CHDD.xml</path>
+  <name>chdd2chdd</name>
   <offsets>
-   <x-m>-0.694</x-m>
-   <y-m>0.0375</y-m>
+   <x-m>-0.930</x-m>
+   <y-m>0.0510</y-m>
    <z-m>0.585</z-m>
+ </offsets>
+</model-->
+
+<model>
+  <path>Aircraft/AT-29/Models/Instruments/CHDD1/CHDD.xml</path>
+  <name>chdd2-1</name>
+  <offsets>
+   <x-m>-1.142</x-m>
+   <y-m>-0.253</y-m>
+   <z-m>0.4765</z-m>
+ </offsets>
+</model>
+
+<model>
+  <path>Aircraft/AT-29/Models/Instruments/CHDD2/CHDD.xml</path>
+  <name>chdd2-2</name>
+  <offsets>
+   <x-m>-1.157</x-m>
+   <y-m>0.063</y-m>
+   <z-m>0.555</z-m>
  </offsets>
 </model>
 
@@ -208,7 +229,7 @@
 
 <!-- beacon flash -->
 <model>
- <path>Aircraft/DavePack/Effects/Red-beacon/flash.xml</path>
+ <path>Aircraft/AT-29/Effects/beacon.xml</path>
  <offsets>
    <x-m>3.59</x-m>
    <y-m>0</y-m>
@@ -239,7 +260,7 @@
 
 <!-- AIM-9, left side -->
 <model>
-  <path>Aircraft/DavePack/Stores/AIM-9/sidewinder.xml</path>
+  <path>Aircraft/DavePack/Stores/</path>
   <name>AIM9L</name>
   <offsets>
    <x-m>-0.3</x-m>
@@ -252,7 +273,7 @@
 
 <!-- AIM-9, right side -->
 <model>
-  <path>Aircraft/DavePack/Stores/AIM-9/sidewinder.xml</path>
+  <path>Aircraft/DavePack/Stores/</path>
   <name>AIM9R</name>
   <offsets>
    <x-m>-0.3</x-m>
@@ -482,7 +503,7 @@
   <object-name>NoseGearLower</object-name>
   <property>gear/gear[0]/position-norm</property>
   <factor>-110</factor>
-  <offset-deg>110</offset-deg>   
+  <offset-deg>110</offset-deg>
   <center>
    <x-m>-2.95</x-m>
    <y-m>0</y-m>
@@ -500,7 +521,7 @@
   <object-name>NoseGear</object-name>
   <property>gear/gear[0]/position-norm</property>
   <factor>-110</factor>
-  <offset-deg>110</offset-deg>   
+  <offset-deg>110</offset-deg>
   <center>
    <x-m>-2.95</x-m>
    <y-m>0</y-m>
@@ -598,7 +619,7 @@
   <center>
    <x-m>-3.57</x-m>
    <y-m>0</y-m>
-   <z-m>-0.02</z-m>
+   <z-m>-0.03s</z-m>
  </center>
  <axis>
    <x>1.0</x>
@@ -615,7 +636,7 @@
   <center>
    <x-m>-3.57</x-m>
    <y-m>0</y-m>
-   <z-m>-0.02</z-m>
+   <z-m>-0.03</z-m>
  </center>
  <axis>
    <x>1.0</x>
@@ -628,7 +649,7 @@
   <type>rotate</type>
   <object-name>Rudder</object-name>
   <property>surface-positions/rudder-pos-norm</property>
-  <factor>25</factor> 
+  <factor>25</factor>
   <center>
    <x-m>6.35</x-m>
    <y-m>0</y-m>
@@ -808,6 +829,14 @@
 
 <animation>
   <name>GroupFuselage</name>
+  <!--object-name>fuselage</object-name>
+  <object-name>entradadear</object-name>
+  <object-name>VentralFin</object-name>
+  <object-name>Spinner</object-name>
+  <object-name>Speedbrake</object-name>
+  <object-name>Rudder</object-name>
+  <object-name>NoseWellCover</object-name-->
+
   <object-name>fuselage</object-name>
   <object-name>entradadear</object-name>
   <object-name>VentralFin</object-name>
@@ -815,8 +844,31 @@
   <object-name>Speedbrake</object-name>
   <object-name>Rudder</object-name>
   <object-name>NoseWellCover</object-name>
+  <object-name>RWing</object-name>
+  <object-name>RFlap</object-name>
+  <object-name>RAileron</object-name>
+  <object-name>MainWellCovers</object-name>
+  <object-name>LWing</object-name>
+  <object-name>LFlap</object-name>
+  <object-name>LAileron</object-name> 
+  <object-name>RHTail</object-name>
+  <object-name>RElevator</object-name>
+  <object-name>LHTail</object-name>
+  <object-name>LElevator</object-name>
+  <object-name>HTailStrake</object-name>
+  <object-name>sidescoop</object-name>
+  <object-name>WindscreenFrame</object-name>
+  <object-name>RMainGearDoorOuter</object-name>
+  <object-name>NoseGearDoor</object-name>
+  <object-name>LMainGearDoorOuter</object-name>
+  <object-name>DorsalStrake</object-name>
+  <object-name>DorsalScoop</object-name>
+
+  <object-name>LFuelTank</object-name>
+  <object-name>RFuelTank</object-name>
+
 </animation>
-<animation>
+<!--animation>
   <name>GroupTail</name>
   <object-name>RHTail</object-name>
   <object-name>RElevator</object-name>
@@ -844,15 +896,18 @@
   <object-name>DorsalStrake</object-name>
   <object-name>DorsalScoop</object-name>
 </animation>
+<animation>
+  <name>GroupGlasses</name>
+</animation-->
 
 <animation>
   <type>material</type>
   <object-name>GroupFuselage</object-name>
   <property-base>sim/model/livery</property-base>
   <texture-prop>fuselage</texture-prop>
-  <texture>Liveries/USA/fuselage.png</texture>
+  <texture>fuselage.png</texture>
 </animation>
-<animation>
+<!--animation>
   <type>material</type>
   <object-name>GroupTail</object-name>
   <property-base>sim/model/livery</property-base>
@@ -885,7 +940,7 @@
   <property-base>sim/model/livery</property-base>
   <texture-prop>armed</texture-prop>
   <texture>1</texture>
-</animation>
+</animation-->
 
 <animation>
   <type>select</type>
@@ -911,38 +966,40 @@
 
 <!--Reflection-->
 <effect>
-	<inherits-from>Aircraft/AT-29/Effects/tucano_reflect</inherits-from>
-	<!--object-name>fuselage</object-name-->
+  <inherits-from>Aircraft/AT-29/Models/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
+  <object-name>fuselage</object-name>
   <object-name>entradadear</object-name>
-  <!--object-name>VentralFin</object-name-->
-  <!--object-name>Spinner</object-name-->
-  <!--object-name>Speedbrake</object-name-->
-  <!--object-name>Rudder</object-name-->
-  <!--object-name>NoseWellCover</object-name-->
- 	<!--object-name>RHTail</object-name>
- 	<object-name>RElevator</object-name>
- 	<object-name>LHTail</object-name>
- 	<object-name>LElevator</object-name-->
- 	<!--object-name>HTailStrake</object-name-->
- 	<!--object-name>RWing</object-name-->
- 	<!--Object-name>RFlap</object-name-->
- 	<!--object-name>RAileron</object-name-->
- 	<object-name>MainWellCovers</object-name>
- 	<!--object-name>LWing</object-name-->
- 	<!--object-name>LFlap</object-name-->
- 	<!--object-name>LAileron</object-name-->
- 	<!--object-name>sidescoop</object-name-->
- 	<object-name>WindscreenFrame</object-name>
- 	<!--object-name>RMainGearDoorOuter</object-name-->
- 	<!--object-name>NoseGearDoor</object-name-->
- 	<!--object-name>LMainGearDoorOuter</object-name-->
- 	<!--object-name>DorsalStrake</object-name-->
- 	<!--object-name>DorsalScoop</object-name-->
- 	<object-name>CanopyFrame</object-name>
- </effect>
+  <object-name>VentralFin</object-name>
+  <object-name>Spinner</object-name>
+  <object-name>Speedbrake</object-name>
+  <object-name>Rudder</object-name>
+  <object-name>NoseWellCover</object-name>
+  <object-name>RWing</object-name>
+  <object-name>RFlap</object-name>
+  <object-name>RAileron</object-name>
+  <object-name>MainWellCovers</object-name>
+  <object-name>LWing</object-name>
+  <object-name>LFlap</object-name>
+  <object-name>LAileron</object-name> 
+  <object-name>RHTail</object-name>
+  <object-name>RElevator</object-name>
+  <object-name>LHTail</object-name>
+  <object-name>LElevator</object-name>
+  <object-name>HTailStrake</object-name>
+  <object-name>sidescoop</object-name>
+  <object-name>WindscreenFrame</object-name>
+  <object-name>RMainGearDoorOuter</object-name>
+  <object-name>NoseGearDoor</object-name>
+  <object-name>LMainGearDoorOuter</object-name>
+  <object-name>DorsalStrake</object-name>
+  <object-name>DorsalScoop</object-name>
+
+  <object-name>LFuelTank</object-name>
+  <object-name>RFuelTank</object-name>
+</effect>
 
  <!-- Lightmap -->
- <effect>
+ <!--effect>
    <inherits-from>Effects/lightmap</inherits-from>
    <parameters>
     <texture n="1">
@@ -954,40 +1011,39 @@
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/A29B_01.png</image>
-		</texture>
-		<factor><use>/controls/lighting/instruments-norm</use></factor>
-	</parameters>
-	<object-name>AD_LOD_100.001</object-name>
-</effect>
-
-
-<effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/fuselage.png</image>
-		</texture>
-	</parameters>
-	<object-name>fuselage</object-name>
-	<object-name>Rudder</object-name>
-	<object-name>Spinner</object-name>
-	<object-name>SpeedBrake</object-name>
-	<object-name>VentralFin</object-name>
-	<object-name>NoseWellCover</object-name>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/A29B_01.png</image>
+        </texture>
+        <factor><use>/controls/lighting/instruments-norm</use></factor>
+    </parameters>
+    <object-name>AD_LOD_100.001</object-name>
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/wings.png</image>
-		</texture>
-	</parameters>
-	<object-name>RWing</object-name>
+  <inherits-from>Effects/lightmap</inherits-from>
+  <parameters>
+    <texture n="1">
+      <image>Aircraft/AT-29/Models/Effects/LightMap/fuselage.png</image>
+    </texture>
+  </parameters>
+  <object-name>fuselage</object-name>
+  <object-name>Rudder</object-name>
+  <object-name>Spinner</object-name>
+  <object-name>SpeedBrake</object-name>
+  <object-name>VentralFin</object-name>
+  <object-name>NoseWellCover</object-name>
+</effect>
+
+<effect>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/wings.png</image>
+        </texture>
+    </parameters>
+    <object-name>RWing</object-name>
   <object-name>RFlap</object-name>
   <object-name>LWing</object-name>
   <object-name>LFlap</object-name>
@@ -996,13 +1052,13 @@
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/htail.png</image>
-		</texture>
-	</parameters>
-	<object-name>RHTail</object-name>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/htail.png</image>
+        </texture>
+    </parameters>
+    <object-name>RHTail</object-name>
   <object-name>RElevator</object-name>
   <object-name>LHTail</object-name>
   <object-name>LElevator</object-name>
@@ -1010,68 +1066,68 @@
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/prop.png</image>
-		</texture>
-	</parameters>
-	<object-name>Prop</object-name>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/prop.png</image>
+        </texture>
+    </parameters>
+    <object-name>Prop</object-name>
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/pylons.png</image>
-		</texture>
-	</parameters>
-	<object-name>Pylon1</object-name>
-	<object-name>Pylon2</object-name>
-	<object-name>Pylon3</object-name>
-	<object-name>Pylon4</object-name>
-	<object-name>Pylon5</object-name>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/pylons.png</image>
+        </texture>
+    </parameters>
+    <object-name>Pylon1</object-name>
+    <object-name>Pylon2</object-name>
+    <object-name>Pylon3</object-name>
+    <object-name>Pylon4</object-name>
+    <object-name>Pylon5</object-name>
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/tanks.png</image>
-		</texture>
-	</parameters>
-	<object-name>RFuelTank</object-name>
-	<object-name>LFuelTank</object-name>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/tanks.png</image>
+        </texture>
+    </parameters>
+    <object-name>RFuelTank</object-name>
+    <object-name>LFuelTank</object-name>
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/wheel.png</image>
-		</texture>
-	</parameters>
-	<object-name>RMainTire</object-name>
-	<object-name>LMainTire</object-name>
-	<object-name>NoseTire</object-name>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/wheel.png</image>
+        </texture>
+    </parameters>
+    <object-name>RMainTire</object-name>
+    <object-name>LMainTire</object-name>
+    <object-name>NoseTire</object-name>
 </effect>
 
 <effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/AT-29/Models/Effects/LightMap/misc.png</image>
-		</texture>
-	</parameters>
-	<object-name>sidescoop</object-name>
-	<object-name>NoseGearDoor</object-name>
-	<object-name>LMainGearDoorOuter</object-name>
-	<object-name>RMainGearDoorOuter</object-name>
-	<object-name>DorsalStrake</object-name>
-	<object-name>DorsalScoop</object-name>
-	<object-name>RMissleRail</object-name>
-	<object-name>LMissleRail</object-name>
-</effect>
+    <inherits-from>Effects/lightmap</inherits-from>
+    <parameters>
+        <texture n="1">
+            <image>Aircraft/AT-29/Models/Effects/LightMap/misc.png</image>
+        </texture>
+    </parameters>
+    <object-name>sidescoop</object-name>
+    <object-name>NoseGearDoor</object-name>
+    <object-name>LMainGearDoorOuter</object-name>
+    <object-name>RMainGearDoorOuter</object-name>
+    <object-name>DorsalStrake</object-name>
+    <object-name>DorsalScoop</object-name>
+    <object-name>RMissleRail</object-name>
+    <object-name>LMissleRail</object-name>
+</effect-->
 
 <model>
   <path>Aircraft/AT-29/Models/Effects/smokeW.xml</path>
@@ -1097,4 +1153,3 @@
 </model>
 
 </PropertyList>
-

@@ -9,6 +9,20 @@
 		<min-m>0</min-m>
 		<max-m>5</max-m>
 	</animation>
+
+    <animation>
+        <type>scale</type>
+        <x-offset>1.5</x-offset>
+        <y-offset>1.5</y-offset>
+        <z-offset>1.5</z-offset>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+        <object-name>background</object-name>
+    </animation>
     
     <animation>
         <type>material</type>

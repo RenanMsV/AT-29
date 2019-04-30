@@ -5,12 +5,8 @@
 <sim>
   <model>
     <livery>
-      <name type="string">EDA</name>
-      <fuselage>Liveries/EDA/0/fuselage.png</fuselage>
-      <tail>Liveries/EDA/0/htail.png</tail>
-      <misc>Liveries/EDA/0/misc.png</misc>
-      <wings>Liveries/EDA/0/wings.png</wings>
-      <conopy>Liveries/EDA/0/conopy.png</conopy>
+      <name type="string">EDA - Esquadrilha da Fumaca</name>
+      <fuselage>Liveries/EDA/fuselage.png</fuselage>
       <armed>0</armed>
     </livery>
   </model>
