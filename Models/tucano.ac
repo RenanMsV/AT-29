@@ -9499,7 +9499,6 @@ name "PropDisk"
 loc -3.57539 -0.0455142 0.001893
 data 13
 PropDisk.mesh
-texture "propdisk.png"
 crease 45.000000
 numvert 37
 -0.000887871 -0.000967056 0.000960498
@@ -50222,7 +50221,7 @@ refs 4
 248 0.358436 0.937665
 kids 0
 OBJECT poly
-name "fuselage"
+name "CanopyFrame"
 loc 1.41355 -1.73125 2.90871e-005
 texture "fuselage.png"
 crease 45.000000
@@ -123366,7 +123365,6 @@ kids 0
 OBJECT poly
 name "WindscreenGlass"
 loc 1.41355 -1.73125 2.90871e-005
-texture "tanks.png"
 crease 45.000000
 numvert 148
 -2.42628 2.06898 0.420668
@@ -124380,9 +124378,8 @@ refs 4
 144 0.179288 0.195091
 kids 0
 OBJECT poly
-name "WindscreenGlass"
+name "CanopyGlass"
 loc 1.41355 -1.73125 2.90871e-005
-texture "tanks.png"
 crease 45.000000
 numvert 353
 -2.12068 2.62896 0.371008
@@ -194838,7 +194835,7 @@ refs 3
 29 0.90405 0.3565
 kids 0
 OBJECT poly
-name "AY_LOD_100"
+name "grid"
 loc 0 -5.03659e-006 0.0112537
 texture "A29B_02.png"
 crease 35.000000

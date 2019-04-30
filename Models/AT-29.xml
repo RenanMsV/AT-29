@@ -800,6 +800,7 @@
   <type>rotate</type>
   <object-name>CanopyGlass</object-name>
   <object-name>CanopyFrame</object-name>
+  <object-name>grid</object-name>
   <property>canopy/position-norm</property>
   <factor>80</factor>
   <axis>
@@ -863,6 +864,7 @@
   <object-name>LMainGearDoorOuter</object-name>
   <object-name>DorsalStrake</object-name>
   <object-name>DorsalScoop</object-name>
+  <object-name>CanopyFrame</object-name>
 
   <object-name>LFuelTank</object-name>
   <object-name>RFuelTank</object-name>
@@ -993,6 +995,7 @@
   <object-name>LMainGearDoorOuter</object-name>
   <object-name>DorsalStrake</object-name>
   <object-name>DorsalScoop</object-name>
+  <object-name>CanopyFrame</object-name>
 
   <object-name>LFuelTank</object-name>
   <object-name>RFuelTank</object-name>
