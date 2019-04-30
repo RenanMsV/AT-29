@@ -1001,6 +1001,12 @@
   <object-name>RFuelTank</object-name>
 </effect>
 
+<effect> <!-- Glass Reflection Effect -->
+  <inherits-from>Aircraft/AT-29/Models/Effects/glass_reflection_effect/reflectglas-uber</inherits-from>
+  <object-name>CanopyGlass</object-name>
+  <object-name>WindscreenGlass</object-name>
+</effect>
+
  <!-- Lightmap -->
  <!--effect>
    <inherits-from>Effects/lightmap</inherits-from>
