@@ -35,13 +35,13 @@
 				<negative-z>Aircraft/Generic/Effects/fgfs-sky2/5.png</negative-z>
 			</images>
 		</texture>
-		<ambient-correction type="float">0.1</ambient-correction>
-			<rendering-hint>transparent</rendering-hint>
-			<transparent>true</transparent>
-			<render-bin>
-				<bin-number>111</bin-number>
-				<bin-name>DepthSortedBin</bin-name>
-			</render-bin>
-		</parameters>
+		<ambient-correction type="float"><use>/sim/rendering/AT-29/glass-reflect/amb-correction</use></ambient-correction>
+		<rendering-hint>transparent</rendering-hint>
+		<transparent>true</transparent>
+		<render-bin>
+			<bin-number>0</bin-number>
+			<bin-name>DepthSortedBin</bin-name>
+		</render-bin>
+	</parameters>
 		
 </PropertyList>
