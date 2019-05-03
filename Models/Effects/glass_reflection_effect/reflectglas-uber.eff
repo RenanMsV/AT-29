@@ -39,7 +39,7 @@
 		<rendering-hint>transparent</rendering-hint>
 		<transparent>true</transparent>
 		<render-bin>
-			<bin-number>9</bin-number>
+			<bin-number>111</bin-number>
 			<bin-name>DepthSortedBin</bin-name>
 		</render-bin>
 	</parameters>
