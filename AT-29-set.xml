@@ -151,6 +151,16 @@ License: Creative Commons "CC-BY-NC-SA"
       <blackout-complete-g>8.0</blackout-complete-g>
     </parameters>
   </redout>
+  <AT-29>
+    <glass-reflect>
+      <amb-correction>1</amb-correction>
+      <correction>1</correction>
+      <dynamic>1</dynamic>
+      <fresnel>0</fresnel>
+      <noise>0</noise>
+      <rainbow>-.5</rainbow>
+    </glass-reflect>
+  </AT-29>
 </rendering>
 
 <multiplay>
