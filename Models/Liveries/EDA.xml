@@ -8,6 +8,13 @@
       <name type="string">EDA - Esquadrilha da Fumaca</name>
       <fuselage>Liveries/EDA/fuselage.png</fuselage>
       <armed>0</armed>
+      <rendering>
+        <AT-29>
+            <refl_correction>0.1</refl_correction>
+            <refl-type>2</refl-type>
+            <fresnel-factor>0</fresnel-factor>
+        </AT-29>
+      </rendering>
     </livery>
   </model>
 </sim>
