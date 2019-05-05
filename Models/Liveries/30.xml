@@ -8,6 +8,13 @@
       <name type="string">T-27 30anos</name>
       <fuselage>Liveries/30/fuselage.png</fuselage>
       <armed>0</armed>
+      <rendering>
+        <AT-29>
+            <refl_correction>0.1</refl_correction>
+            <refl-type>2</refl-type>
+            <fresnel-factor>0</fresnel-factor>
+        </AT-29>
+      </rendering>
     </livery>
   </model>
 </sim>

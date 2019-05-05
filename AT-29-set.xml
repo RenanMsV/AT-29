@@ -151,11 +151,6 @@ License: Creative Commons "CC-BY-NC-SA"
       <blackout-complete-g>8.0</blackout-complete-g>
     </parameters>
   </redout>
-  <AT-29>
-    <refl_correction>0.1</refl_correction>
-    <refl-type>2</refl-type>
-    <fresnel-factor>0</fresnel-factor>
-  </AT-29>
 </rendering>
 
 <multiplay>
