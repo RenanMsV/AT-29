@@ -227,16 +227,6 @@
 
 <!-- Effects ******************************************************* -->
 
-<!-- beacon flash -->
-<model>
- <path>Aircraft/AT-29/Effects/beacon.xml</path>
- <offsets>
-   <x-m>3.59</x-m>
-   <y-m>0</y-m>
-   <z-m>0.55</z-m>
- </offsets>
-</model>
-
 <model>
   <path>Aircraft/DavePack/Effects/Vortex/condensation-left.xml</path>
   <offsets>
@@ -999,6 +989,12 @@
 
   <object-name>LFuelTank</object-name>
   <object-name>RFuelTank</object-name>
+</effect>
+
+<effect> <!-- Glass Reflection Effect -->
+  <inherits-from>Aircraft/AT-29/Models/Effects/glass_reflection_effect/reflectglas-uber</inherits-from>
+  <object-name>CanopyGlass</object-name>
+  <object-name>WindscreenGlass</object-name>
 </effect>
 
  <!-- Lightmap -->
