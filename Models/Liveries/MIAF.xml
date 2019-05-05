@@ -5,9 +5,9 @@
 <sim>
   <model>
     <livery>
-      <name type="string">T-27 30anos</name>
-      <fuselage>Liveries/30/fuselage.png</fuselage>
-      <armed>0</armed>
+      <name type="string">MIAF - Mauritania Islamic Air Force</name>
+      <fuselage>Liveries/MIAF/fuselage.png</fuselage>
+      <armed>1</armed>
       <rendering>
         <AT-29>
             <refl_correction>0.1</refl_correction>
