@@ -16,9 +16,9 @@
     <lightmap_enabled type="int">0</lightmap_enabled>
     <reflection-enabled type="int">1</reflection-enabled>
     <reflect-map-enabled type="int">1</reflect-map-enabled>
-    <reflection-correction type="float"><use>/sim/rendering/AT-29/refl_correction</use></reflection-correction>
-    <reflection-fresnel-factor type="float"><use>/sim/rendering/AT-29/fresnel-factor</use></reflection-fresnel-factor>
-    <reflection-type type="int"><use>/sim/rendering/AT-29/refl-type</use></reflection-type>
+    <reflection-correction type="float"><use>/sim/model/livery/rendering/AT-29/refl_correction</use></reflection-correction>
+    <reflection-fresnel-factor type="float"><use>/sim/model/livery/rendering/AT-29/fresnel-factor</use></reflection-fresnel-factor>
+    <reflection-type type="int"><use>/sim/model/livery/rendering/AT-29/refl-type</use></reflection-type>
     <reflection-dynamic type="int">1</reflection-dynamic>
     <texture n="4">
       <image>Aircraft/AT-29/Models/Effects/fuse_reflection_effect/grey.png</image>
