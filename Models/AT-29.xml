@@ -227,16 +227,6 @@
 
 <!-- Effects ******************************************************* -->
 
-<!-- beacon flash -->
-<model>
- <path>Aircraft/AT-29/Effects/beacon.xml</path>
- <offsets>
-   <x-m>3.59</x-m>
-   <y-m>0</y-m>
-   <z-m>0.55</z-m>
- </offsets>
-</model>
-
 <model>
   <path>Aircraft/DavePack/Effects/Vortex/condensation-left.xml</path>
   <offsets>
