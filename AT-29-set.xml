@@ -180,6 +180,7 @@ License: Creative Commons "CC-BY-NC-SA"
    <int n="12" type="int">0</int>
    <float n="0" type="float" alias="/engines/engine[0]/n2"/>
    <float n="1" type="float" alias="/engines/engine[0]/starter"/>
+   <float n="2" type="float" alias="/gear/gear[0]/steering-norm"/>
  </generic>
 </multiplay>
 

@@ -291,9 +291,9 @@
 
 <animation><!-- Nose Wheel Steering -->
   <type>rotate</type>
-  <object-name>NoseGearLower</object-name>
+  <object-name>NoseGear</object-name>
   <object-name>NoseTire</object-name>
-  <property>sim/multiplay/generic/float[1]</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <factor>55</factor>
   <axis>
    <x1-m> -3.08</x1-m>
