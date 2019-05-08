@@ -281,7 +281,7 @@
  <condition>
   <property>fdm/jsbsim/systems/crash-detect/crashed</property>
 </condition>
-<path>Aircraft/DavePack/Sounds/boing.wav</path>
+<path>Sounds/crash.wav</path>
 </crash>
 
 <canopy>

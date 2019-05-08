@@ -228,7 +228,7 @@
 <!-- Effects ******************************************************* -->
 
 <model>
-  <path>Aircraft/DavePack/Effects/Vortex/condensation-left.xml</path>
+  <path>Aircraft/AT-29/Models/Davepack/Vortex/condensation-left.xml</path>
   <offsets>
    <x-m> 1.0</x-m>
    <y-m>-5.8</y-m>
@@ -237,7 +237,7 @@
 </model>
 
 <model>
-  <path>Aircraft/DavePack/Effects/Vortex/condensation-right.xml</path>
+  <path>Aircraft/AT-29/Models/Davepack/Vortex/condensation-right.xml</path>
   <offsets>
    <x-m> 1.0</x-m>
    <y-m> 5.8</y-m>
@@ -249,8 +249,8 @@
 <!-- Stores ******************************************************** -->
 
 <!-- AIM-9, left side -->
-<model>
-  <path>Aircraft/DavePack/Stores/</path>
+<!--model>
+  <path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
   <name>AIM9L</name>
   <offsets>
    <x-m>-0.3</x-m>
@@ -259,11 +259,11 @@
    <pitch-deg>0</pitch-deg>
    <roll-deg>45</roll-deg>
  </offsets>
-</model>
+</model-->
 
 <!-- AIM-9, right side -->
-<model>
-  <path>Aircraft/DavePack/Stores/</path>
+<!--model>
+  <path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
   <name>AIM9R</name>
   <offsets>
    <x-m>-0.3</x-m>
@@ -272,7 +272,7 @@
    <pitch-deg>0</pitch-deg>
    <roll-deg>45</roll-deg>
  </offsets>
-</model>
+</model-->
 
 
 <!-- Animations **************************************************** -->
