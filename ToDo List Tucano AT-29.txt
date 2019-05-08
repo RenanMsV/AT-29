@@ -1,8 +1,0 @@
-ToDo List Tucano AT-29
-
-Sounds // 90
-Livery System // 100
-Reflection Effect // 90
-Lights // 0
-Replace old model by the new model made by pjedvaj // 0
-
