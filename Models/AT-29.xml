@@ -402,7 +402,7 @@
         </greater-than>
         <less-than>
           <property>engines/engine[0]/n2</property>
-          <value>40</value>
+          <value>60</value>
         </less-than>
       </and>
     </condition>
@@ -413,7 +413,7 @@
     <condition>
       <greater-than>
         <property>engines/engine[0]/n2</property>
-        <value>40</value>
+        <value>59.99</value>
       </greater-than>
     </condition>
   </animation>
@@ -421,9 +421,24 @@
     <type>spin</type>
     <object-name>Prop</object-name>
     <object-name>PropBlur</object-name>
-    <object-name>PropDisk</object-name>
     <property>engines/engine[0]/n2</property>
     <factor>-30.0</factor>
+    <center>
+      <x-m>-3.57</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.03s</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropDisk</object-name>
+    <property>engines/engine[0]/thrust_lb</property>
+    <factor>-11.0</factor>
     <center>
       <x-m>-3.57</x-m>
       <y-m>0</y-m>
