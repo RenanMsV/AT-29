@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+  <path>pilot.ac</path>
+
+  <!-- Creating the hade movement group -->
+  <animation>
+    <name>PilotHead</name>
+    <object-name>L-helmet</object-name>
+    <object-name>L-head</object-name>
+    <object-name>L-visor</object-name>
+    <object-name>L-face-mask</object-name>
+    <object-name>L-mask-tube</object-name>
+    <object-name>L-oxy-tube</object-name>
+  </animation>
+
+  <!--  Here we apply a up or down movement based in the aircraft's elevator -->
+  <animation>
+    <type>rotate</type>
+    <object-name>PilotHead</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-0.592822</x-m>
+      <y-m>-0.00068</y-m>
+      <z-m>0.470078</z-m>
+    </center>
+    <axis>
+      <x>0.000</x>
+      <y>1.000</y>
+      <z>0.000</z>
+    </axis>
+  </animation>
+  <!--  Here we apply a right or left movement based in the aircraft's rudder -->
+  <animation>
+    <type>rotate</type>
+    <object-name>PilotHead</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-75</factor>
+    <center>
+      <x-m>-0.592822</x-m>
+      <y-m>-0.00068</y-m>
+      <z-m>0.470078</z-m>
+    </center>
+    <axis>
+      <x>0.000</x>
+      <y>0.000</y>
+      <z>1.000</z>
+    </axis>
+  </animation>
+  <!--  Here we apply a right and left movement based in the aircraft's aileron -->
+  <animation>
+    <type>rotate</type>
+    <object-name>PilotHead</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor>50.0</factor>
+    <center>
+      <x-m>-0.592822</x-m>
+      <y-m>-0.00068</y-m>
+      <z-m>0.470078</z-m>
+    </center>
+    <axis>
+      <x>1.000</x>
+      <y>0.000</y>
+      <z>0.000</z>
+    </axis>
+  </animation>
+</PropertyList>

@@ -10,7 +10,7 @@
       # aircraft. The code is only executed if the file is loaded for a remote
       # aircraft in Multi-Player mode (MP)
       ##############################################################################
-    	-->
+      -->
       <![CDATA[var livery_update = aircraft.livery_update.new("Aircraft/AT-29/Models/Liveries");]]>
     </load>
     <unload><![CDATA[livery_update.stop();]]></unload>
@@ -57,28 +57,28 @@
   <!-- Here add the 3d stores/armament -->
   <!-- AIM-9, left side -->
   <!--model>
-  	<path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
-  	<name>AIM9L</name>
-  	<offsets>
-   		<x-m>-0.3</x-m>
-   		<y-m>-3.46</y-m>
-   		<z-m>-0.62</z-m>
-   		<pitch-deg>0</pitch-deg>
-   		<roll-deg>45</roll-deg>
- 		</offsets>
-	</model-->
-	<!-- AIM-9, right side -->
-	<!--model>
-	  <path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
-	  <name>AIM9R</name>
-	  <offsets>
-	  	<x-m>-0.3</x-m>
-	   	<y-m> 3.46</y-m>
-	   	<z-m>-0.62</z-m>
-	   	<pitch-deg>0</pitch-deg>
-	   	<roll-deg>45</roll-deg>
-	 	</offsets>
-	</model-->
+    <path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
+    <name>AIM9L</name>
+    <offsets>
+      <x-m>-0.3</x-m>
+      <y-m>-3.46</y-m>
+      <z-m>-0.62</z-m>
+      <pitch-deg>0</pitch-deg>
+      <roll-deg>45</roll-deg>
+    </offsets>
+  </model-->
+  <!-- AIM-9, right side -->
+  <!--model>
+    <path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
+    <name>AIM9R</name>
+    <offsets>
+      <x-m>-0.3</x-m>
+      <y-m> 3.46</y-m>
+      <z-m>-0.62</z-m>
+      <pitch-deg>0</pitch-deg>
+      <roll-deg>45</roll-deg>
+    </offsets>
+  </model-->
   <!-- Here add all nimations -->
   <!-- Gear animation -->
   <animation>
@@ -591,13 +591,10 @@
   <animation>
     <type>select</type>
     <object-name>Pilot-fwd</object-name>
-    <object-name>Seat-fwd</object-name>
+    <object-name>Pilot-aft</object-name>
     <condition>
       <not>
-        <equals>
-          <property>sim/current-view/view-number</property>
-          <value>0</value>
-        </equals>
+        <property>sim/current-view/internal</property>
       </not>
     </condition>
   </animation>
@@ -713,6 +710,24 @@
       <roll-deg>0</roll-deg>
       <pitch-deg>0</pitch-deg>
       <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <name>Pilot-fwd</name>
+    <path>Aircraft/AT-29/Models/Pilots/Pilot.xml</path>
+    <offsets>
+      <x-m>0.17</x-m>
+      <y-m>-0.01</y-m>
+      <z-m>0.1</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>Pilot-aft</name>
+    <path>Aircraft/AT-29/Models/Pilots/Pilot.xml</path>
+    <offsets>
+      <x-m>1.57</x-m>
+      <y-m>-0.01</y-m>
+      <z-m>0.23</z-m>
     </offsets>
   </model>
 </PropertyList>
