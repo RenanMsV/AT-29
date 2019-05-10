@@ -705,6 +705,10 @@
     <object-name>CanopyGlass</object-name>
     <object-name>WindscreenGlass</object-name>
   </effect>
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <object-name>PropDisk</object-name>
+  </effect>
   <!-- Adding animated airshow smoke particle emitter -->
   <model>
     <path>Aircraft/AT-29/Models/Effects/airshow_smoke/smokeW.xml</path>
