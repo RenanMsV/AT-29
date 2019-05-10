@@ -2,7 +2,7 @@
 
 <system name="crash-detect">
 
-  <property value="0">systems/crash-detect/crashed</property>
+  <!--property value="0">systems/crash-detect/crashed</property-->
 
   <channel name="Over-G">
 
