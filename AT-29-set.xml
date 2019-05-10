@@ -67,6 +67,36 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <z-offset-m archive="y">-0.40</z-offset-m> <!-- aft/fore -->
       </config>
     </view>
+    <view n="250">
+      <name>Pilot Back View</name>
+      <internal archive="y">false</internal>
+      <enabled archive="y">true</enabled>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <pitch-offset-deg>-9.6</pitch-offset-deg>
+        <heading-offset-deg>30.5</heading-offset-deg>
+        <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+        <x-offset-m archive="y">0.345</x-offset-m> <!-- right/left -->
+        <y-offset-m archive="y">0.724</y-offset-m> <!-- up/down -->
+        <z-offset-m archive="y">-0.205</z-offset-m> <!-- aft/fore -->
+      </config>
+    </view>
+    <view n="251">
+      <name>Pilots View</name>
+      <internal archive="y">false</internal>
+      <enabled archive="y">true</enabled>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <pitch-offset-deg>2.14</pitch-offset-deg>
+        <heading-offset-deg>155.468</heading-offset-deg>
+        <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+        <x-offset-m archive="y">0.345</x-offset-m> <!-- right/left -->
+        <y-offset-m archive="y">0.662</y-offset-m> <!-- up/down -->
+        <z-offset-m archive="y">-0.84</z-offset-m> <!-- aft/fore -->
+      </config>
+    </view>
     <chase-distance-m type="double" archive="y">-15.0</chase-distance-m>
     <flaps>
       <setting>0.00</setting>

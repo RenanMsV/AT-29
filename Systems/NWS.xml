@@ -2,7 +2,7 @@
 
 <system name="NWS">
 
-  <property>systems/NWS/engaged</property>
+  <!--property>systems/NWS/engaged</property-->
 
   <channel name="Nose Wheel Steering">
 
