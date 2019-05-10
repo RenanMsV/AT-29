@@ -705,6 +705,7 @@
     <object-name>CanopyGlass</object-name>
     <object-name>WindscreenGlass</object-name>
   </effect>
+  <!-- Aplying transparent effect to the prop so its Rembrandt ready. -->
   <effect>
    <inherits-from>Effects/model-transparent</inherits-from>
    <object-name>PropDisk</object-name>
