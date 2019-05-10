@@ -223,6 +223,10 @@
      <property>/fdm/jsbsim/aero/alpha-rad[0]</property>
      <value>0.2</value>
    </greater-than>
+   <greater-than>
+     <property>/velocities/airspeed-kt</property>
+     <value>4</value>
+   </greater-than>
  </condition>
  <path>Sounds/rumble.wav</path>
  <volume>
