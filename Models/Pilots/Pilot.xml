@@ -2,7 +2,7 @@
 <PropertyList>
   <path>pilot.ac</path>
 
-  <!-- Creating the hade movement group -->
+  <!-- Creating the head movement group -->
   <animation>
     <name>PilotHead</name>
     <object-name>L-helmet</object-name>
@@ -11,6 +11,24 @@
     <object-name>L-face-mask</object-name>
     <object-name>L-mask-tube</object-name>
     <object-name>L-oxy-tube</object-name>
+  </animation>
+
+  <!-- Set pilot helmet's texture by livery -->
+  <animation>
+    <type>material</type>
+    <object-name>L-helmet</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>pilot-helmet</texture-prop>
+    <texture>Pilots/pilot_helmet.png</texture> <!-- Default texture if no livery selec -->
+  </animation>
+
+  <!-- Set pilot patche's texture by livery -->
+  <animation>
+    <type>material</type>
+    <object-name>patche</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>pilot-patche</texture-prop>
+    <texture>Pilots/pilot_patche.png</texture> <!-- Default texture if no livery selec -->
   </animation>
 
   <!--  Here we apply a up or down movement based in the aircraft's elevator -->
@@ -52,7 +70,7 @@
     <type>rotate</type>
     <object-name>PilotHead</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor>50.0</factor>
+    <factor>25.0</factor>
     <center>
       <x-m>-0.592822</x-m>
       <y-m>-0.00068</y-m>
