@@ -10,6 +10,7 @@
       <!-- For the pilot helmet and pilot patche ../ is required! -->
       <pilot-helmet type="string">../Liveries/FAC/pilot_helmet.png</pilot-helmet>
       <pilot-patche type="string">../Liveries/FAC/pilot_patche.png</pilot-patche>
+      <pilot-vest type="string">../Liveries/FAC/pilot_vest.png</pilot-vest>
       <armed type="bool">1</armed>
       <rendering>
         <AT-29>

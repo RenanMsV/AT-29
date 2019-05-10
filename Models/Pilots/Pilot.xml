@@ -31,6 +31,20 @@
     <texture>Pilots/pilot_patche.png</texture> <!-- Default texture if no livery selec -->
   </animation>
 
+  <!-- Set pilot vest's texture by livery -->
+  <animation>
+    <type>material</type>
+    <object-name>LL-leg</object-name>
+    <object-name>LR-leg</object-name>
+    <object-name>L-chest</object-name>
+    <object-name>LL-arm</object-name>
+    <object-name>LR-armA</object-name>
+    <object-name>L-collar</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>pilot-vest</texture-prop>
+    <texture>Pilots/pilot_vest.png</texture> <!-- Default texture if no livery selec -->
+  </animation>
+
   <!--  Here we apply a up or down movement based in the aircraft's elevator -->
   <animation>
     <type>rotate</type>
