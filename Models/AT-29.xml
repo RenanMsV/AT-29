@@ -596,10 +596,41 @@
   <animation>
     <type>select</type>
     <object-name>Pilot-fwd</object-name>
-    <object-name>Pilot-aft</object-name>
     <condition>
       <not>
         <property>sim/current-view/internal</property>
+      </not>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Pilot-aft</object-name> <!-- Back seat pilot -->
+    <condition>
+      <and>
+        <not>
+          <property>sim/model/mono-cockpit-enabled</property>
+        </not>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+      </and>
+    </condition>
+  </animation>
+  <!-- Suppress/Hide Mono Cockpit Models -->
+  <animation>
+    <type>select</type>
+    <object-name>AD_LOD_100_M</object-name>
+    <object-name>MonoBox</object-name>
+    <condition>
+      <property>sim/model/mono-cockpit-enabled</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>AD_LOD_100</object-name>
+    <condition>
+      <not>
+        <property>sim/model/mono-cockpit-enabled</property>
       </not>
     </condition>
   </animation>
