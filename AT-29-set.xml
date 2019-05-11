@@ -57,6 +57,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <livery>
         <file type="string" />
       </livery>
+      <mono-cockpit-enabled type="bool">false</mono-cockpit-enabled>
     </model>
     <view n="0">
       <internal archive="y">true</internal>
