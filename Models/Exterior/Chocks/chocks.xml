@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>chocks.ac</path>
+
+	<!--
+
+	/environment/
+
+	wind-from-east-fps
+
+	wind-from-north-fps
+
+	wind-speed-kt
+
+	/windsock/wind-speed-kt
+	-->
+
+	<!-- Front fit -->
+
+	<animation>
+	  <object-name>FrontFit</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-east-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-2.05091</x-m>
+	  	<y-m>-0.45677</y-m>
+	  	<z-m>-0.603273</z-m>
+	  </center>
+	  <axis>
+	  	<x>0</x>
+	  	<y>1</y>
+	  	<z>0</z>
+	  </axis>
+	</animation>
+
+	<animation>
+	  <object-name>FrontFit</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-north-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-2.05091</x-m>
+	  	<y-m>-0.45677</y-m>
+	  	<z-m>-0.603273</z-m>
+	  </center>
+	  <axis>
+	  	<x>1</x>
+	  	<y>0</y>
+	  	<z>0</z>
+	  </axis>
+	</animation>
+
+	<animation>
+	  <object-name>FrontFit</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-down-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-2.05091</x-m>
+	  	<y-m>-0.45677</y-m>
+	  	<z-m>-0.603273</z-m>
+	  </center>
+	  <axis>
+	  	<x>0</x>
+	  	<y>0</y>
+	  	<z>1</z>
+	  </axis>
+	</animation>
+
+	<!-- SideFitL -->
+
+	<animation>
+	  <object-name>SideFitL</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-east-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-1.14526</x-m>
+	  	<y-m>-2.58967</y-m>
+	  	<z-m>-0.321702</z-m>
+	  </center>
+	  <axis>
+	  	<x>0</x>
+	  	<y>1</y>
+	  	<z>0</z>
+	  </axis>
+	</animation>
+
+	<animation>
+	  <object-name>SideFitL</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-north-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-1.14526</x-m>
+	  	<y-m>-2.58967</y-m>
+	  	<z-m>-0.321702</z-m>
+	  </center>
+	  <axis>
+	  	<x>1</x>
+	  	<y>0</y>
+	  	<z>0</z>
+	  </axis>
+	</animation>
+
+	<animation>
+	  <object-name>SideFitL</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-down-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-1.14526</x-m>
+	  	<y-m>-2.58967</y-m>
+	  	<z-m>-0.321702</z-m>
+	  </center>
+	  <axis>
+	  	<x>0</x>
+	  	<y>0</y>
+	  	<z>1</z>
+	  </axis>
+	</animation>
+
+	<!-- SideFitR -->
+
+	<animation>
+	  <object-name>SideFitR</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-east-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-1.14606</x-m>
+	  	<y-m>2.56826</y-m>
+	  	<z-m>-0.319205</z-m>
+	  </center>
+	  <axis>
+	  	<x>0</x>
+	  	<y>1</y>
+	  	<z>0</z>
+	  </axis>
+	</animation>
+
+	<animation>
+	  <object-name>SideFitR</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-north-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-1.14606</x-m>
+	  	<y-m>2.56826</y-m>
+	  	<z-m>-0.319205</z-m>
+	  </center>
+	  <axis>
+	  	<x>1</x>
+	  	<y>0</y>
+	  	<z>0</z>
+	  </axis>
+	</animation>
+
+	<animation>
+	  <object-name>SideFitR</object-name>
+	  <type>rotate</type>
+	  <factor>1</factor>
+	  <expression>
+	  	<product>
+        <property>/environment/wind-from-down-fps</property>
+        <property>/environment/windsock/wind-speed-kt</property>
+      </product>
+	  </expression>
+	  <center>
+	  	<x-m>-1.14606</x-m>
+	  	<y-m>2.56826</y-m>
+	  	<z-m>-0.319205</z-m>
+	  </center>
+	  <axis>
+	  	<x>0</x>
+	  	<y>0</y>
+	  	<z>1</z>
+	  </axis>
+	</animation>
+</PropertyList>
