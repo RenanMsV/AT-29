@@ -3,16 +3,32 @@
 	<path>chocks.ac</path>
 
 	<!--
+	<X>
+	<expression>
+		<product>
+			<property>/environment/windsock/wind-speed-kt</property>
+			<cos>
+				<difference>
+					<property>/environment/wind-from-heading-deg</property>
+					<property>/orientation/heading-deg</property>
+				</difference>
+			</cos>	
+		</product>
+	</expression>
 
-	/environment/
+	<Y>
+	<expression>
+		<product>
+			<property>/environment/windsock/wind-speed-kt</property>
+			<sin>
+				<difference>
+					<property>/environment/wind-from-heading-deg</property>
+					<property>/orientation/heading-deg</property>
+				</difference>
+			</sin>	
+		</product>
+	</expression>
 
-	wind-from-east-fps
-
-	wind-from-north-fps
-
-	wind-speed-kt
-
-	/windsock/wind-speed-kt
 	-->
 
 	<!-- Front fit -->
@@ -22,11 +38,16 @@
 	  <type>rotate</type>
 	  <factor>1</factor>
 	  <expression>
-	  	<product>
-        <property>/environment/wind-from-east-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
-      </product>
-	  </expression>
+			<product>
+				<property>/environment/windsock/wind-speed-kt</property>
+				<sin>
+					<difference>
+						<property>/environment/wind-from-heading-deg</property>
+						<property>/orientation/heading-deg</property>
+					</difference>
+				</sin>	
+			</product>
+		</expression>
 	  <center>
 	  	<x-m>-2.05091</x-m>
 	  	<y-m>-0.45677</y-m>
@@ -44,11 +65,16 @@
 	  <type>rotate</type>
 	  <factor>1</factor>
 	  <expression>
-	  	<product>
-        <property>/environment/wind-from-north-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
-      </product>
-	  </expression>
+			<product>
+				<property>/environment/windsock/wind-speed-kt</property>
+				<cos>
+					<difference>
+						<property>/environment/wind-from-heading-deg</property>
+						<property>/orientation/heading-deg</property>
+					</difference>
+				</cos>	
+			</product>
+		</expression>
 	  <center>
 	  	<x-m>-2.05091</x-m>
 	  	<y-m>-0.45677</y-m>
@@ -90,11 +116,16 @@
 	  <type>rotate</type>
 	  <factor>1</factor>
 	  <expression>
-	  	<product>
-        <property>/environment/wind-from-east-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
-      </product>
-	  </expression>
+			<product>
+				<property>/environment/windsock/wind-speed-kt</property>
+				<sin>
+					<difference>
+						<property>/environment/wind-from-heading-deg</property>
+						<property>/orientation/heading-deg</property>
+					</difference>
+				</sin>	
+			</product>
+		</expression>
 	  <center>
 	  	<x-m>-1.14526</x-m>
 	  	<y-m>-2.58967</y-m>
@@ -112,11 +143,16 @@
 	  <type>rotate</type>
 	  <factor>1</factor>
 	  <expression>
-	  	<product>
-        <property>/environment/wind-from-north-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
-      </product>
-	  </expression>
+			<product>
+				<property>/environment/windsock/wind-speed-kt</property>
+				<cos>
+					<difference>
+						<property>/environment/wind-from-heading-deg</property>
+						<property>/orientation/heading-deg</property>
+					</difference>
+				</cos>	
+			</product>
+		</expression>
 	  <center>
 	  	<x-m>-1.14526</x-m>
 	  	<y-m>-2.58967</y-m>
@@ -158,11 +194,16 @@
 	  <type>rotate</type>
 	  <factor>1</factor>
 	  <expression>
-	  	<product>
-        <property>/environment/wind-from-east-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
-      </product>
-	  </expression>
+			<product>
+				<property>/environment/windsock/wind-speed-kt</property>
+				<sin>
+					<difference>
+						<property>/environment/wind-from-heading-deg</property>
+						<property>/orientation/heading-deg</property>
+					</difference>
+				</sin>	
+			</product>
+		</expression>
 	  <center>
 	  	<x-m>-1.14606</x-m>
 	  	<y-m>2.56826</y-m>
@@ -180,11 +221,16 @@
 	  <type>rotate</type>
 	  <factor>1</factor>
 	  <expression>
-	  	<product>
-        <property>/environment/wind-from-north-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
-      </product>
-	  </expression>
+			<product>
+				<property>/environment/windsock/wind-speed-kt</property>
+				<cos>
+					<difference>
+						<property>/environment/wind-from-heading-deg</property>
+						<property>/orientation/heading-deg</property>
+					</difference>
+				</cos>	
+			</product>
+		</expression>
 	  <center>
 	  	<x-m>-1.14606</x-m>
 	  	<y-m>2.56826</y-m>
