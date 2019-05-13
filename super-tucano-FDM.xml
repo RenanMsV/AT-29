@@ -254,7 +254,7 @@
        <z>   0.0 </z>
      </location>
      <priority>2</priority>
-     <density unit="LBS/GAL"> 6.7 </density>
+     <density unit="LBS/GAL"> 6.48 </density>
      <capacity unit="LBS"> 1112.00 </capacity>
      <contents unit="LBS"> 1100.00 </contents>
   </tank>
@@ -265,7 +265,7 @@
        <y> -98.0 </y>
        <z>  -6.0 </z>
      </location>
-     <density unit="LBS/GAL"> 6.7 </density>
+     <density unit="LBS/GAL"> 6.48 </density>
      <capacity unit="LBS"> 566.00 </capacity>
      <contents unit="LBS"> 0 </contents>
   </tank>
@@ -276,7 +276,7 @@
        <y>  98.0 </y>
        <z>  -6.0 </z>
      </location>
-     <density unit="LBS/GAL"> 6.7 </density>
+     <density unit="LBS/GAL"> 6.48 </density>
      <capacity unit="LBS"> 566.00 </capacity>
      <contents unit="LBS"> 0 </contents>
   </tank>
@@ -287,7 +287,7 @@
        <y>  0.0 </y>
        <z>  -6.0 </z>
      </location>
-     <density unit="LBS/GAL"> 6.7 </density>
+     <density unit="LBS/GAL"> 6.48 </density>
      <capacity unit="LBS"> 566.00 </capacity>
      <contents unit="LBS"> 0 </contents>
   </tank>
