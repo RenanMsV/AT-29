@@ -7,10 +7,10 @@
     <livery>
       <name type="string">RAF - Royal Air Force Short S-312 Tucano Spitfire</name>
       <fuselage type="string">Liveries/RAFS/fuselage.png</fuselage>
-      <!-- For the pilot helmet and pilot patche ../ is required! -->
-      <pilot-helmet type="string">../Liveries/RAFS/pilot_helmet.png</pilot-helmet>
-      <pilot-patche type="string">../Liveries/RAFS/pilot_patche.png</pilot-patche>
-      <pilot-vest type="string">../Liveries/RAFS/pilot_vest.png</pilot-vest>
+      <!-- For the pilot objets ../../ is required! -->
+      <pilot-helmet type="string">../../Liveries/RAFS/pilot_helmet.png</pilot-helmet>
+      <pilot-patche type="string">../../Liveries/RAFS/pilot_patche.png</pilot-patche>
+      <pilot-vest type="string">../../Liveries/RAFS/pilot_vest.png</pilot-vest>
       <armed type="bool">1</armed>
       <rendering>
         <AT-29>

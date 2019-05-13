@@ -58,6 +58,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <file type="string" />
       </livery>
       <mono-cockpit-enabled type="bool">false</mono-cockpit-enabled>
+      <chocks-enabled type="bool">true</chocks-enabled>
     </model>
     <view n="0">
       <internal archive="y">true</internal>
@@ -147,6 +148,9 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <rainbow>-.5</rainbow>
         </glass-reflect>
       </AT-29>
+      <shaders>
+        <model userarchive="y" type="int">1</model> <!-- Set model shader to ON -->
+      </shaders>
     </rendering>
     <multiplay>
       <generic>
@@ -178,6 +182,32 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
             <binding>
               <command>nasal</command>
               <script>aircraft.livery.dialog.open();</script>
+            </binding>
+          </item>
+          <item>
+            <label>Toggle Chocks</label>
+            <binding>
+              <condition>
+                <less-than>
+                  <property>/engines/engine[0]/n2</property>
+                  <value type="double">0.01</value>
+                </less-than>
+                </condition>
+              <command>property-toggle</command>
+              <property>/sim/model/chocks-enabled</property>
+            </binding>
+            <binding>
+              <command>nasal</command>
+              <script>
+                if (getprop("/engines/engine[0]/n2") > 0.01) gui.popupTip("Stop the engine and wait until the propeller stops before doing that", 5, nil);
+              </script>
+            </binding>
+          </item>
+          <item>
+            <label>Toggle Mono Cockpit</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/model/mono-cockpit-enabled</property>
             </binding>
           </item>
           <item>
@@ -279,8 +309,19 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <name>s</name>
         <desc>Toggle starter valves.</desc>
         <binding>
+          <condition>
+            <not>
+             <property>/sim/model/chocks-enabled</property>
+            </not>
+           </condition>
           <command>property-toggle</command>
           <property>controls/engines/engine[0]/starter</property>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (getprop("/sim/model/chocks-enabled")) gui.popupTip("Remove chocks and protections before starting the engine", 5, nil);
+          </script>
         </binding>
       </key>
       <key n="81">

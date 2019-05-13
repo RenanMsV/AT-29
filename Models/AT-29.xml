@@ -20,7 +20,7 @@
   </sound>
   <!-- Here add the 3d/2d instruments -->
   <model>
-    <path>Aircraft/AT-29/Models/Instruments/CHDD1/CHDD.xml</path>
+    <path>Aircraft/AT-29/Models/Interior/Instruments/CHDD1/CHDD.xml</path>
     <name>chdd2-1</name>
     <offsets>
       <x-m>-1.142</x-m>
@@ -29,7 +29,7 @@
     </offsets>
   </model>
   <model>
-    <path>Aircraft/AT-29/Models/Instruments/CHDD2/CHDD.xml</path>
+    <path>Aircraft/AT-29/Models/Interior/Instruments/CHDD2/CHDD.xml</path>
     <name>chdd2-2</name>
     <offsets>
       <x-m>-1.157</x-m>
@@ -39,7 +39,7 @@
   </model>
   <!-- Here add the 3d/2d effects -->
   <model>
-    <path>Aircraft/AT-29/Models/Davepack/Vortex/condensation-left.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Davepack/Vortex/condensation-left.xml</path>
     <offsets>
       <x-m>1.0</x-m>
       <y-m>-5.8</y-m>
@@ -47,7 +47,7 @@
     </offsets>
   </model>
   <model>
-    <path>Aircraft/AT-29/Models/Davepack/Vortex/condensation-right.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Davepack/Vortex/condensation-right.xml</path>
     <offsets>
       <x-m>1.0</x-m>
       <y-m>5.8</y-m>
@@ -57,7 +57,7 @@
   <!-- Here add the 3d stores/armament -->
   <!-- AIM-9, left side -->
   <!--model>
-    <path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Davepack/Stores/AIM-9/sidewinder.xml</path>
     <name>AIM9L</name>
     <offsets>
       <x-m>-0.3</x-m>
@@ -69,7 +69,7 @@
   </model-->
   <!-- AIM-9, right side -->
   <!--model>
-    <path>Aircraft/AT-29/Models/Davepack/Stores/AIM-9/sidewinder.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Davepack/Stores/AIM-9/sidewinder.xml</path>
     <name>AIM9R</name>
     <offsets>
       <x-m>-0.3</x-m>
@@ -370,7 +370,7 @@
       <z>0</z>
     </axis>
   </animation>
-  <!-- Propeler animation -->
+  <!-- Propeller animation -->
   <animation>
     <type>select</type>
     <object-name>Prop</object-name>
@@ -409,6 +409,11 @@
   </animation>
   <animation>
     <type>spin</type>
+    <condition>
+      <not>
+        <property>/sim/model/chocks-enabled</property>
+      </not>
+    </condition>
     <object-name>Prop</object-name>
     <object-name>PropBlur</object-name>
     <property>engines/engine[0]/n2</property>
@@ -592,37 +597,13 @@
       <z2-m>0.37</z2-m>
     </axis>
   </animation>
-  <!-- Suppress/Hide Seat/Pilot Models in Cockpit View -->
-  <animation>
-    <type>select</type>
-    <object-name>Pilot-fwd</object-name>
-    <condition>
-      <not>
-        <property>sim/current-view/internal</property>
-      </not>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>Pilot-aft</object-name> <!-- Back seat pilot -->
-    <condition>
-      <and>
-        <not>
-          <property>sim/model/mono-cockpit-enabled</property>
-        </not>
-        <not>
-          <property>sim/current-view/internal</property>
-        </not>
-      </and>
-    </condition>
-  </animation>
   <!-- Suppress/Hide Mono Cockpit Models -->
   <animation>
     <type>select</type>
     <object-name>AD_LOD_100_M</object-name>
     <object-name>MonoBox</object-name>
     <condition>
-      <property>sim/model/mono-cockpit-enabled</property>
+      <property>/sim/model/mono-cockpit-enabled</property>
     </condition>
   </animation>
   <animation>
@@ -630,7 +611,7 @@
     <object-name>AD_LOD_100</object-name>
     <condition>
       <not>
-        <property>sim/model/mono-cockpit-enabled</property>
+        <property>/sim/model/mono-cockpit-enabled</property>
       </not>
     </condition>
   </animation>
@@ -753,9 +734,15 @@
       <heading-deg>0</heading-deg>
     </offsets>
   </model>
+  <!-- Adding animated Pilots -->
   <model>
     <name>Pilot-fwd</name>
-    <path>Aircraft/AT-29/Models/Pilots/Pilot.xml</path>
+    <path>Aircraft/AT-29/Models/Interior/Pilots/Pilot.xml</path>
+    <condition>
+      <not>
+        <property>sim/current-view/internal</property>
+      </not>
+    </condition>
     <offsets>
       <x-m>0.17</x-m>
       <y-m>-0.01</y-m>
@@ -764,11 +751,48 @@
   </model>
   <model>
     <name>Pilot-aft</name>
-    <path>Aircraft/AT-29/Models/Pilots/Pilot.xml</path>
+    <path>Aircraft/AT-29/Models/Interior/Pilots/Pilot.xml</path>
+    <condition>
+      <and>
+        <not>
+          <property>sim/model/mono-cockpit-enabled</property>
+        </not>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+      </and>
+    </condition>
     <offsets>
       <x-m>1.57</x-m>
       <y-m>-0.01</y-m>
       <z-m>0.23</z-m>
     </offsets>
   </model>
+  <!-- Adding animated chocks and protections -->
+  <model>
+    <name>ChocksAndProtections</name>
+    <path>Aircraft/AT-29/Models/Exterior/Chocks/chocks.xml</path>
+    <condition>
+      <property>/sim/model/chocks-enabled</property>
+    </condition>
+  </model>
+  <animation>
+    <type>select</type>
+    <object-name>gunchocks</object-name>
+    <condition>
+      <property>/sim/model/livery/armed</property> <!--Hide gun chocks if not military-->
+    </condition>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>ChocksAndProtections</object-name> <!-- Disable cocks if clicked -->
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/chocks-enabled</property>
+      </binding>
+    </action>
+  </animation>
 </PropertyList>
