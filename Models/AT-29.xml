@@ -370,7 +370,7 @@
       <z>0</z>
     </axis>
   </animation>
-  <!-- Propeler animation -->
+  <!-- Propeller animation -->
   <animation>
     <type>select</type>
     <object-name>Prop</object-name>
