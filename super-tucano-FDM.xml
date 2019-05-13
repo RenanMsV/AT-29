@@ -232,6 +232,7 @@
     <feed>0</feed>
     <feed>1</feed>
     <feed>2</feed>
+    <feed>3</feed>
     <thruster file="direct">
      <location unit="IN">
        <x>  26.0 </x>
@@ -273,6 +274,17 @@
      <location unit="IN">
        <x> 170.0 </x>
        <y>  98.0 </y>
+       <z>  -6.0 </z>
+     </location>
+     <density unit="LBS/GAL"> 6.7 </density>
+     <capacity unit="LBS"> 566.00 </capacity>
+     <contents unit="LBS"> 550.00 </contents>
+  </tank>
+
+  <tank type="FUEL" number="3"><!-- Center external tank, 320 liters -->
+     <location unit="IN">
+       <x> 170.0 </x>
+       <y>  0.0 </y>
        <z>  -6.0 </z>
      </location>
      <density unit="LBS/GAL"> 6.7 </density>
