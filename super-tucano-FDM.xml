@@ -74,7 +74,7 @@
      <z>   0.0 </z>
    </location>
    <pointmass name="station1"><!-- missle -->
-      <weight unit="LBS"> 150 </weight>
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y> -114 </y>
@@ -82,14 +82,14 @@
       </location>
    </pointmass>
    <pointmass name="station2"><!-- empty tank -->
-      <weight unit="LBS"> 75 </weight>
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y> -100 </y>
           <z>  0 </z>
       </location>
    </pointmass>
-   <pointmass name="station3"><!-- empty pylon -->
+   <pointmass name="station3"><!-- empty center tank -->
       <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
@@ -97,19 +97,43 @@
           <z>   0 </z>
       </location>
    </pointmass>
-   <pointmass name="station4"><!-- empty tank -->
-      <weight unit="LBS"> 75 </weight>
+   <pointmass name="station4"><!-- empty tank def 75 -->
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y>  100 </y>
           <z>   0 </z>
       </location>
    </pointmass>
-   <pointmass name="station5"><!-- missle -->
-      <weight unit="LBS"> 150 </weight>
+   <pointmass name="station5"><!-- missle def 150-->
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y>  114 </y>
+          <z>   0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Pilot"><!-- pilot -->
+      <weight unit="LBS"> 165 </weight>
+      <location name="POINTMASS" unit="IN">
+          <x>  163 </x>
+          <y>  -0 </y>
+          <z>   0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Co-pilot"><!-- co-pilot -->
+      <weight unit="LBS"> 165 </weight>
+      <location name="POINTMASS" unit="IN">
+          <x>  163 </x>
+          <y>  -0 </y>
+          <z>   0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Equipment"><!-- equipments -->
+      <weight unit="LBS"> 0 </weight>
+      <location name="POINTMASS" unit="IN">
+          <x>  163 </x>
+          <y>  -0 </y>
           <z>   0 </z>
       </location>
    </pointmass>
