@@ -267,7 +267,7 @@
      </location>
      <density unit="LBS/GAL"> 6.7 </density>
      <capacity unit="LBS"> 566.00 </capacity>
-     <contents unit="LBS"> 550.00 </contents>
+     <contents unit="LBS"> 0 </contents>
   </tank>
 
   <tank type="FUEL" number="2"><!-- Right external tank, 320 liters -->
@@ -278,7 +278,7 @@
      </location>
      <density unit="LBS/GAL"> 6.7 </density>
      <capacity unit="LBS"> 566.00 </capacity>
-     <contents unit="LBS"> 550.00 </contents>
+     <contents unit="LBS"> 0 </contents>
   </tank>
 
   <tank type="FUEL" number="3"><!-- Center external tank, 320 liters -->
@@ -289,7 +289,7 @@
      </location>
      <density unit="LBS/GAL"> 6.7 </density>
      <capacity unit="LBS"> 566.00 </capacity>
-     <contents unit="LBS"> 550.00 </contents>
+     <contents unit="LBS"> 0 </contents>
   </tank>
 
  </propulsion>
