@@ -27,7 +27,6 @@
     <object-name>L-helmet</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>pilot-helmet</texture-prop>
-    <texture>Pilots/pilot_helmet.png</texture> <!-- Default texture if no livery selec -->
   </animation>
 
   <!-- Set pilot patche's texture by livery -->
@@ -36,7 +35,6 @@
     <object-name>patche</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>pilot-patche</texture-prop>
-    <texture>Pilots/pilot_patche.png</texture> <!-- Default texture if no livery selec -->
   </animation>
 
   <!-- Set pilot vest's texture by livery -->
@@ -50,7 +48,6 @@
     <object-name>L-collar</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>pilot-vest</texture-prop>
-    <texture>Pilots/pilot_vest.png</texture> <!-- Default texture if no livery selec -->
   </animation>
 
   <!--  Here we apply a up or down movement based in the aircraft's elevator -->

@@ -7,10 +7,10 @@
     <livery>
       <name type="string">FAB - T-27 Retro</name>
       <fuselage type="string">Liveries/FABT27R/fuselage.png</fuselage>
-      <!-- For the pilot helmet and pilot patche ../ is required! -->
-      <pilot-helmet type="string">../Liveries/FABT27R/pilot_helmet.png</pilot-helmet>
-      <pilot-patche type="string">../Liveries/FABT27R/pilot_patche.png</pilot-patche>
-      <pilot-vest type="string">../Liveries/FABT27R/pilot_vest.png</pilot-vest>
+      <!-- For the pilot objets ../../ is required! -->
+      <pilot-helmet type="string">../../Liveries/FABT27R/pilot_helmet.png</pilot-helmet>
+      <pilot-patche type="string">../../Liveries/FABT27R/pilot_patche.png</pilot-patche>
+      <pilot-vest type="string">../../Liveries/FABT27R/pilot_vest.png</pilot-vest>
       <armed type="bool">1</armed>
       <rendering>
         <AT-29>
