@@ -370,6 +370,47 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
   <canopy>
     <position-norm type="double">0</position-norm>
   </canopy>
+  <payload>
+    <weight>
+      <name type="string">Pilot</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+      <min-lb type="double">130.0</min-lb>
+      <max-lb type="double">200.0</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Co-pilot</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+      <min-lb type="double">0.0</min-lb>
+      <max-lb type="double">200.0</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Equipment / Baggage</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+      <min-lb type="double">130.0</min-lb>
+      <max-lb type="double">200.0</max-lb>
+    </weight>
+  </payload>
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <name>Internal tank</name>
+      </tank>
+      <tank n="1">
+        <name>External left tank</name>
+      </tank>
+      <tank n="3">
+        <name>External central tank</name>
+      </tank>
+      <tank n="2">
+        <name>External right tank</name>
+      </tank>
+    </fuel>
+  </consumables>
+  <limits>
+    <mass-and-balance>
+      <maximum-takeoff-mass-lbs type="double">11905</maximum-takeoff-mass-lbs>
+    </mass-and-balance>
+  </limits>
   <nasal>
     <at29>
       <file>Aircraft/AT-29/Nasal/liveries.nas</file>

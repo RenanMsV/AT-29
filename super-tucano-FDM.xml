@@ -74,7 +74,7 @@
      <z>   0.0 </z>
    </location>
    <pointmass name="station1"><!-- missle -->
-      <weight unit="LBS"> 150 </weight>
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y> -114 </y>
@@ -82,14 +82,14 @@
       </location>
    </pointmass>
    <pointmass name="station2"><!-- empty tank -->
-      <weight unit="LBS"> 75 </weight>
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y> -100 </y>
           <z>  0 </z>
       </location>
    </pointmass>
-   <pointmass name="station3"><!-- empty pylon -->
+   <pointmass name="station3"><!-- empty center tank -->
       <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
@@ -97,19 +97,43 @@
           <z>   0 </z>
       </location>
    </pointmass>
-   <pointmass name="station4"><!-- empty tank -->
-      <weight unit="LBS"> 75 </weight>
+   <pointmass name="station4"><!-- empty tank def 75 -->
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y>  100 </y>
           <z>   0 </z>
       </location>
    </pointmass>
-   <pointmass name="station5"><!-- missle -->
-      <weight unit="LBS"> 150 </weight>
+   <pointmass name="station5"><!-- missle def 150-->
+      <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="IN">
           <x>  163 </x>
           <y>  114 </y>
+          <z>   0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Pilot"><!-- pilot -->
+      <weight unit="LBS"> 165 </weight>
+      <location name="POINTMASS" unit="IN">
+          <x>  163 </x>
+          <y>  -0 </y>
+          <z>   0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Co-pilot"><!-- co-pilot -->
+      <weight unit="LBS"> 165 </weight>
+      <location name="POINTMASS" unit="IN">
+          <x>  163 </x>
+          <y>  -0 </y>
+          <z>   0 </z>
+      </location>
+   </pointmass>
+   <pointmass name="Equipment"><!-- equipments -->
+      <weight unit="LBS"> 0 </weight>
+      <location name="POINTMASS" unit="IN">
+          <x>  163 </x>
+          <y>  -0 </y>
           <z>   0 </z>
       </location>
    </pointmass>
@@ -214,6 +238,7 @@
     <feed>0</feed>
     <feed>1</feed>
     <feed>2</feed>
+    <feed>3</feed>
     <thruster file="direct">
      <location unit="IN">
        <x>  26.0 </x>
@@ -235,7 +260,7 @@
        <z>   0.0 </z>
      </location>
      <priority>2</priority>
-     <density unit="LBS/GAL"> 6.7 </density>
+     <density unit="LBS/GAL"> 6.48 </density>
      <capacity unit="LBS"> 1112.00 </capacity>
      <contents unit="LBS"> 1100.00 </contents>
   </tank>
@@ -246,9 +271,9 @@
        <y> -98.0 </y>
        <z>  -6.0 </z>
      </location>
-     <density unit="LBS/GAL"> 6.7 </density>
+     <density unit="LBS/GAL"> 6.48 </density>
      <capacity unit="LBS"> 566.00 </capacity>
-     <contents unit="LBS"> 550.00 </contents>
+     <contents unit="LBS"> 0 </contents>
   </tank>
 
   <tank type="FUEL" number="2"><!-- Right external tank, 320 liters -->
@@ -257,9 +282,20 @@
        <y>  98.0 </y>
        <z>  -6.0 </z>
      </location>
-     <density unit="LBS/GAL"> 6.7 </density>
+     <density unit="LBS/GAL"> 6.48 </density>
      <capacity unit="LBS"> 566.00 </capacity>
-     <contents unit="LBS"> 550.00 </contents>
+     <contents unit="LBS"> 0 </contents>
+  </tank>
+
+  <tank type="FUEL" number="3"><!-- Center external tank, 320 liters -->
+     <location unit="IN">
+       <x> 170.0 </x>
+       <y>  0.0 </y>
+       <z>  -6.0 </z>
+     </location>
+     <density unit="LBS/GAL"> 6.48 </density>
+     <capacity unit="LBS"> 566.00 </capacity>
+     <contents unit="LBS"> 0 </contents>
   </tank>
 
  </propulsion>
