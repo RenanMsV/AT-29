@@ -414,7 +414,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
   <nasal>
     <at29>
       <file>Aircraft/AT-29/Nasal/liveries.nas</file>
-      <file>Aircraft/AT-29/Nasal/lights.nas</file>
+      <file>Aircraft/AT-29/Nasal/lightmanager.nas</file>
     </at29>
   </nasal>
 </PropertyList>
