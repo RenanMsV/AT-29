@@ -60,11 +60,15 @@
   </model>
   <model>
     <name>StrobeBack</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/Strobe.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flash.xml</path>
+    <condition>
+      <property>/controls/lighting/strobe</property>
+    </condition>
     <offsets>
       <x-m>7.08244</x-m>
       <y-m>0</y-m>
       <z-m>-0.26</z-m>
+      <heading-deg>180.000</heading-deg>
     </offsets>
   </model>
   <model>
