@@ -43,8 +43,8 @@
     <type>dist-scale</type>
     <object-name>Light</object-name>
     <interpolation>
-      <entry><ind>    0 </ind><dep> 0.5 </dep></entry>
-      <entry><ind>   20 </ind><dep> 1 </dep></entry>
+      <entry><ind>    0 </ind><dep> 1 </dep></entry>
+      <entry><ind>   20 </ind><dep> 2 </dep></entry>
       <entry><ind> 1500 </ind><dep> 5.00 </dep></entry>
     </interpolation>
   </animation>
@@ -53,15 +53,10 @@
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <property>/sim/model/lights/strobe/state</property>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>Light</object-name>
-    <condition>
-      <property>controls/lighting/strobe</property>
+      <and>
+        <property>/sim/model/lights/strobe/state</property>
+        <property>controls/lighting/strobe</property>
+      </and>
     </condition>
   </animation>
 

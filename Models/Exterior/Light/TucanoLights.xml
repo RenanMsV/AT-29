@@ -37,4 +37,24 @@
 			<heading-deg>-10.000</heading-deg>
 		</offsets>
 	</model>
+	<model>
+		<name>Strobe</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/Strobe.xml</path>
+		<offsets>
+			<x-m>-0.012353</x-m>
+			<y-m>-5.9</y-m>
+			<z-m>-0.08006</z-m>
+			<heading-deg>-90.000</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Strobe2</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/Strobe.xml</path>
+		<offsets>
+			<x-m>-0.012353</x-m>
+			<y-m>5.9</y-m>
+			<z-m>-0.08006</z-m>
+			<heading-deg>90.000</heading-deg>
+		</offsets>
+	</model>
 </PropertyList>
