@@ -13,7 +13,10 @@
     <type>select</type>
     <object-name>flash</object-name>
     <condition>
-      <property>controls/lighting/taxi-light</property>
+      <and>
+        <property>controls/lighting/taxi-light</property>
+        <property>gear/gear[0]/position-norm</property>
+      </and>
     </condition>
   </animation>
   <animation>
