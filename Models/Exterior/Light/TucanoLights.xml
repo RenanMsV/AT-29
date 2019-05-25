@@ -77,4 +77,24 @@
 			<heading-deg>90.000</heading-deg>
 		</offsets>
 	</model>
+	<model>
+		<name>FormationLeft</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/formationlight.xml</path>
+		<offsets>
+			<x-m>0.182764</x-m>
+			<y-m>-5.9</y-m>
+			<z-m>-0.08006</z-m>
+			<heading-deg>-90.000</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>FormationRight</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/formationlight.xml</path>
+		<offsets>
+			<x-m>0.182764</x-m>
+			<y-m>5.9</y-m>
+			<z-m>-0.08006</z-m>
+			<heading-deg>90.000</heading-deg>
+		</offsets>
+	</model>
 </PropertyList>
