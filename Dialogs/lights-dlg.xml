@@ -29,6 +29,10 @@
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/sim/rendering/als-secondary-lights/use-landing-light-ext</property>
+			</binding>
 			<live>true</live>
 		</checkbox>
 

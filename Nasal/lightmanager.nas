@@ -132,7 +132,7 @@ var light_manager = {
         setprop("/sim/rendering/als-secondary-lights/landing-light2-offset-deg", als_light_offset_2);
         setprop("/sim/rendering/als-secondary-lights/landing-light3-offset-deg", als_light_offset_3);
 
-        setprop("/sim/rendering/als-secondary-lights/use-landing-light-ext", 1);
+        props.globals.getNode("/sim/rendering/als-secondary-lights/use-landing-light-ext", 1).setBoolValue(1);
         
         me.light_manager_timer = maketimer(0.0, func{me.update()});
         
@@ -160,6 +160,7 @@ var light_manager = {
 
     update: func {
 
+        if (!getprop("/sim/rendering/shaders/skydome")) return; # return if ALS not enabled
         var apos = geo.aircraft_position();
         var vpos = geo.viewer_position();
 
