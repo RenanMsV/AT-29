@@ -24,6 +24,15 @@
 		</checkbox>
 
 		<checkbox>
+			<label>Taxi Lights</label>
+			<property>controls/lighting/taxi-light</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
 			<label>Navigation lights</label>
 			<property>controls/lighting/nav-lights</property>
 			<binding>
@@ -42,7 +51,16 @@
 		</checkbox>
 
 		<checkbox>
-			<label>Beacon</label>
+			<label>Formation Lights</label>
+			<property>controls/lighting/formation-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
+			<label>Beacon Light</label>
 			<property>controls/lighting/beacon</property>
 			<binding>
 				<command>dialog-apply</command>
