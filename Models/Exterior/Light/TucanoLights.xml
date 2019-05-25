@@ -17,4 +17,24 @@
 			<z-m>-0.84545</z-m>
 		</offsets>
 	</model>
+	<model>
+		<name>LandingLight</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/landinglight.xml</path>
+		<offsets>
+			<x-m>-0.535162</x-m>
+			<y-m>4.03114</y-m>
+			<z-m>-0.251002</z-m>
+			<heading-deg>10.000</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>LandingLight2</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/landinglight.xml</path>
+		<offsets>
+			<x-m>-0.535162</x-m>
+			<y-m>-4.03114</y-m>
+			<z-m>-0.251002</z-m>
+			<heading-deg>-10.000</heading-deg>
+		</offsets>
+	</model>
 </PropertyList>
