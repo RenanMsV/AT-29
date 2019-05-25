@@ -253,6 +253,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <elevator-trim>-0.07</elevator-trim>
     </flight>
     <lighting>
+      <strobe type="bool">true</strobe>
       <instruments-norm>0.3</instruments-norm>
     </lighting>
     <armament>
