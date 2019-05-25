@@ -57,4 +57,24 @@
 			<heading-deg>90.000</heading-deg>
 		</offsets>
 	</model>
+	<model>
+		<name>Nav</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/RedLight.xml</path>
+		<offsets>
+			<x-m>-0.052353</x-m>
+			<y-m>-5.9</y-m>
+			<z-m>-0.08006</z-m>
+			<heading-deg>-90.000</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Nav2</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/GreenLight.xml</path>
+		<offsets>
+			<x-m>-0.052353</x-m>
+			<y-m>5.9</y-m>
+			<z-m>-0.08006</z-m>
+			<heading-deg>90.000</heading-deg>
+		</offsets>
+	</model>
 </PropertyList>
