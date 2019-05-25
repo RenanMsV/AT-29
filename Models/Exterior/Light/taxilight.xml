@@ -9,6 +9,10 @@
     <type>alpha-test</type>
     <alpha-factor>0.01</alpha-factor>
   </animation>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>flash</object-name>
+  </effect>
   <animation>
     <type>select</type>
     <object-name>flash</object-name>
