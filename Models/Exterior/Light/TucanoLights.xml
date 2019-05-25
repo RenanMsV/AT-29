@@ -99,6 +99,16 @@
 		</offsets>
 	</model>
 
+	<model>
+		<name>Beacon</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/beacon.xml</path>
+		<offsets>
+			<x-m>3.73048</x-m>
+			<y-m>0.</y-m>
+			<z-m>0.520</z-m>
+		</offsets>
+	</model>
+
 	<!-- Animations below -->
 
 	<animation>

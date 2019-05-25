@@ -32,7 +32,10 @@
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <property>/sim/model/lights/beacon/state</property>
+      <and>
+        <property>/sim/model/lights/beacon/state</property>
+        <property>controls/lighting/beacon</property>
+      </and>
     </condition>
   </animation>
 
@@ -40,18 +43,10 @@
     <type>dist-scale</type>
     <object-name>Light</object-name>
     <interpolation>
-      <entry><ind>    0 </ind><dep> 0.5 </dep></entry>
-      <entry><ind>   20 </ind><dep> 1 </dep></entry>
-      <entry><ind> 1500 </ind><dep> 5.00 </dep></entry>
+      <entry><ind>    0 </ind><dep> 1 </dep></entry>
+      <entry><ind>   20 </ind><dep> 1.5 </dep></entry>
+      <entry><ind> 1500 </ind><dep> 2.00 </dep></entry>
     </interpolation>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>Light</object-name>
-    <condition>
-      <property>controls/lighting/beacon</property>
-    </condition>
   </animation>
 
 </PropertyList>
