@@ -213,7 +213,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <item>
             <name>lights</name>
             <label>Lights</label>
-            <enabled type="bool">0</enabled>
+            <enabled type="bool">true</enabled>
             <binding>
               <command>nasal</command>
               <script>

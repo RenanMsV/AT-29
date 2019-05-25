@@ -14,33 +14,14 @@
 	<group>
 		<layout>vbox</layout>
 
-		<text>
-			<label>Landing lights</label>
-		</text>
-
-		<group>
-			<layout>hbox</layout>
-
-			<checkbox>
-				<label>Left</label>
-				<property>controls/lighting/landing-lights</property>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<live>true</live>
-			</checkbox>
-
-			<checkbox>
-				<label>Right</label>
-				<property>controls/lighting/landing-lights</property>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<live>true</live>
-			</checkbox>
-		</group>
-
-		<hrule/>
+		<checkbox>
+			<label>Landing Lights</label>
+			<property>controls/lighting/landing-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
 
 		<checkbox>
 			<label>Navigation lights</label>
@@ -69,7 +50,7 @@
 			<live>true</live>
 		</checkbox>
 
-		<checkbox>
+		<!--checkbox>
 			<label>Logo Lights</label>
 			<property>controls/lighting/logo-lights</property>
 			<binding>
@@ -104,7 +85,7 @@
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
-		</slider>
+		</slider-->
 	</group>
 
 	<hrule />
