@@ -153,4 +153,21 @@
       <z>0</z>
     </axis>
   </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StrobeBack</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>25</factor>
+    <center>
+      <x-m>6.35</x-m>
+      <y-m>0</y-m>
+      <z-m>0.97</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
 </PropertyList>
