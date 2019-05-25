@@ -89,7 +89,7 @@
   </model>
   <model>
     <name>FormationLeft</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/formationlight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/formationlightl.xml</path>
     <offsets>
       <x-m>0.182764</x-m>
       <y-m>-5.9</y-m>
@@ -99,7 +99,7 @@
   </model>
   <model>
     <name>FormationRight</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/formationlight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/formationlightr.xml</path>
     <offsets>
       <x-m>0.182764</x-m>
       <y-m>5.9</y-m>
