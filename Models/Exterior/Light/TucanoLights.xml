@@ -1,0 +1,20 @@
+<PropertyList>
+	<model>
+		<name>TaxiLight</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/taxilight.xml</path>
+		<offsets>
+			<x-m>-3.01988</x-m>
+			<y-m>0.036791</y-m>
+			<z-m>-0.84545</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>TaxiLight2</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/taxilight.xml</path>
+		<offsets>
+			<x-m>-3.021</x-m>
+			<y-m>-0.036791</y-m>
+			<z-m>-0.84545</z-m>
+		</offsets>
+	</model>
+</PropertyList>
