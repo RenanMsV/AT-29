@@ -110,7 +110,7 @@ var light_manager = {
 
         # light 5 ######## strobe
         # offsets to aircraft center
-        me.light5_xpos = -2.0;
+        me.light5_xpos = 0.0;
         me.light5_ypos = 0.0;
         me.light5_zpos = 0.0;
 
@@ -120,7 +120,7 @@ var light_manager = {
         me.light5_b = .2;
 
         # spot size
-        me.light5_size = 5.0;
+        me.light5_size = 10.0;
 
         # als landing light setup
 
