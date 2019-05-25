@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <path>RedLight.ac</path>
+  <path>navlightred.ac</path>
 
   <animation>
     <type>noshadow</type>
@@ -12,9 +12,6 @@
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Light</object-name>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
   </effect>
 
   <animation>
@@ -32,18 +29,10 @@
     <type>dist-scale</type>
     <object-name>Light</object-name>
     <interpolation>
-      <entry><ind>    0 </ind><dep> 0.25 </dep></entry>
-      <entry><ind>   20 </ind><dep> 0.50 </dep></entry>
-      <entry><ind> 1500 </ind><dep> 2.00 </dep></entry>
+      <entry><ind>0</ind><dep>0.25</dep></entry>
+      <entry><ind>20</ind><dep>0.50</dep></entry>
+      <entry><ind>1500</ind><dep>2.00</dep></entry>
     </interpolation>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>Light</object-name>
-    <condition>
-      <property>controls/lighting/nav-lights</property>
-    </condition>
   </animation>
 
 </PropertyList>

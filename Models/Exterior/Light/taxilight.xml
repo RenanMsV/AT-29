@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-  <path>flash.ac</path>
+  <path>flashlight.ac</path>
   <animation>
     <type>noshadow</type>
     <object-name>flash</object-name>
@@ -13,16 +13,6 @@
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>flash</object-name>
   </effect>
-  <animation>
-    <type>select</type>
-    <object-name>flash</object-name>
-    <condition>
-      <and>
-        <property>controls/lighting/taxi-light</property>
-        <property>gear/gear[0]/position-norm</property>
-      </and>
-    </condition>
-  </animation>
   <animation>
     <type>flash</type>
     <object-name>flash</object-name>

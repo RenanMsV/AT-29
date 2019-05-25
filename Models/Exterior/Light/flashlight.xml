@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-  <path>flash.ac</path>
+  <path>flashlight.ac</path>
   <animation>
     <type>noshadow</type>
     <object-name>flash</object-name>

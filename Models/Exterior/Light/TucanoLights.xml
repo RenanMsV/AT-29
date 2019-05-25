@@ -2,6 +2,12 @@
   <model>
     <name>TaxiLightLeft</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/taxilight.xml</path>
+    <condition>
+      <and>
+        <property>controls/lighting/taxi-light</property>
+        <property>gear/gear[0]/position-norm</property>
+      </and>
+    </condition>
     <offsets>
       <x-m>-3.021</x-m>
       <y-m>-0.036791</y-m>
@@ -12,6 +18,12 @@
   <model>
     <name>TaxiLightRight</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/taxilight.xml</path>
+    <condition>
+      <and>
+        <property>controls/lighting/taxi-light</property>
+        <property>gear/gear[0]/position-norm</property>
+      </and>
+    </condition>
     <offsets>
       <x-m>-3.01988</x-m>
       <y-m>0.036791</y-m>
@@ -21,6 +33,9 @@
   <model>
     <name>LandingLightLeft</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/landinglight.xml</path>
+    <condition>
+      <property>controls/lighting/landing-lights</property>
+    </condition>
     <offsets>
       <x-m>-0.535162</x-m>
       <y-m>-4.03114</y-m>
@@ -31,6 +46,9 @@
   <model>
     <name>LandingLightRight</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/landinglight.xml</path>
+    <condition>
+      <property>controls/lighting/landing-lights</property>
+    </condition>
     <offsets>
       <x-m>-0.535162</x-m>
       <y-m>4.03114</y-m>
@@ -40,7 +58,13 @@
   </model>
   <model>
     <name>StrobeLeft</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/Strobe.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
+    <condition>
+      <and>
+        <property>/sim/model/lights/strobe/state</property>
+        <property>controls/lighting/strobe</property>
+      </and>
+    </condition>
     <offsets>
       <x-m>-0.012353</x-m>
       <y-m>-5.9</y-m>
@@ -50,7 +74,13 @@
   </model>
   <model>
     <name>StrobeRight</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/Strobe.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
+    <condition>
+      <and>
+        <property>/sim/model/lights/strobe/state</property>
+        <property>controls/lighting/strobe</property>
+      </and>
+    </condition>
     <offsets>
       <x-m>-0.012353</x-m>
       <y-m>5.9</y-m>
@@ -60,7 +90,7 @@
   </model>
   <model>
     <name>StrobeBack</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/flash.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
       <property>/controls/lighting/strobe</property>
     </condition>
@@ -73,7 +103,10 @@
   </model>
   <model>
     <name>NavLeft</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/RedLight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/navlightred.xml</path>
+    <condition>
+      <property>controls/lighting/nav-lights</property>
+    </condition>
     <offsets>
       <x-m>-0.052353</x-m>
       <y-m>-5.9</y-m>
@@ -83,7 +116,10 @@
   </model>
   <model>
     <name>NavRight</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/GreenLight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/navlightgreen.xml</path>
+    <condition>
+      <property>controls/lighting/nav-lights</property>
+    </condition>
     <offsets>
       <x-m>-0.052353</x-m>
       <y-m>5.9</y-m>
@@ -94,6 +130,9 @@
   <model>
     <name>FormationLeft</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/formationlightl.xml</path>
+    <condition>
+      <property>/controls/lighting/formation-lights</property>
+    </condition>
     <offsets>
       <x-m>0.182764</x-m>
       <y-m>-5.9</y-m>
@@ -104,6 +143,9 @@
   <model>
     <name>FormationRight</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/formationlightr.xml</path>
+    <condition>
+      <property>/controls/lighting/formation-lights</property>
+    </condition>
     <offsets>
       <x-m>0.182764</x-m>
       <y-m>5.9</y-m>
@@ -113,7 +155,13 @@
   </model>
   <model>
     <name>Beacon</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/beacon.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/beaconlight.xml</path>
+    <condition>
+      <and>
+        <property>/sim/model/lights/beacon/state</property>
+        <property>controls/lighting/beacon</property>
+      </and>
+    </condition>
     <offsets>
       <x-m>3.73048</x-m>
       <y-m>0.</y-m>
