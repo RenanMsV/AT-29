@@ -59,6 +59,15 @@
 		</offsets>
 	</model>
 	<model>
+		<name>StrobeBack</name>
+		<path>Aircraft/AT-29/Models/Exterior/Light/Strobe.xml</path>
+		<offsets>
+			<x-m>7.08244</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.26</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>NavLeft</name>
 		<path>Aircraft/AT-29/Models/Exterior/Light/RedLight.xml</path>
 		<offsets>
@@ -98,7 +107,6 @@
 			<heading-deg>90.000</heading-deg>
 		</offsets>
 	</model>
-
 	<model>
 		<name>Beacon</name>
 		<path>Aircraft/AT-29/Models/Exterior/Light/beacon.xml</path>
