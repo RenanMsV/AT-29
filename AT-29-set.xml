@@ -213,7 +213,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <item>
             <name>lights</name>
             <label>Lights</label>
-            <enabled type="bool">0</enabled>
+            <enabled type="bool">true</enabled>
             <binding>
               <command>nasal</command>
               <script>
@@ -253,6 +253,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <elevator-trim>-0.07</elevator-trim>
     </flight>
     <lighting>
+      <strobe type="bool">true</strobe>
       <instruments-norm>0.3</instruments-norm>
     </lighting>
     <armament>
@@ -414,6 +415,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
   <nasal>
     <at29>
       <file>Aircraft/AT-29/Nasal/liveries.nas</file>
+      <file>Aircraft/AT-29/Nasal/lightmanager.nas</file>
     </at29>
   </nasal>
 </PropertyList>

@@ -14,37 +14,81 @@
 	<group>
 		<layout>vbox</layout>
 
-		<text>
-			<label>Landing lights</label>
-		</text>
+		<checkbox>
+			<label>Landing Lights</label>
+			<property>/controls/lighting/landing-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>/controls/lighting/taxi-light</property>
+					</not>
+				</condition>
+				<command>property-toggle</command>
+				<property>/sim/rendering/als-secondary-lights/use-landing-light-ext</property>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>/controls/lighting/taxi-light</property>
+					</not>
+				</condition>
+				<command>property-toggle</command>
+				<property>/sim/rendering/als-secondary-lights/use-landing-light</property>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>/controls/lighting/taxi-light</property>
+					</not>
+				</condition>
+				<command>property-toggle</command>
+				<property>/sim/rendering/als-secondary-lights/use-alt-landing-light</property>
+			</binding>
+			<live>true</live>
+		</checkbox>
 
-		<group>
-			<layout>hbox</layout>
-
-			<checkbox>
-				<label>Left</label>
-				<property>controls/lighting/landing-lights</property>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<live>true</live>
-			</checkbox>
-
-			<checkbox>
-				<label>Right</label>
-				<property>controls/lighting/landing-lights</property>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<live>true</live>
-			</checkbox>
-		</group>
-
-		<hrule/>
+		<checkbox>
+			<label>Taxi Lights</label>
+			<property>/controls/lighting/taxi-light</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>/controls/lighting/landing-lights</property>
+					</not>
+				</condition>
+				<command>property-toggle</command>
+				<property>/sim/rendering/als-secondary-lights/use-landing-light-ext</property>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>/controls/lighting/landing-lights</property>
+					</not>
+				</condition>
+				<command>property-toggle</command>
+				<property>/sim/rendering/als-secondary-lights/use-landing-light</property>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>/controls/lighting/landing-lights</property>
+					</not>
+				</condition>
+				<command>property-toggle</command>
+				<property>/sim/rendering/als-secondary-lights/use-alt-landing-light</property>
+			</binding>
+			<live>true</live>
+		</checkbox>
 
 		<checkbox>
 			<label>Navigation lights</label>
-			<property>controls/lighting/nav-lights</property>
+			<property>/controls/lighting/nav-lights</property>
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
@@ -53,7 +97,7 @@
 
 		<checkbox>
 			<label>Strobe lights</label>
-			<property>controls/lighting/strobe</property>
+			<property>/controls/lighting/strobe</property>
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
@@ -61,8 +105,8 @@
 		</checkbox>
 
 		<checkbox>
-			<label>Beacon</label>
-			<property>controls/lighting/beacon</property>
+			<label>Formation Lights</label>
+			<property>/controls/lighting/formation-lights</property>
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
@@ -70,8 +114,17 @@
 		</checkbox>
 
 		<checkbox>
+			<label>Beacon Light</label>
+			<property>/controls/lighting/beacon</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<!--checkbox>
 			<label>Logo Lights</label>
-			<property>controls/lighting/logo-lights</property>
+			<property>/controls/lighting/logo-lights</property>
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
@@ -104,7 +157,7 @@
 			<binding>
 				<command>dialog-apply</command>
 			</binding>
-		</slider>
+		</slider-->
 	</group>
 
 	<hrule />

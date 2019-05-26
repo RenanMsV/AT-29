@@ -795,4 +795,8 @@
       </binding>
     </action>
   </animation>
+  <!-- Adding animated lights -->
+  <model>
+    <path>Aircraft/AT-29/Models/Exterior/Light/TucanoLights.xml</path>
+  </model>
 </PropertyList>
