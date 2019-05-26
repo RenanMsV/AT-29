@@ -310,14 +310,9 @@ setlistener("/sim/signals/fdm-initialized", func {
     # no landing lights at external view 
     settimer(func(){
         setlistener("/sim/current-view/internal", func (node) {
-            if (!getprop("/controls/lighting/landing-lights")) return;
-            if(!node.getValue()) {
-                setprop("/sim/rendering/als-secondary-lights/use-alt-landing-light", 0);
-                setprop("/sim/rendering/als-secondary-lights/use-landing-light", 0);
-            } elsif (node.getValue()) {
-                setprop("/sim/rendering/als-secondary-lights/use-alt-landing-light", 1);
-                setprop("/sim/rendering/als-secondary-lights/use-landing-light", 1);
-            }
+            if (!getprop("/controls/lighting/landing-lights") and !getprop("/controls/lighting/taxi-light")) return;
+            setprop("/sim/rendering/als-secondary-lights/use-alt-landing-light", node.getValue());
+            setprop("/sim/rendering/als-secondary-lights/use-landing-light", node.getValue());
             }, 1, 0);
     }, 2);    
 });
