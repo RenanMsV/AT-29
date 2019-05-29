@@ -148,6 +148,32 @@
       <z-m>0.520</z-m>
     </offsets>
   </model>
+  <model>
+    <name>SearchLeft</name>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
+    <condition>
+      <property>controls/lighting/search-lights</property>
+    </condition>
+    <offsets>
+      <x-m>-1.87073</x-m>
+      <y-m>-0.51</y-m>
+      <z-m>-0.028321</z-m>
+      <heading-deg>90.000</heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <name>SearchRight</name>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
+    <condition>
+      <property>controls/lighting/search-lights</property>
+    </condition>
+    <offsets>
+      <x-m>-1.87073</x-m>
+      <y-m>0.51</y-m>
+      <z-m>-0.028321</z-m>
+      <heading-deg>-90.000</heading-deg>
+    </offsets>
+  </model>
 
   <!-- Animations below -->
 

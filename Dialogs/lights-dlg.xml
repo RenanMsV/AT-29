@@ -114,6 +114,15 @@
 		</checkbox>
 
 		<checkbox>
+			<label>Search Lights</label>
+			<property>/controls/lighting/search-lights</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+
+		<checkbox>
 			<label>Beacon Light</label>
 			<property>/controls/lighting/beacon</property>
 			<binding>
