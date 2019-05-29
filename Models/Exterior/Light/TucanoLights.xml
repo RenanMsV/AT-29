@@ -1,7 +1,7 @@
 <PropertyList>
   <model>
     <name>TaxiLightLeft</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/taxilight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
       <and>
         <property>controls/lighting/taxi-light</property>
@@ -17,7 +17,7 @@
   </model>
   <model>
     <name>TaxiLightRight</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/taxilight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
       <and>
         <property>controls/lighting/taxi-light</property>
@@ -32,7 +32,7 @@
   </model>
   <model>
     <name>LandingLightLeft</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/landinglight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
       <property>controls/lighting/landing-lights</property>
     </condition>
@@ -45,7 +45,7 @@
   </model>
   <model>
     <name>LandingLightRight</name>
-    <path>Aircraft/AT-29/Models/Exterior/Light/landinglight.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
       <property>controls/lighting/landing-lights</property>
     </condition>
