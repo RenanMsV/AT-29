@@ -411,12 +411,25 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     <mass-and-balance>
       <maximum-takeoff-mass-lbs type="double">11905</maximum-takeoff-mass-lbs>
     </mass-and-balance>
+    <vne>319</vne>
+    <max-gear-extension-speed>194</max-gear-extension-speed>
+    <max-positive-g>7</max-positive-g>
+    <max-negative-g>-3.5</max-negative-g>
+    <max-flap-extension-speed>
+      <flaps>0</flaps>
+      <speed>212</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps>0.49</flaps>
+      <speed>183</speed>
+    </max-flap-extension-speed>
   </limits>
   <nasal>
     <at29>
       <file>Aircraft/AT-29/Nasal/liveries.nas</file>
       <file>Aircraft/AT-29/Nasal/lightmanager.nas</file>
       <file>Aircraft/AT-29/Nasal/tyresmoke.nas</file>
+      <file>Aircraft/Generic/limits.nas</file>
     </at29>
   </nasal>
 </PropertyList>
