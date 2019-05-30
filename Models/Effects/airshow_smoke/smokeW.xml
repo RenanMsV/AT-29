@@ -17,7 +17,11 @@
       <and>
         <property>sim/multiplay/generic/int[6]</property>
         <not>
-          <property>sim/model/hide-yoke</property>
+          <or>
+            <property>/gear/gear[0]/wow</property>
+            <property>/gear/gear[1]/wow</property>
+            <property>/gear/gear[2]/wow</property>
+          </or>
         </not>
       </and>
     </condition>
@@ -48,7 +52,7 @@
     </shooter>
     <counter>
       <particles-per-sec>
-        <value>10</value>
+        <value>25</value>
         <spread>1</spread>
       </particles-per-sec>
     </counter>
