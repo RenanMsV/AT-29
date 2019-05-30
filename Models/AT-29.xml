@@ -829,7 +829,7 @@
   </model>
   <model>
     <path>Aircraft/Generic/Effects/rain-nose.xml</path>
-    <name>tyre-smoke-n</name>
+    <name>rain-splash-n</name>
     <offsets>
       <x-m>-4.669</x-m>
       <y-m>0</y-m>
@@ -838,7 +838,7 @@
   </model>
   <model>
     <path>Aircraft/Generic/Effects/rain-port.xml</path>
-    <name>tyre-smoke-p</name>
+    <name>rain-splash-p</name>
     <offsets>
       <x-m>0.459534</x-m>
       <y-m>-1.89327</y-m>
@@ -847,7 +847,7 @@
   </model>
   <model>
     <path>Aircraft/Generic/Effects/rain-stbd.xml</path>
-    <name>tyre-smoke-s</name>
+    <name>rain-splash-s</name>
     <offsets>
       <x-m>0.459534</x-m>
       <y-m>1.89327</y-m>
@@ -856,7 +856,7 @@
   </model>
   <model>
     <path>Aircraft/Generic/Effects/rain-tail.xml</path>
-    <name>tyre-smoke-t</name>
+    <name>rain-splash-t</name>
     <offsets>
       <x-m>6.05443</x-m>
       <y-m>0.010506</y-m>
