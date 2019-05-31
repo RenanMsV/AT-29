@@ -585,6 +585,7 @@
     <type>rotate</type>
     <object-name>CanopyGlass</object-name>
     <object-name>CanopyFrame</object-name>
+    <object-name>CanopyFrameInner</object-name>
     <object-name>grid</object-name>
     <property>canopy/position-norm</property>
     <factor>80</factor>
