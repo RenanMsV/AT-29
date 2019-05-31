@@ -199,7 +199,8 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
             <binding>
               <command>nasal</command>
               <script>
-                if (getprop("/engines/engine[0]/n2") > 0.01) gui.popupTip("Stop the engine and wait until the propeller stops before doing that", 5, nil);
+                if (getprop("/engines/engine[0]/n2") > 0.01)
+                  gui.popupTip("Stop the engine and wait until the propeller stops before doing that", 5, nil);
               </script>
             </binding>
           </item>
@@ -274,6 +275,80 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
   </engines>
   <input>
     <keyboard>
+      <key n="71">
+        <name>G</name>
+        <desc>Gear down</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (getprop("/velocities/airspeed-kt") >= 194)
+              gui.popupTip("Cant release gear above the maximum release speed", 5, nil);
+            else
+              controls.gearDown(1);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.gearDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="81">
+        <name>Shift-Q</name>
+        <desc>Fuel Cutoff Switch</desc>
+        <binding>
+          <condition>
+            <property>/sim/input/selected/engine[0]</property>
+          </condition>
+          <command>property-toggle</command>
+          <property>/controls/engines/engine[0]/cutoff</property>
+        </binding>
+      </key>
+      <key n="91">
+        <name>[</name>
+        <desc>Decrease flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (!getprop("/engines/engine[0]/running"))
+              gui.popupTip("Cant use flaps without engine running. Not enough electrical power", 5, nil);
+            else
+              controls.flapsDown(-1);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.flapsDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="93">
+        <name>]</name>
+        <desc>Increase flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var current_speed = getprop("/velocities/airspeed-kt");
+            var flap_pos = getprop("/controls/flight/flaps");
+            if (!getprop("/engines/engine[0]/running")){
+              gui.popupTip("Cant use flaps without engine running. Not enough electrical power", 5, nil);
+              return;
+            }
+            else if ( (flap_pos == 0 and current_speed >= 212) or (flap_pos == 0.49 and current_speed >= 183) )
+              gui.popupTip("Cant release flaps above the maximum release speed", 5, nil);
+            else
+              controls.flapsDown(1);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.flapsDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>
       <key n="99">
         <name>c</name>
         <desc>toggle canopy</desc>
@@ -281,6 +356,25 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <command>property-toggle</command>
           <property>fdm/jsbsim/systems/canopy/command</property>
         </binding>
+      </key>
+      <key n="103">
+        <name>g</name>
+        <desc>Gear Up</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (!getprop("/engines/engine[0]/running"))
+              gui.popupTip("Cant retract gear without engine running. Not enough electrical power", 5, nil);
+            else
+              controls.gearDown(-1);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.gearDown(0)</script>
+          </binding>
+        </mod-up>
       </key>
       <key n="109">
         <name>m</name>
@@ -321,19 +415,9 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <binding>
           <command>nasal</command>
           <script>
-            if (getprop("/sim/model/chocks-enabled")) gui.popupTip("Remove chocks and protections before starting the engine", 5, nil);
+            if (getprop("/sim/model/chocks-enabled"))
+              gui.popupTip("Remove chocks and protections before starting the engine", 5, nil);
           </script>
-        </binding>
-      </key>
-      <key n="81">
-        <name>Shift-Q</name>
-        <desc>Fuel Cutoff Switch</desc>
-        <binding>
-          <condition>
-            <property>/sim/input/selected/engine[0]</property>
-          </condition>
-          <command>property-toggle</command>
-          <property>/controls/engines/engine[0]/cutoff</property>
         </binding>
       </key>
     </keyboard>
@@ -411,12 +495,25 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     <mass-and-balance>
       <maximum-takeoff-mass-lbs type="double">11905</maximum-takeoff-mass-lbs>
     </mass-and-balance>
+    <vne>319</vne>
+    <max-gear-extension-speed>194</max-gear-extension-speed>
+    <max-positive-g>7</max-positive-g>
+    <max-negative-g>-3.5</max-negative-g>
+    <max-flap-extension-speed>
+      <flaps>0</flaps>
+      <speed>212</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps>0.49</flaps>
+      <speed>183</speed>
+    </max-flap-extension-speed>
   </limits>
   <nasal>
     <at29>
       <file>Aircraft/AT-29/Nasal/liveries.nas</file>
       <file>Aircraft/AT-29/Nasal/lightmanager.nas</file>
       <file>Aircraft/AT-29/Nasal/tyresmoke.nas</file>
+      <file>Aircraft/Generic/limits.nas</file>
     </at29>
   </nasal>
 </PropertyList>
