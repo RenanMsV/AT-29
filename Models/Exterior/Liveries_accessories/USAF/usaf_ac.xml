@@ -1,0 +1,18 @@
+<PropertyList>
+	<path>usaf_ac.ac</path>
+
+	<animation>
+    <type>material</type>
+    <object-name>RightUsafAc</object-name>
+    <object-name>LeftUsafAc</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>fuselage</texture-prop>
+    <texture>fuselage.png</texture>
+  </animation>
+
+	<effect>
+    <inherits-from>Aircraft/AT-29/Models/Effects/fuse_reflection_effect/fuse_bumpreflect</inherits-from>
+    <object-name>RightUsafAc</object-name>
+    <object-name>LeftUsafAc</object-name>
+  </effect>
+</PropertyList>
