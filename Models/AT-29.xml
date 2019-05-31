@@ -864,4 +864,24 @@
       <z-m>2.12846</z-m>
     </offsets>
   </model>
+  <!-- Adding USAF livery accessory model -->
+  <model>
+    <path>Aircraft/AT-29/Models/Exterior/Liveries_accessories/USAF/usaf_ac.xml</path>
+    <condition>
+      <equals>
+        <property>/sim/model/livery/file</property>
+        <value type="string">USAF</value>
+      </equals>
+    </condition>
+  </model>
+  <!-- Adding AAF livery accessory model -->
+  <model>
+    <path>Aircraft/AT-29/Models/Exterior/Liveries_accessories/USAF/usaf_ac.xml</path>
+    <condition>
+      <equals>
+        <property>/sim/model/livery/file</property>
+        <value type="string">AAF</value>
+      </equals>
+    </condition>
+  </model>
 </PropertyList>
