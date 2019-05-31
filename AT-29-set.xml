@@ -64,7 +64,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <internal archive="y">true</internal>
       <config>
         <pitch-offset-deg>-4.0</pitch-offset-deg>
-        <x-offset-m archive="y">0.0</x-offset-m> <!-- right/left -->
+        <x-offset-m archive="y">0.01</x-offset-m> <!-- right/left -->
         <y-offset-m archive="y">0.68</y-offset-m> <!-- up/down -->
         <z-offset-m archive="y">-0.40</z-offset-m> <!-- aft/fore -->
       </config>
