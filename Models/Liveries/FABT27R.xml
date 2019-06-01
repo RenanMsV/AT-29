@@ -12,6 +12,7 @@
       <pilot-patche type="string">../../Liveries/FABT27R/pilot_patche.png</pilot-patche>
       <pilot-vest type="string">../../Liveries/FABT27R/pilot_vest.png</pilot-vest>
       <armed type="bool">1</armed>
+      <fuselage-extra type="bool">0</fuselage-extra>
       <rendering>
         <AT-29>
             <refl_correction type="double">0.1</refl_correction>
