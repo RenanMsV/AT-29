@@ -107,8 +107,8 @@
     <type>rotate</type>
     <object-name>DE_LOD_100</object-name>
     <property>/controls/engines/engine[0]/cutoff</property>
-    <offset-deg>-45</offset-deg>
-    <factor>45</factor>
+    <offset-deg>-55</offset-deg>
+    <factor>55</factor>
     <center>
       <x-m>-0.59968</x-m>
       <y-m>0.29196</y-m>
