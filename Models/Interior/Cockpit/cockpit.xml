@@ -187,4 +187,35 @@
       <y>1</y>
     </axis>
   </animation>
+  <!-- Animate center stick -->
+  <animation>
+    <type>rotate</type>
+    <object-name>BW_LOD_100</object-name>
+    <property>/controls/flight/aileron</property>
+    <offset-deg>-12.5</offset-deg>
+    <factor>-25</factor>
+    <center>
+      <x-m>-0.95377</x-m>
+      <y-m>0.01844</y-m>
+      <z-m>-0.23498</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>BW_LOD_100</object-name>
+    <property>/controls/flight/elevator</property>
+    <offset-deg>0</offset-deg>
+    <factor>-25</factor>
+    <center>
+      <x-m>-0.95377</x-m>
+      <y-m>0.01844</y-m>
+      <z-m>-0.23498</z-m>
+    </center>
+    <axis>
+      <y>1</y>
+    </axis>
+  </animation>
 </PropertyList>
