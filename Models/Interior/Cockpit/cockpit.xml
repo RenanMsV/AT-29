@@ -218,4 +218,51 @@
       <y>1</y>
     </axis>
   </animation>
+  <!-- Animate gear lever -->
+  <animation>
+    <type>pick</type>
+    <object-name>BS_LOD_100</object-name>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          if (!getprop("/engines/engine[0]/running"))
+            gui.popupTip("Cant retract gear without engine running. Not enough electrical power", 5, nil);
+          else
+            controls.gearDown(-1);
+        </script>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          if (getprop("/velocities/airspeed-kt") >= 194)
+            gui.popupTip("Cant release gear above the maximum release speed", 5, nil);
+          else
+            controls.gearDown(1);
+        </script>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>BS_LOD_100</object-name>
+    <property>/controls/gear/gear-down</property>
+    <offset-deg>0</offset-deg>
+    <factor>45</factor>
+    <center>
+      <x-m>-1.13409</x-m>
+      <y-m>0.28597</y-m>
+      <z-m>0.11855</z-m>
+    </center>
+    <axis>
+      <y>.2</y>
+      <x>.01</x>
+    </axis>
+  </animation>
 </PropertyList>
