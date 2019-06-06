@@ -145,4 +145,46 @@
       <y>-1</y>
     </axis>
   </animation>
+  <!-- Animate throttle lever -->
+  <animation>
+    <type>pick</type>
+    <object-name>BP_LOD_100</object-name>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <step>.1</step>
+        <max>1</max>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <step>-.1</step>
+        <min>0</min>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>BP_LOD_100</object-name>
+    <object-name>BQ_LOD_100</object-name>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <offset-deg>24</offset-deg>
+    <factor>-25</factor>
+    <center>
+      <x-m>-0.78766</x-m>
+      <y-m>0.33057</y-m>
+      <z-m>0.08606</z-m>
+    </center>
+    <axis>
+      <z>1</z>
+      <y>1</y>
+    </axis>
+  </animation>
 </PropertyList>
