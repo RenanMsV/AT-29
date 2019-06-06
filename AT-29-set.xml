@@ -283,7 +283,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <script>
             if (getprop("/velocities/airspeed-kt") >= 194)
               gui.popupTip("Cant release gear above the maximum release speed", 5, nil);
-            else
+            else if (getprop('/sim/failure-manager/controls/gear/serviceable'))
               controls.gearDown(1);
           </script>
         </binding>
@@ -365,7 +365,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <script>
             if (!getprop("/engines/engine[0]/running"))
               gui.popupTip("Cant retract gear without engine running. Not enough electrical power", 5, nil);
-            else
+            else if (getprop('/sim/failure-manager/controls/gear/serviceable'))
               controls.gearDown(-1);
           </script>
         </binding>
