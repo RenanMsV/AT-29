@@ -1,7 +1,6 @@
 <PropertyList>
-	<path>cockpit.ac</path>
-
-	<!-- Suppress/Hide Mono Cockpit Models -->
+  <path>cockpit.ac</path>
+  <!-- Suppress/Hide Mono Cockpit Models -->
   <animation>
     <type>select</type>
     <object-name>AD_LOD_100_M</object-name>
@@ -18,5 +17,132 @@
         <property>/sim/model/mono-cockpit-enabled</property>
       </not>
     </condition>
+  </animation>
+  <!-- Animate starter swtich -->
+  <animation>
+    <type>pick</type>
+    <object-name>CZ_LOD_100</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <not>
+            <property>/sim/model/chocks-enabled</property>
+          </not>
+        </condition>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[0]/starter</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          if (getprop("/sim/model/chocks-enabled"))
+            gui.popupTip("Remove chocks and protections before starting the engine", 5, nil);
+        </script>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>CZ_LOD_100</object-name>
+    <property>/controls/engines/engine[0]/starter</property>
+    <factor>45</factor>
+    <center>
+      <x-m>-0.98869</x-m>
+      <y-m>0.29478</y-m>
+      <z-m>0.05375</z-m>
+    </center>
+    <axis>
+      <y>-1</y>
+    </axis>
+  </animation>
+  <!-- Animate fuel pump switch -->
+  <animation>
+    <type>pick</type>
+    <object-name>DA_LOD_100</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <property>/controls/engines/engine[0]/cutoff</property>
+        </condition>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[0]/fuel-pump</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>DA_LOD_100</object-name>
+    <property>/controls/engines/engine[0]/fuel-pump</property>
+    <factor>45</factor>
+    <center>
+      <x-m>-0.98869</x-m>
+      <y-m>0.33226</y-m>
+      <z-m>0.05375</z-m>
+    </center>
+    <axis>
+      <y>-1</y>
+    </axis>
+  </animation>
+  <!-- Animate fuel cuttof switch -->
+  <animation>
+    <type>pick</type>
+    <object-name>DE_LOD_100</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <property>/sim/input/selected/engine[0]</property>
+        </condition>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[0]/cutoff</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>DE_LOD_100</object-name>
+    <property>/controls/engines/engine[0]/cutoff</property>
+    <offset-deg>-45</offset-deg>
+    <factor>45</factor>
+    <center>
+      <x-m>-0.59968</x-m>
+      <y-m>0.29196</y-m>
+      <z-m>0.05266</z-m>
+    </center>
+    <axis>
+      <y>1</y>
+    </axis>
+  </animation>
+  <!-- Animate fuel cutoff switch cover -->
+  <animation>
+    <type>pick</type>
+    <object-name>DF_LOD_100</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/cockpit/fuel-cutoff-cover</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>DF_LOD_100</object-name>
+    <property>/controls/switches/cockpit/fuel-cutoff-cover</property>
+    <factor>45</factor>
+    <center>
+      <x-m>-0.62342</x-m>
+      <y-m>0.29394</y-m>
+      <z-m>0.05797</z-m>
+    </center>
+    <axis>
+      <y>-1</y>
+    </axis>
   </animation>
 </PropertyList>
