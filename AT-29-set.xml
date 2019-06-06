@@ -54,6 +54,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
     <model>
       <path archive="y">Aircraft/AT-29/Models/AT-29.xml</path>
+      <fallback-model-index>404</fallback-model-index> <!-- spitfire fallback model -->
       <livery>
         <file type="string" />
       </livery>
