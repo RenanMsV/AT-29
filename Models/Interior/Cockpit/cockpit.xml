@@ -282,4 +282,42 @@
       </binding>
     </action>
   </animation>
+  <!-- Animate gear status lights -->
+  <animation>
+    <type>select</type>
+    <object-name>gear_status_light_g</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </equals>
+        <property>/sim/failure-manager/controls/gear/serviceable</property>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>gear_status_light_r</object-name>
+    <condition>
+      <not>
+        <property>/sim/failure-manager/controls/gear/serviceable</property>
+      </not>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>gear_status_light</object-name>
+    <condition>
+      <and>
+        <not>
+          <equals>
+            <property>/gear/gear[0]/position-norm</property>
+            <value>1</value>
+          </equals>
+        </not>
+        <property>/sim/failure-manager/controls/gear/serviceable</property>
+      </and>
+    </condition>
+  </animation>
 </PropertyList>
