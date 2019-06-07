@@ -65,9 +65,6 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
-        <condition>
-          <property>/controls/engines/engine[0]/cutoff</property>
-        </condition>
         <command>property-toggle</command>
         <property>/controls/engines/engine[0]/fuel-pump</property>
       </binding>
