@@ -884,4 +884,37 @@
       <y>-1</y>
     </axis>
   </animation>
+  <!-- Animate panel lights knob -->
+  <animation>
+    <type>knob</type>
+    <object-name>BU_LOD_100</object-name>
+    <property>/controls/switches/cockpit/panel-light</property>
+    <factor>-270</factor>
+    <center>
+      <x-m>-0.974844</x-m>
+      <y-m>0.295446</y-m>
+      <z-m>0.057478</z-m>
+    </center>
+    <axis>
+      <y>0</y>
+      <x>0</x>
+      <z>1</z>
+    </axis>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/panel-light</property>
+        <step>-.1</step>
+        <min>0</min>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/panel-light</property>
+        <step>.1</step>
+        <max>1</max>
+      </binding>
+    </decrease>
+  </animation>
 </PropertyList>
