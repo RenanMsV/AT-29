@@ -193,7 +193,7 @@
     <object-name>BW_LOD_100</object-name>
     <property>/controls/flight/aileron</property>
     <offset-deg>-12.5</offset-deg>
-    <factor>-25</factor>
+    <factor>-11</factor>
     <center>
       <x-m>-0.95377</x-m>
       <y-m>0.01844</y-m>
@@ -208,7 +208,7 @@
     <object-name>BW_LOD_100</object-name>
     <property>/controls/flight/elevator</property>
     <offset-deg>0</offset-deg>
-    <factor>-25</factor>
+    <factor>-12</factor>
     <center>
       <x-m>-0.95377</x-m>
       <y-m>0.01844</y-m>
