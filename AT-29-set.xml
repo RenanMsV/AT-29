@@ -256,6 +256,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     <lighting>
       <strobe type="bool">true</strobe>
       <instruments-norm>0.3</instruments-norm>
+      <formation-lights type="bool">true</formation-lights>
     </lighting>
     <armament>
       <gunsight>
