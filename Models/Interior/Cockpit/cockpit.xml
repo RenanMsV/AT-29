@@ -320,4 +320,57 @@
       </and>
     </condition>
   </animation>
+  <!-- Animate flap lever -->
+  <animation>
+    <type>pick</type>
+    <object-name>BR_LOD_100</object-name>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          if (!getprop("/engines/engine[0]/running"))
+            gui.popupTip("Cant use flaps without engine running. Not enough electrical power", 5, nil);
+          else
+            controls.flapsDown(-1);
+        </script>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          var current_speed = getprop("/velocities/airspeed-kt");
+          var flap_pos = getprop("/controls/flight/flaps");
+          if (!getprop("/engines/engine[0]/running")){
+            gui.popupTip("Cant use flaps without engine running. Not enough electrical power", 5, nil);
+            return;
+          }
+          else if ( (flap_pos == 0 and current_speed >= 212) or (flap_pos == 0.49 and current_speed >= 183) )
+            gui.popupTip("Cant release flaps above the maximum release speed", 5, nil);
+          else
+            controls.flapsDown(1);
+        </script>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>BR_LOD_100</object-name>
+    <property>/controls/flight/flaps</property>
+    <offset-deg>0</offset-deg>
+    <factor>14</factor>
+    <center>
+      <x-m>-0.74009</x-m>
+      <y-m>0.26095</y-m>
+      <z-m>0.08167</z-m>
+    </center>
+    <axis>
+      <z>1</z>
+      <x>.2</x>
+    </axis>
+  </animation>
 </PropertyList>
