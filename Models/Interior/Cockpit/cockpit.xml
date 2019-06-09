@@ -1762,4 +1762,71 @@
       <x>1</x>
     </axis>
   </animation>
+  <!-- Animate hud pwr knob -->
+  <animation>
+    <type>knob</type>
+    <object-name>BY_LOD_100</object-name>
+    <property>/controls/switches/cockpit/hud-pwr</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-1.10479</x-m>
+      <y-m>-0.0539</y-m>
+      <z-m>0.5853</z-m>
+    </center>
+    <axis>
+      <y>1</y>
+    </axis>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/hud-pwr</property>
+        <step>-.1</step>
+        <min>0</min>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/hud-pwr</property>
+        <step>.1</step>
+        <max>1</max>
+      </binding>
+    </decrease>
+  </animation>
+  <!-- Animate hud brt knob -->
+  <animation>
+    <type>knob</type>
+    <object-name>BX_LOD_100</object-name>
+    <property>/controls/switches/cockpit/hud-brt</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-1.10479</x-m>
+      <y-m>-0.0539</y-m>
+      <z-m>0.5853</z-m>
+    </center>
+    <axis>
+      <y>1</y>
+    </axis>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/hud-brt</property>
+        <step>-.1</step>
+        <min>0</min>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/hud-brt</property>
+        <step>.1</step>
+        <max>1</max>
+      </binding>
+    </decrease>
+  </animation>
+  <!-- Animate ilsiffdvlap switch -->
+  <animation>
+    <type>pick</type>
+    <object-name>ilsiffdvlap</object-name>
+  </animation>
 </PropertyList>
