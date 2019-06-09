@@ -1728,4 +1728,38 @@
       <x>-1</x>
     </axis>
   </animation>
+  <!-- Animated left pedal -->
+  <animation>
+    <type>translate</type>
+    <object-name>BO_LOD_100</object-name>
+    <object-name>BN_LOD_100</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>.08</factor>
+    <offset-m>.3</offset-m>
+    <center>
+      <x-m>-1.57986</x-m>
+      <y-m>-0.15496</y-m>
+      <z-m>-0.03994</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+    </axis>
+  </animation>
+  <!-- Animated right pedal -->
+  <animation>
+    <type>translate</type>
+    <object-name>BM_LOD_100</object-name>
+    <object-name>BL_LOD_100</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>-.08</factor>
+    <offset-m>.075</offset-m>
+    <center>
+      <x-m>-1.57986</x-m>
+      <y-m>-0.15496</y-m>
+      <z-m>-0.03994</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+    </axis>
+  </animation>
 </PropertyList>
