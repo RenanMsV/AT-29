@@ -1854,8 +1854,21 @@
   <!-- Animate not-usable-for-now switch -->
   <animation>
     <type>pick</type>
+    <object-name>hud_switches</object-name>
     <object-name>left_buttons</object-name>
     <object-name>right_buttons</object-name>
-    <object-name>hud_switches</object-name>
+    <object-name>baro_switch</object-name>
+    <object-name>master_alert_warning</object-name>
+    <object-name>chdd_l_brt</object-name>
+    <object-name>chdd_l_dcl</object-name>
+    <object-name>chdd_r_dcl</object-name>
+    <object-name>chdd_r_brt</object-name>
+    <object-name>chdd_r_knob</object-name>
+    <object-name>chdd_l_knob</object-name>
+    <object-name>chdd_l_cnt</object-name>
+    <object-name>mixture</object-name>
+    <object-name>std_switch</object-name>
+    <object-name>chdd_r_cnt</object-name>
+    <action></action>
   </animation>
 </PropertyList>
