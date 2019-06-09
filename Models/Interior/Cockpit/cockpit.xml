@@ -1824,9 +1824,38 @@
       </binding>
     </decrease>
   </animation>
-  <!-- Animate ilsiffdvlap switch -->
+  <!-- Animate canopy switch -->
   <animation>
     <type>pick</type>
-    <object-name>ilsiffdvlap</object-name>
+    <object-name>AZ_LOD_100</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>fdm/jsbsim/systems/canopy/command</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>AZ_LOD_100</object-name>
+    <property>fdm/jsbsim/systems/canopy/command</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-0.66555</x-m>
+      <y-m>-0.35848</y-m>
+      <z-m>0.36606</z-m>
+    </center>
+    <axis>
+      <y>1</y>
+    </axis>
+  </animation>
+  <!-- Animate not-usable-for-now switch -->
+  <animation>
+    <type>pick</type>
+    <object-name>left_buttons</object-name>
+    <object-name>right_buttons</object-name>
+    <object-name>hud_switches</object-name>
   </animation>
 </PropertyList>
