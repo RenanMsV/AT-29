@@ -890,7 +890,7 @@
   <animation>
     <type>knob</type>
     <object-name>BU_LOD_100</object-name>
-    <property>/controls/switches/cockpit/panel-light</property>
+    <property>/controls/lighting/instruments-norm</property>
     <factor>-270</factor>
     <center>
       <x-m>-0.974844</x-m>
@@ -903,7 +903,13 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/panel-light</property>
+        <property>/controls/lighting/instruments-norm</property>
+        <step>-.1</step>
+        <min>0</min>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/lighting/panel-norm</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -911,7 +917,13 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/panel-light</property>
+        <property>/controls/lighting/instruments-norm</property>
+        <step>.1</step>
+        <max>1</max>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/lighting/panel-norm</property>
         <step>.1</step>
         <max>1</max>
       </binding>
