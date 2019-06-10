@@ -1876,4 +1876,23 @@
     <object-name>stick_button</object-name>
     <action></action>
   </animation>
+
+  <!-- Animated standby attitude indicator by DavePack -->
+  <model>
+    <path>Aircraft/AT-29/Models/Interior/Instruments/SAI/sai.xml</path>
+    <offsets>
+      <x-m>-1.15</x-m>
+      <y-m>-0.02986</y-m>
+      <z-m>0.26678</z-m>
+    </offsets>
+  </model>
+  <!-- Animated standby vertical speed indicator by DavePack -->
+  <model>
+    <path>Aircraft/AT-29/Models/Interior/Instruments/IVSI/IVSI.xml</path>
+    <offsets>
+      <x-m>-1.15</x-m>
+      <y-m>0.04973</y-m>
+      <z-m>0.26753</z-m>
+    </offsets>
+  </model>
 </PropertyList>
