@@ -254,9 +254,13 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <elevator-trim>-0.07</elevator-trim>
     </flight>
     <lighting>
-      <strobe type="bool">true</strobe>
-      <instruments-norm>0.3</instruments-norm>
-      <formation-lights type="bool">true</formation-lights>
+      <strobe type="bool">false</strobe>
+      <beacon type="bool">false</beacon>
+      <landing-lights type="bool">false</landing-lights>
+      <taxi-light type="bool">false</taxi-light>
+      <nav-lights type="bool">false</nav-lights>
+      <formation-lights type="bool">false</formation-lights>
+      <instruments-norm type="double">0</instruments-norm>
     </lighting>
     <armament>
       <gunsight>

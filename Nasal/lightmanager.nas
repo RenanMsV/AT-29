@@ -131,8 +131,6 @@ var light_manager = {
         setprop("/sim/rendering/als-secondary-lights/landing-light1-offset-deg", als_light_offset_1);
         setprop("/sim/rendering/als-secondary-lights/landing-light2-offset-deg", als_light_offset_2);
         setprop("/sim/rendering/als-secondary-lights/landing-light3-offset-deg", als_light_offset_3);
-
-        props.globals.getNode("/sim/rendering/als-secondary-lights/use-landing-light-ext", 1).setBoolValue(1);
         
         me.light_manager_timer = maketimer(0.0, func{me.update()});
         
