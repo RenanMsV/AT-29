@@ -188,6 +188,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BW_LOD_100</object-name>
+    <object-name>stick_button</object-name>
     <property>/controls/flight/aileron</property>
     <offset-deg>-12.5</offset-deg>
     <factor>-11</factor>
@@ -203,6 +204,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BW_LOD_100</object-name>
+    <object-name>stick_button</object-name>
     <property>/controls/flight/elevator</property>
     <offset-deg>0</offset-deg>
     <factor>-12</factor>
@@ -1871,6 +1873,7 @@
     <object-name>chdd_r_cnt</object-name>
     <object-name>BT_LOD_100</object-name>
     <object-name>eject_switch</object-name>
+    <object-name>stick_button</object-name>
     <action></action>
   </animation>
 </PropertyList>
