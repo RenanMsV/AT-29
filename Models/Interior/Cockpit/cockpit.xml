@@ -1907,4 +1907,13 @@
       <z-m>0.26753</z-m>
     </offsets>
   </model>
+  <!-- Animated standby clock indicator by DavePack -->
+  <model>
+    <path>Aircraft/AT-29/Models/Interior/Instruments/CLOCK/clock.xml</path>
+    <offsets>
+      <x-m>-1.15701</x-m>
+      <y-m>0.14164</y-m>
+      <z-m>0.50889</z-m>
+    </offsets>
+  </model>
 </PropertyList>
