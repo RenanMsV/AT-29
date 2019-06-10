@@ -1869,6 +1869,8 @@
     <object-name>mixture</object-name>
     <object-name>std_switch</object-name>
     <object-name>chdd_r_cnt</object-name>
+    <object-name>BT_LOD_100</object-name>
+    <object-name>eject_switch</object-name>
     <action></action>
   </animation>
 </PropertyList>
