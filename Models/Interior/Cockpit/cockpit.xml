@@ -1865,6 +1865,71 @@
       <y>1</y>
     </axis>
   </animation>
+  <!-- Animate speedbrake warning -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>speed_brake_warning</object-name>
+    <property>/controls/flight/speedbrake</property>
+    <bias>0.0001</bias>
+    <factor>.043</factor>
+    <step>1</step>
+    <axis>
+      <x>1</x>
+    </axis>
+  </animation>
+  <!-- Animate master alert warning -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>master_alert_warning</object-name>
+    <property>/controls/switches/cockpit/master-alert</property>
+    <bias>0.0001</bias>
+    <factor>.041</factor>
+    <step>1</step>
+    <axis>
+      <x>.02</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>master_alert_warning</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <condition>
+          <property>/controls/switches/cockpit/master-alert</property>
+        </condition>
+        <command>property-toggle</command>
+        <property>/controls/switches/cockpit/master-alert</property>
+      </binding>
+    </action>
+  </animation>
+  <!-- Animate fuel low warning -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>fuel_low_warning</object-name>
+    <property>/controls/switches/cockpit/fuel-low</property>
+    <bias>0.0001</bias>
+    <factor>.041</factor>
+    <step>1</step>
+    <axis>
+      <x>.02</x>
+      <y>1</y>
+    </axis>
+  </animation>
+  <!-- Animate engine fire warning -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>engine_fire_warning</object-name>
+    <property>/controls/switches/cockpit/engine-fire</property>
+    <bias>0.0001</bias>
+    <factor>.041</factor>
+    <step>1</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
   <!-- Animate not-usable-for-now switch -->
   <animation>
     <type>pick</type>
@@ -1872,7 +1937,6 @@
     <object-name>left_buttons</object-name>
     <object-name>right_buttons</object-name>
     <object-name>baro_switch</object-name>
-    <object-name>master_alert_warning</object-name>
     <object-name>chdd_l_brt</object-name>
     <object-name>chdd_l_dcl</object-name>
     <object-name>chdd_r_dcl</object-name>
