@@ -312,6 +312,7 @@
  <system file="speedbrakes"/>
  <system file="canopy"/>
  <system file="particles"/>
+ <system file="fuel"/>
 
  <flight_control name="FCS: tucano"/>
 
