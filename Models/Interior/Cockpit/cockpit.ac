@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "mat00" rgb 0.5843 0.5843 0.5843  amb 1 1 1  emis 0.5843 0.5843 0.5843  spec 0.0471 0.0471 0.0471  shi 12  trans 0
+MATERIAL "mat00" rgb 0.5843 0.5843 0.5843  amb 1 1 1  emis 0 0 0  spec 0.0471 0.0471 0.0471  shi 12  trans 0
 MATERIAL "mat10" rgb 0.7373 0.7373 0.7373  amb 1 1 1  emis 0.7373 0.7373 0.7373  spec 0.3686 0.3686 0.3686  shi 12  trans 0
 MATERIAL "green_light" rgb 0.00392157 0.996078 0.227451  amb 0 1 0.501961  emis 0 1 0.501961  spec 0 1 0.501961  shi 128  trans 0
 MATERIAL "red_light" rgb 1 0 0  amb 1 0 0  emis 1 0 0  spec 1 0 0  shi 128  trans 0
