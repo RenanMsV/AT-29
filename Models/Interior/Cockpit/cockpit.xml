@@ -1980,4 +1980,13 @@
       <z-m>0.50889</z-m>
     </offsets>
   </model>
+  <!-- Animated standby electronic flight instrument -->
+  <model>
+    <path>Aircraft/AT-29/Models/Interior/Instruments/SEFI/sefi.xml</path>
+    <offsets>
+      <x-m>-1.15736</x-m>
+      <y-m>0.00913</y-m>
+      <z-m>0.37074</z-m>
+    </offsets>
+  </model>
 </PropertyList>
