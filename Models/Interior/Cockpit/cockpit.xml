@@ -1877,6 +1877,19 @@
       <x>1</x>
     </axis>
   </animation>
+  <animation>
+    <type>material</type>
+    <object-name>speed_brake_warning</object-name>
+    <condition>
+      <property>/controls/flight/speedbrake</property>
+    </condition>
+    <emission>
+      <red>0.5843</red>
+      <green>0.5843</green>
+      <blue>0.5843</blue>
+      <factor-prop>/sim/fdm-initialized</factor-prop>
+    </emission>
+  </animation>
   <!-- Animate master alert warning -->
   <animation>
     <type>textranslate</type>
@@ -1904,6 +1917,19 @@
       </binding>
     </action>
   </animation>
+  <animation>
+    <type>material</type>
+    <object-name>master_alert_warning</object-name>
+    <condition>
+      <property>/controls/switches/cockpit/master-alert</property>
+    </condition>
+    <emission>
+      <red>0.5843</red>
+      <green>0.5843</green>
+      <blue>0.5843</blue>
+      <factor-prop>/sim/fdm-initialized</factor-prop>
+    </emission>
+  </animation>
   <!-- Animate fuel low warning -->
   <animation>
     <type>textranslate</type>
@@ -1917,6 +1943,19 @@
       <y>1</y>
     </axis>
   </animation>
+  <animation>
+    <type>material</type>
+    <object-name>fuel_low_warning</object-name>
+    <condition>
+      <property>/controls/switches/cockpit/fuel-low</property>
+    </condition>
+    <emission>
+      <red>0.5843</red>
+      <green>0.5843</green>
+      <blue>0.5843</blue>
+      <factor-prop>/sim/fdm-initialized</factor-prop>
+    </emission>
+  </animation>
   <!-- Animate engine fire warning -->
   <animation>
     <type>textranslate</type>
@@ -1929,6 +1968,19 @@
       <x>0</x>
       <y>1</y>
     </axis>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>engine_fire_warning</object-name>
+    <condition>
+      <property>/controls/switches/cockpit/engine-fire</property>
+    </condition>
+    <emission>
+      <red>0.5843</red>
+      <green>0.5843</green>
+      <blue>0.5843</blue>
+      <factor-prop>/sim/fdm-initialized</factor-prop>
+    </emission>
   </animation>
   <!-- Animate not-usable-for-now switch -->
   <animation>
