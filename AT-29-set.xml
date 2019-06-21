@@ -255,8 +255,13 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <elevator-trim>-0.07</elevator-trim>
     </flight>
     <lighting>
-      <strobe type="bool">true</strobe>
-      <instruments-norm>0.3</instruments-norm>
+      <strobe type="bool">false</strobe>
+      <beacon type="bool">false</beacon>
+      <landing-lights type="bool">false</landing-lights>
+      <taxi-light type="bool">false</taxi-light>
+      <nav-lights type="bool">false</nav-lights>
+      <formation-lights type="bool">false</formation-lights>
+      <instruments-norm type="double">0</instruments-norm>
     </lighting>
     <armament>
       <gunsight>
@@ -284,7 +289,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <script>
             if (getprop("/velocities/airspeed-kt") >= 194)
               gui.popupTip("Cant release gear above the maximum release speed", 5, nil);
-            else
+            else if (getprop('/sim/failure-manager/controls/gear/serviceable'))
               controls.gearDown(1);
           </script>
         </binding>
@@ -366,7 +371,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <script>
             if (!getprop("/engines/engine[0]/running"))
               gui.popupTip("Cant retract gear without engine running. Not enough electrical power", 5, nil);
-            else
+            else if (getprop('/sim/failure-manager/controls/gear/serviceable'))
               controls.gearDown(-1);
           </script>
         </binding>

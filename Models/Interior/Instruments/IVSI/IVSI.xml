@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<!-- IVSI, by Dave Culp -->
+
+<PropertyList>
+
+ <path>IVSI.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>face</object-name>
+  <object-name>needle</object-name>
+   <emission>
+     <red>0.6</red>
+     <green>0.3</green>
+     <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>velocities/vertical-speed-fps</property>
+  <min>-100.0</min>
+  <max>100.0</max>
+  <interpolation>
+     <entry><ind>-100.000</ind><dep>-164.0</dep></entry>
+     <entry><ind> -83.333</ind><dep>-144.0</dep></entry>
+     <entry><ind> -66.667</ind><dep>-124.0</dep></entry>
+     <entry><ind> -50.000</ind><dep>-104.0</dep></entry>
+     <entry><ind> -33.333</ind><dep>-79.0</dep></entry>
+     <entry><ind> -16.667</ind><dep>-46.5</dep></entry>
+     <entry><ind>   0.000</ind><dep>  0.0</dep></entry>
+     <entry><ind>  16.667</ind><dep> 46.5</dep></entry>
+     <entry><ind>  33.333</ind><dep> 79.0</dep></entry>
+     <entry><ind>  50.000</ind><dep>104.0</dep></entry>
+     <entry><ind>  66.667</ind><dep>124.0</dep></entry>
+     <entry><ind>  83.333</ind><dep>144.0</dep></entry>
+     <entry><ind> 100.000</ind><dep>164.0</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>-0.019</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation> 
+
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

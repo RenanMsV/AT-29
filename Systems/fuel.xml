@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<system name="particles">
+
+  <channel name="fuel low channel">
+
+    <switch name="fuel low test">
+      <default value="0"/>
+      <test value="1">
+        /consumables/fuel/total-fuel-norm lt 0.1
+      </test>
+      <output>/controls/switches/cockpit/fuel-low</output>
+    </switch>
+  
+  </channel>
+
+</system>

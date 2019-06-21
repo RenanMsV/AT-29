@@ -18,6 +18,10 @@
   <sound>
     <path>Aircraft/AT-29/Sounds/tucano-mp-sound.xml</path>
   </sound>
+  <!-- Adding animated cockpit model -->
+  <model>
+    <path>Aircraft/AT-29/Models/Interior/Cockpit/cockpit.xml</path>
+  </model>
   <!-- Here add the 3d/2d instruments -->
   <model>
     <path>Aircraft/AT-29/Models/Interior/Instruments/CHDD1/CHDD.xml</path>
@@ -597,24 +601,6 @@
       <y2-m>0.46</y2-m>
       <z2-m>0.37</z2-m>
     </axis>
-  </animation>
-  <!-- Suppress/Hide Mono Cockpit Models -->
-  <animation>
-    <type>select</type>
-    <object-name>AD_LOD_100_M</object-name>
-    <object-name>MonoBox</object-name>
-    <condition>
-      <property>/sim/model/mono-cockpit-enabled</property>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>AD_LOD_100</object-name>
-    <condition>
-      <not>
-        <property>/sim/model/mono-cockpit-enabled</property>
-      </not>
-    </condition>
   </animation>
   <!-- Creating group fuselage to use in animations -->
   <animation>
