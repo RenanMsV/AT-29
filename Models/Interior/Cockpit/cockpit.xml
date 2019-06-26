@@ -1417,31 +1417,6 @@
       <y>-1</y>
     </axis>
   </animation>
-  <!-- Animate baro knob -->
-  <animation>
-    <type>knob</type>
-    <object-name>BZ_LOD_100</object-name>
-    <property>/controls/switches/cockpit/baro</property>
-    <factor>-1</factor>
-    <center>
-      <x-m>-1.14191</x-m>
-      <y-m>0.04513</y-m>
-      <z-m>0.32781</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-    </axis>
-    <action>
-      <binding>
-        <command>property-adjust</command>
-        <property>/controls/switches/cockpit/baro</property>
-        <step>1</step>
-        <min>0</min>
-        <max>359</max>
-        <wrap>1</wrap>
-      </binding>
-    </action>
-  </animation>
   <!-- Animate gage knob -->
   <animation>
     <type>knob</type>
@@ -1988,7 +1963,6 @@
     <object-name>hud_switches</object-name>
     <object-name>left_buttons</object-name>
     <object-name>right_buttons</object-name>
-    <object-name>baro_switch</object-name>
     <object-name>chdd_l_brt</object-name>
     <object-name>chdd_l_dcl</object-name>
     <object-name>chdd_r_dcl</object-name>
@@ -1997,7 +1971,6 @@
     <object-name>chdd_l_knob</object-name>
     <object-name>chdd_l_cnt</object-name>
     <object-name>mixture</object-name>
-    <object-name>std_switch</object-name>
     <object-name>chdd_r_cnt</object-name>
     <object-name>BT_LOD_100</object-name>
     <object-name>eject_switch</object-name>
@@ -2036,9 +2009,76 @@
   <model>
     <path>Aircraft/AT-29/Models/Interior/Instruments/SEFI/sefi.xml</path>
     <offsets>
-      <x-m>-1.15736</x-m>
-      <y-m>0.00913</y-m>
-      <z-m>0.37074</z-m>
+      <x-m>-1.15707</x-m>
+      <y-m>0.01008</y-m>
+      <z-m>0.37243</z-m>
     </offsets>
   </model>
+  <animation>
+    <type>pick</type>
+    <object-name>baro_switch</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/sefi-inhg-mode</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>std_switch</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <value type="double">1013.33</value>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>knob</type>
+    <object-name>BZ_LOD_100</object-name>
+    <property>/controls/switches/cockpit/baro</property>
+    <factor>-1</factor>
+    <center>
+      <x-m>-1.14191</x-m>
+      <y-m>0.04513</y-m>
+      <z-m>0.32781</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+    </axis>
+    <increase>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/baro</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>359</max>
+        <wrap>1</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <step type="double">-1</step>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/switches/cockpit/baro</property>
+        <step>1</step>
+        <min>0</min>
+        <max>359</max>
+        <wrap>1</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-hpa</property>
+        <step type="double">1</step>
+      </binding>
+    </decrease>
+  </animation>
 </PropertyList>
