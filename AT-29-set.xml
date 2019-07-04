@@ -60,6 +60,12 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       </livery>
       <mono-cockpit-enabled type="bool">false</mono-cockpit-enabled>
       <chocks-enabled type="bool">true</chocks-enabled>
+      <pushback>
+        <kp type="double">10</kp>
+        <ki type="double">2.5</ki>
+        <kd type="double">0</kd>
+        <position-norm type="double">0</position-norm>
+      </pushback>
     </model>
     <view n="0">
       <internal archive="y">true</internal>
@@ -222,6 +228,14 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
                 var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/AT-29/Dialogs/lights-dlg.xml");
                 lights.open();
               </script>
+            </binding>
+          </item>
+          <item>
+            <label>Pushback</label>
+            <name>pushback</name>
+            <binding>
+              <command>dialog-show</command>
+              <dialog-name>pushback</dialog-name>
             </binding>
           </item>
         </menu>

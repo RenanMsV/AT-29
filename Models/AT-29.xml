@@ -878,4 +878,14 @@
       <irradiance-map-strength type="float">.5</irradiance-map-strength>
     </parameters>
   </effect>
+  <!-- Pushback truck -->
+  <model>
+    <name>Pushback</name>
+    <path>Models/Airport/Pushback/Forklift.xml</path>
+    <offsets>
+      <x-m>-3.1</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.8</z-m>
+    </offsets>
+  </model>
 </PropertyList>
