@@ -5,13 +5,21 @@
 <sim>
   <model>
     <livery>
-      <name type="string">FAB</name>
-      <fuselage>Liveries/FAB/FAB/fuselage.png</fuselage>
-      <tail>Liveries/FAB/FAB/htail.png</tail>
-      <misc>Liveries/FAB/FAB/misc.png</misc>
-      <wings>Liveries/FAB/FAB/wings.png</wings>
-      <conopy>Liveries/FAB/FAB/conopy.png</conopy>
-      <armed>1</armed>
+      <name type="string">FAB - Forca Aerea Brasileira</name>
+      <fuselage type="string">Liveries/FAB/fuselage.png</fuselage>
+      <!-- For the pilot objets ../../ is required! -->
+      <pilot-helmet type="string">../../Liveries/FAB/pilot_helmet.png</pilot-helmet>
+      <pilot-patche type="string">../../Liveries/FAB/pilot_patche.png</pilot-patche>
+      <pilot-vest type="string">../../Liveries/FAB/pilot_vest.png</pilot-vest>
+      <armed type="bool">1</armed>
+      <fuselage-extra type="bool">0</fuselage-extra>
+      <rendering>
+        <AT-29>
+            <refl_correction type="double">0.1</refl_correction>
+            <refl-type type="int">2</refl-type>
+            <fresnel-factor type="double">0</fresnel-factor>
+        </AT-29>
+      </rendering>
     </livery>
   </model>
 </sim>

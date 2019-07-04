@@ -1,475 +1,539 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 ************************************************************************
 Super Tucano A-29B config file
-David Culp,  davidculp@cox.net
-License: Creative Commons "CC-BY-NC-SA"
+David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
 ************************************************************************
 -->
-
 <PropertyList>
-
- <sim>
-
-  <description>Embraer Super Tucano A-29B, FAB</description>
-  <author>David Culp, Alpha Simulations, RenanMsV</author>
-  <status>alpha</status>
-
-  <flight-model>jsb</flight-model>
-  <aero>super-tucano-FDM</aero>
-
-  <startup>
-   <splash-texture>Aircraft/AT-29/Splashs/splash.png</splash-texture>
-   <splash-texture>Aircraft/AT-29/Splashs/splash01.png</splash-texture>
-   <splash-texture>Aircraft/AT-29/Splashs/splash02.png</splash-texture>
-   <splash-texture>Aircraft/AT-29/Splashs/splash03.png</splash-texture>
- </startup>
- <previews>
-  <preview>
-    <type>exterior</type>
-    <splash type="bool">true</splash>
-    <path>Splashs/splash.png</path>
-  </preview>
-  <preview>
-    <type>exterior</type>
-    <splash type="bool">true</splash>
-    <path>Splashs/splash01.png</path>
-  </preview>
-  <preview>
-    <type>exterior</type>
-    <splash type="bool">true</splash>
-    <path>Splashs/splash02.png</path>
-  </preview>
-  <preview>
-    <type>exterior</type>
-    <splash type="bool">true</splash>
-    <path>Splashs/splash03.png</path>
-  </preview>
-</previews>
-
-<systems>
- <electrical>
- </electrical>
-</systems> 
-
-<sound>
- <path>Aircraft/AT-29/Sounds/tucano-sound.xml</path>
-</sound>
-
-<submodels> 
-  <serviceable type="bool">true</serviceable>
-  <path>Aircraft/AT-29/submodels.xml</path>
-</submodels>
-
-<virtual-cockpit archive="y">true</virtual-cockpit>
-<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
-
-<model>
- <path archive="y">Aircraft/AT-29/Models/AT-29.xml</path>
- <livery>
-  <file type="string"/>
-</livery>
-</model>
-
-<view n="0">
- <internal archive="y">true</internal>
- <config>
-  <pitch-offset-deg>-4.0</pitch-offset-deg>
-  <x-offset-m archive="y">0.0</x-offset-m><!-- right/left -->
-  <y-offset-m archive="y">0.68</y-offset-m><!-- up/down -->
-  <z-offset-m archive="y">-0.1</z-offset-m><!-- aft/fore -->
-</config>
-</view>
-
-<chase-distance-m type="double" archive="y">-15.0</chase-distance-m>
-
-<flaps>
- <setting>0.00</setting>
- <setting>0.49</setting> 
- <setting>1.00</setting> 
-</flaps>
-
-<help>
- <key>
-  <name>Shift-Q</name>
-  <desc>fuel cutoff switch or lever</desc>
-</key>
-<key>
-  <name>m (lower case m) </name>
-  <desc>Nose wheel steering</desc>
-</key>
-<key>
-  <name>c (lower case c) </name>
-  <desc>Open/Close canopy</desc>
-</key>
-<key>
-  <name>s (lower case s)</name>
-  <desc>Toggle starter valves</desc>
-</key>
-<key>
-  <name>o (lower case o)</name>
-  <desc>Toggle smoke</desc>
-</key>
-   <!--key>
-    <name>e (lower case e)</name>
-    <desc>Release selected stores</desc>
-   </key>
-   <key>
-    <name>1 </name>
-    <desc>Select Stations 1 and 5, deselect others</desc>
-   </key>
-   <key>
-    <name>2 </name>
-    <desc>Select Stations 2 and 4, deselect others</desc>
-   </key>
-   <key>
-    <name>3 </name>
-    <desc>Select Station 3, deselect others</desc>
-   </key>
-   <key>
-    <name>Shift 1 </name>
-    <desc>Select Station 1</desc>
-   </key>
-   <key>
-    <name>Shift 2 </name>
-    <desc>Select Station 2</desc>
-   </key>
-   <key>
-    <name>Shift 3 </name>
-    <desc>Select Station 3</desc>
-   </key>
-   <key>
-    <name>0 </name>
-    <desc>Deselect All Stations</desc>
-  </key-->
-</help>
-
-<rendering>
-  <redout>
-    <parameters>
-      <blackout-onset-g>4.0</blackout-onset-g>
-      <blackout-complete-g>8.0</blackout-complete-g>
-    </parameters> 
-  </redout>
-</rendering>
-
-<multiplay>
-  <generic>
-   <int n="0" type="int">0</int>
-   <int n="1" type="int">0</int>
-   <int n="2" type="int">0</int>
-   <int n="3" type="int">0</int>
-   <int n="4" type="int">0</int>
-   <int n="5" type="int">0</int>
-   <int n="6" type="int">0</int>
-   <int n="7" type="int">0</int>
-   <int n="8" type="int">0</int>
-   <int n="9" type="int">0</int>
-   <int n="10" type="int">0</int>
-   <int n="11" type="int">0</int>
-   <int n="12" type="int">0</int>
-   <float n="0" type="float" alias="/engines/engine[0]/n2"/>
-   <float n="1" type="float" alias="/engines/engine[0]/starter"/>
- </generic>
-</multiplay>
-
-<menubar>
-  <default>
-    <menu n="100">
-      <label>AT-29 Super Tucano</label>
-      <enabled type="bool">true</enabled>
-      <item>
-        <label>Select Livery</label>
+  <sim>
+    <description>Embraer Super Tucano A-29A/B, FAB</description>
+    <author>David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito</author>
+    <status>alpha</status>
+    <flight-model>jsb</flight-model>
+    <aero>super-tucano-FDM</aero>
+    <startup>
+      <splash-texture>Aircraft/AT-29/Splashs/splash.jpg</splash-texture>
+      <splash-texture>Aircraft/AT-29/Splashs/splash01.jpg</splash-texture>
+      <splash-texture>Aircraft/AT-29/Splashs/splash02.jpg</splash-texture>
+      <splash-texture>Aircraft/AT-29/Splashs/splash03.jpg</splash-texture>
+    </startup>
+    <previews>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash.jpg</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash01.jpg</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash02.jpg</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Splashs/splash03.jpg</path>
+      </preview>
+    </previews>
+    <systems>
+      <electrical/>
+    </systems>
+    <sound>
+      <path>Aircraft/AT-29/Sounds/tucano-sound.xml</path>
+    </sound>
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/AT-29/submodels.xml</path>
+    </submodels>
+    <virtual-cockpit archive="y">true</virtual-cockpit>
+    <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+    <model>
+      <path archive="y">Aircraft/AT-29/Models/AT-29.xml</path>
+      <fallback-model-index>404</fallback-model-index> <!-- spitfire fallback model -->
+      <livery>
+        <file type="string" />
+      </livery>
+      <mono-cockpit-enabled type="bool">false</mono-cockpit-enabled>
+      <chocks-enabled type="bool">true</chocks-enabled>
+      <pushback>
+        <kp type="double">10</kp>
+        <ki type="double">2.5</ki>
+        <kd type="double">0</kd>
+        <position-norm type="double">0</position-norm>
+      </pushback>
+    </model>
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+        <pitch-offset-deg>-4.0</pitch-offset-deg>
+        <x-offset-m archive="y">0.01</x-offset-m> <!-- right/left -->
+        <y-offset-m archive="y">0.68</y-offset-m> <!-- up/down -->
+        <z-offset-m archive="y">-0.40</z-offset-m> <!-- aft/fore -->
+      </config>
+    </view>
+    <view n="250">
+      <name>Pilot Back View</name>
+      <internal archive="y">false</internal>
+      <enabled archive="y">true</enabled>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <pitch-offset-deg>-9.6</pitch-offset-deg>
+        <heading-offset-deg>30.5</heading-offset-deg>
+        <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+        <x-offset-m archive="y">0.345</x-offset-m> <!-- right/left -->
+        <y-offset-m archive="y">0.724</y-offset-m> <!-- up/down -->
+        <z-offset-m archive="y">-0.205</z-offset-m> <!-- aft/fore -->
+      </config>
+    </view>
+    <view n="251">
+      <name>Pilots View</name>
+      <internal archive="y">false</internal>
+      <enabled archive="y">true</enabled>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <pitch-offset-deg>2.14</pitch-offset-deg>
+        <heading-offset-deg>155.468</heading-offset-deg>
+        <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+        <x-offset-m archive="y">0.345</x-offset-m> <!-- right/left -->
+        <y-offset-m archive="y">0.662</y-offset-m> <!-- up/down -->
+        <z-offset-m archive="y">-0.84</z-offset-m> <!-- aft/fore -->
+      </config>
+    </view>
+    <chase-distance-m type="double" archive="y">-15.0</chase-distance-m>
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.49</setting>
+      <setting>1.00</setting>
+    </flaps>
+    <help>
+      <key>
+        <name>Shift-Q</name>
+        <desc>fuel cutoff switch or lever</desc>
+      </key>
+      <key>
+        <name>m (lower case m) </name>
+        <desc>Nose wheel steering</desc>
+      </key>
+      <key>
+        <name>c (lower case c) </name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <key>
+        <name>s (lower case s)</name>
+        <desc>Toggle starter valves</desc>
+      </key>
+      <key>
+        <name>o (lower case o)</name>
+        <desc>Toggle smoke</desc>
+      </key>
+    </help>
+    <rendering>
+      <redout>
+        <enabled type="bool" userarchive="y">true</enabled>
+        <parameters>
+          <!-- Blackscreen by G-Force limits -3.5 to 7, but unused -->
+          <blackout-onset-g>6.5</blackout-onset-g>
+          <blackout-complete-g>7</blackout-complete-g>
+          <redout-onset-g>-3</redout-onset-g>
+          <redout-complete-g>-3.5</redout-complete-g>
+        </parameters>
+      </redout>
+      <AT-29>
+        <glass-reflect>
+          <amb-correction>1</amb-correction>
+          <correction>1</correction>
+          <dynamic>1</dynamic>
+          <fresnel>0</fresnel>
+          <noise>0</noise>
+          <rainbow>-.5</rainbow>
+        </glass-reflect>
+      </AT-29>
+      <shaders>
+        <model userarchive="y" type="int">1</model> <!-- Set model shader to ON -->
+      </shaders>
+    </rendering>
+    <multiplay>
+      <generic>
+        <int n="0" type="int">0</int>
+        <int n="1" type="int">0</int>
+        <int n="2" type="int">0</int>
+        <int n="3" type="int">0</int>
+        <int n="4" type="int">0</int> <!-- Vortex particles.xml -->
+        <int n="5" type="int">0</int> <!-- Contrail particles.xml -->
+        <int n="6" type="int" alias="/controls/smoke">0</int> <!-- Airshow smoke smokeW.xml -->
+        <int n="7" type="int">0</int>
+        <int n="8" type="int">0</int>
+        <int n="9" type="int">0</int>
+        <int n="10" type="int">0</int>
+        <int n="11" type="int">0</int>
+        <int n="12" type="int">0</int>
+        <float n="0" type="float" alias="/engines/engine[0]/n2" /> <!-- beacon light systems/beacon.xml -->
+        <float n="1" type="float" alias="/engines/engine[0]/starter" /> <!-- steer-cmd-norm NWS.xml -->
+        <float n="2" type="float" alias="/gear/gear[0]/steering-norm" /> <!-- steering AT-29.xml -->
+      </generic>
+    </multiplay>
+    <menubar>
+      <default>
+        <menu n="100">
+          <label>AT-29 Super Tucano</label>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.open();</script>
+            </binding>
+          </item>
+          <item>
+            <label>Toggle Chocks</label>
+            <binding>
+              <condition>
+                <less-than>
+                  <property>/engines/engine[0]/n2</property>
+                  <value type="double">0.01</value>
+                </less-than>
+                </condition>
+              <command>property-toggle</command>
+              <property>/sim/model/chocks-enabled</property>
+            </binding>
+            <binding>
+              <command>nasal</command>
+              <script>
+                if (getprop("/engines/engine[0]/n2") > 0.01)
+                  gui.popupTip("Stop the engine and wait until the propeller stops before doing that", 5, nil);
+              </script>
+            </binding>
+          </item>
+          <item>
+            <label>Toggle Mono Cockpit</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/model/mono-cockpit-enabled</property>
+            </binding>
+          </item>
+          <item>
+            <name>lights</name>
+            <label>Lights</label>
+            <enabled type="bool">true</enabled>
+            <binding>
+              <command>nasal</command>
+              <script>
+                var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/AT-29/Dialogs/lights-dlg.xml");
+                lights.open();
+              </script>
+            </binding>
+          </item>
+          <item>
+            <label>Pushback</label>
+            <name>pushback</name>
+            <binding>
+              <command>dialog-show</command>
+              <dialog-name>pushback</dialog-name>
+            </binding>
+          </item>
+        </menu>
+      </default>
+    </menubar>
+    <tags>
+      <tag>interceptor</tag>
+      <tag>reconnaissance</tag>
+      <tag>trainer</tag>
+      <tag>aerobatic</tag>
+      <tag>embraer</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>retractable-gear</tag>
+      <tag>glass-cockpit</tag>
+      <tag>ifr</tag>
+      <tag>pressurised</tag>
+      <tag>rembrandt</tag>
+      <tag>turboprop</tag>
+      <tag>1-engine</tag>
+    </tags>
+    <rating>
+      <FDM type="int">0</FDM>
+      <systems type="int">1</systems>
+      <cockpit type="int">2</cockpit>
+      <model type="int">4</model>
+    </rating>
+  </sim>
+  <controls>
+    <flight>
+      <elevator-trim>-0.07</elevator-trim>
+    </flight>
+    <lighting>
+      <strobe type="bool">false</strobe>
+      <beacon type="bool">false</beacon>
+      <landing-lights type="bool">false</landing-lights>
+      <taxi-light type="bool">false</taxi-light>
+      <nav-lights type="bool">false</nav-lights>
+      <formation-lights type="bool">false</formation-lights>
+      <instruments-norm type="double">0</instruments-norm>
+    </lighting>
+    <armament>
+      <gunsight>
+        <power-on type="bool">true</power-on>
+        <intensity type="double">1.0</intensity>
+      </gunsight>
+    </armament>
+    <gear>
+      <brake-parking type="double">1</brake-parking>
+    </gear>
+    <smoke type="int" />
+  </controls>
+  <engines>
+    <engine n="0">
+      <running>false</running>
+    </engine>
+  </engines>
+  <input>
+    <keyboard>
+      <key n="71">
+        <name>G</name>
+        <desc>Gear down</desc>
         <binding>
           <command>nasal</command>
-          <script>aircraft.livery.dialog.open();</script>
+          <script>
+            if (getprop("/velocities/airspeed-kt") >= 194)
+              gui.popupTip("Cant release gear above the maximum release speed", 5, nil);
+            else if (getprop('/sim/failure-manager/controls/gear/serviceable'))
+              controls.gearDown(1);
+          </script>
         </binding>
-      </item>
-      <item>
-       <name>lights</name>
-       <label>Lights</label>
-       <binding>
-        <command>nasal</command>
-        <script>
-         var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/AT-29/Dialogs/lights-dlg.xml");
-         lights.open();
-       </script>
-     </binding>
-   </item>
- </menu>
-</default>
-</menubar>
-
-</sim>
-
-<controls>
-  <flight>
-   <elevator-trim>-0.07</elevator-trim>
- </flight>
- <lighting>
-   <instruments-norm>0.3</instruments-norm>
- </lighting>
- <armament>
-   <gunsight>
-    <power-on type="bool">true</power-on>
-    <intensity type="double">1.0</intensity>
-  </gunsight>
-</armament>
-<gear>
- <brake-parking type="double">1</brake-parking>
-</gear>
-</controls>
-
-<controls>
-  <smoke alias="/sim/multiplay/generic/int[6]"/>
-</controls>
-
-<engines>
-  <engine n="0">
-   <running>false</running>
- </engine>
-</engines>
-
-<input>
- <keyboard>
-
-  <key n="99">
-   <name>c</name>
-   <desc>toggle canopy</desc>
-   <binding>
-     <command>property-toggle</command>
-     <property>fdm/jsbsim/systems/canopy/command</property>
-   </binding>
- </key>
-
- <key n="109">
-   <name>m</name>
-   <desc>engage nose wheel steering</desc>
-   <binding>
-    <command>property-assign</command>
-    <property>fdm/jsbsim/systems/NWS/engaged</property>
-    <value>1</value> 
-  </binding>
-  <mod-up>
-   <binding>
-    <command>property-assign</command>
-    <property>fdm/jsbsim/systems/NWS/engaged</property>
-    <value>0</value> 
-  </binding>
-</mod-up>
-</key>
-
-<key n="111">
-   <name>c</name>
-   <desc>toggle smoke</desc>
-   <binding>
-     <command>property-toggle</command>
-     <property>/sim/multiplay/generic/int[6]</property>
-   </binding>
- </key>
-
-<key n="33">
-  <name>Shift 1</name>
-  <desc>Add Station 1</desc>
-  <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station1/selected</property>
-   <value type="int">1</value>
- </binding>
-</key>
-
-<key n="64">
-  <name>Shift 2</name>
-  <desc>Add Station 2</desc>
-  <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station2/selected</property>
-   <value type="int">1</value>
- </binding>
-</key>
-
-<key n="35">
-  <name>Shift 3</name>
-  <desc>Add Station 3</desc>
-  <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station3/selected</property>
-   <value type="int">1</value>
- </binding>
-</key>
-
-<key n="48">
-  <name>0</name>
-  <desc>De-select All Stations</desc>
-  <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station1/selected</property>
-   <value type="int">0</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station2/selected</property>
-   <value type="int">0</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station3/selected</property>
-   <value type="int">0</value>
- </binding>
-</key>
-
-<key n="49">
-  <name>1</name>
-  <desc>Select Station 1 exclusively</desc>
-  <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station1/selected</property>
-   <value type="int">1</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station2/selected</property>
-   <value type="int">0</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station3/selected</property>
-   <value type="int">0</value>
- </binding>
-</key>
-
-<key n="50">
-  <name>2</name>
-  <desc>Select Station 2</desc>
-  <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station2/selected</property>
-   <value type="int">1</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station1/selected</property>
-   <value type="int">0</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station3/selected</property>
-   <value type="int">0</value>
- </binding>
-</key>
-
-<key n="51">
-  <name>3</name>
-  <desc>Select Station 3</desc>
-  <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station3/selected</property>
-   <value type="int">1</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station1/selected</property>
-   <value type="int">0</value>
- </binding>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/station2/selected</property>
-   <value type="int">0</value>
- </binding>
-</key>
-
-<key n="115">
- <name>s</name>
- <desc>Toggle starter valves.</desc>
- <binding>
-   <command>property-toggle</command>
-   <property>controls/engines/engine[0]/starter</property>
- </binding>
- <binding>
-   <command>property-toggle</command>
-   <property>controls/engines/engine[1]/starter</property>
- </binding>
- <mod-up>
-   <binding>
-     <command>null</command>
-   </binding>
- </mod-up>
-</key>
-
-<key n="101">
- <name>e</name>
- <desc>Release selected store(s)</desc>
- <binding>
-   <command>property-assign</command>
-   <property>fdm/jsbsim/systems/armament/release</property>
-   <value>1</value>
- </binding>
- <mod-up>
-   <binding>
-    <command>property-assign</command>
-    <property>fdm/jsbsim/systems/armament/release</property>
-    <value>0</value> 
-  </binding>
-</mod-up>
-</key>
-
-<key n="81">
-  <name>Shift-Q</name>
-  <desc>Fuel Cutoff Switch.</desc>
-  <binding>
-   <condition>
-    <property>/sim/input/selected/engine[0]</property>
-  </condition>
-  <command>property-toggle</command>
-  <property>/controls/engines/engine[0]/cutoff</property>
-</binding>
-</key>
-
-</keyboard>
-</input>
-
-<instrumentation>
-  <marker-beacon>
-    <volume type="double" archive="y">0.0</volume>
-  </marker-beacon>
-  <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
-</instrumentation>
-
-
-<fdm>
-  <jsbsim>
-   <systems>
-    <NWS>
-      <engaged type="double">0</engaged>
-    </NWS>
-    <canopy>
-      <command type="double">0</command>
-    </canopy>
-    <armament>
-      <station1>
-        <selected type="double">0</selected>
-      </station1>
-      <station2>
-        <selected type="double">0</selected>
-      </station2>
-      <station3>
-        <selected type="double">0</selected>
-      </station3>
-    </armament> 
-  </systems> 
-</jsbsim>
-</fdm>
-
-<station-selected type="int">1</station-selected>
-
-<canopy>
-  <position-norm type="double">0</position-norm>
-</canopy>
-
-<nasal>
-  <at29>  
-    <file>Aircraft/AT-29/Nasal/liveries.nas</file>
-  </at29>
-</nasal>
-
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.gearDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="81">
+        <name>Shift-Q</name>
+        <desc>Fuel Cutoff Switch</desc>
+        <binding>
+          <condition>
+            <property>/sim/input/selected/engine[0]</property>
+          </condition>
+          <command>property-toggle</command>
+          <property>/controls/engines/engine[0]/cutoff</property>
+        </binding>
+      </key>
+      <key n="91">
+        <name>[</name>
+        <desc>Decrease flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (!getprop("/engines/engine[0]/running"))
+              gui.popupTip("Cant use flaps without engine running. Not enough electrical power", 5, nil);
+            else
+              controls.flapsDown(-1);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.flapsDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="93">
+        <name>]</name>
+        <desc>Increase flaps</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var current_speed = getprop("/velocities/airspeed-kt");
+            var flap_pos = getprop("/controls/flight/flaps");
+            if (!getprop("/engines/engine[0]/running")){
+              gui.popupTip("Cant use flaps without engine running. Not enough electrical power", 5, nil);
+              return;
+            }
+            else if ( (flap_pos == 0 and current_speed >= 212) or (flap_pos == 0.49 and current_speed >= 183) )
+              gui.popupTip("Cant release flaps above the maximum release speed", 5, nil);
+            else
+              controls.flapsDown(1);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.flapsDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="99">
+        <name>c</name>
+        <desc>toggle canopy</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>fdm/jsbsim/systems/canopy/command</property>
+        </binding>
+      </key>
+      <key n="103">
+        <name>g</name>
+        <desc>Gear Up</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (!getprop("/engines/engine[0]/running"))
+              gui.popupTip("Cant retract gear without engine running. Not enough electrical power", 5, nil);
+            else if (getprop('/sim/failure-manager/controls/gear/serviceable'))
+              controls.gearDown(-1);
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>controls.gearDown(0)</script>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="109">
+        <name>m</name>
+        <desc>engage nose wheel steering</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>fdm/jsbsim/systems/NWS/engaged</property>
+          <value>1</value>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-assign</command>
+            <property>fdm/jsbsim/systems/NWS/engaged</property>
+            <value>0</value>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="111">
+        <name>o</name>
+        <desc>toggle smoke</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/multiplay/generic/int[6]</property>
+        </binding>
+      </key>
+      <key n="115">
+        <name>s</name>
+        <desc>Toggle starter valves.</desc>
+        <binding>
+          <condition>
+            <not>
+             <property>/sim/model/chocks-enabled</property>
+            </not>
+           </condition>
+          <command>property-toggle</command>
+          <property>controls/engines/engine[0]/starter</property>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (getprop("/sim/model/chocks-enabled"))
+              gui.popupTip("Remove chocks and protections before starting the engine", 5, nil);
+          </script>
+        </binding>
+      </key>
+    </keyboard>
+  </input>
+  <instrumentation>
+    <marker-beacon>
+      <volume type="double" archive="y">0.0</volume>
+    </marker-beacon>
+    <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
+  </instrumentation>
+  <fdm>
+    <jsbsim>
+      <systems>
+        <NWS>
+          <engaged type="double">0</engaged>
+        </NWS>
+        <canopy>
+          <command type="double">0</command>
+        </canopy>
+        <armament>
+          <station1>
+            <selected type="double">0</selected>
+          </station1>
+          <station2>
+            <selected type="double">0</selected>
+          </station2>
+          <station3>
+            <selected type="double">0</selected>
+          </station3>
+        </armament>
+      </systems>
+    </jsbsim>
+  </fdm>
+  <station-selected type="int">1</station-selected>
+  <canopy>
+    <position-norm type="double">0</position-norm>
+  </canopy>
+  <payload>
+    <weight>
+      <name type="string">Pilot</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+      <min-lb type="double">130.0</min-lb>
+      <max-lb type="double">200.0</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Co-pilot</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+      <min-lb type="double">0.0</min-lb>
+      <max-lb type="double">200.0</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Equipment / Baggage</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+      <min-lb type="double">130.0</min-lb>
+      <max-lb type="double">200.0</max-lb>
+    </weight>
+  </payload>
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <name>Internal tank</name>
+      </tank>
+      <tank n="1">
+        <name>External left tank</name>
+      </tank>
+      <tank n="3">
+        <name>External central tank</name>
+      </tank>
+      <tank n="2">
+        <name>External right tank</name>
+      </tank>
+    </fuel>
+  </consumables>
+  <limits>
+    <mass-and-balance>
+      <maximum-takeoff-mass-lbs type="double">11905</maximum-takeoff-mass-lbs>
+    </mass-and-balance>
+    <vne>319</vne>
+    <max-gear-extension-speed>194</max-gear-extension-speed>
+    <max-positive-g>7</max-positive-g>
+    <max-negative-g>-3.5</max-negative-g>
+    <max-flap-extension-speed>
+      <flaps>0</flaps>
+      <speed>212</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps>0.49</flaps>
+      <speed>183</speed>
+    </max-flap-extension-speed>
+  </limits>
+  <nasal>
+    <at29>
+      <file>Aircraft/AT-29/Nasal/liveries.nas</file>
+      <file>Aircraft/AT-29/Nasal/lightmanager.nas</file>
+      <file>Aircraft/AT-29/Nasal/tyresmoke.nas</file>
+      <file>Aircraft/Generic/limits.nas</file>
+    </at29>
+  </nasal>
 </PropertyList>

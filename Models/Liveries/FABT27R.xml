@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">FAB - T-27 Retro</name>
+      <fuselage type="string">Liveries/FABT27R/fuselage.png</fuselage>
+      <!-- For the pilot objets ../../ is required! -->
+      <pilot-helmet type="string">../../Liveries/FABT27R/pilot_helmet.png</pilot-helmet>
+      <pilot-patche type="string">../../Liveries/FABT27R/pilot_patche.png</pilot-patche>
+      <pilot-vest type="string">../../Liveries/FABT27R/pilot_vest.png</pilot-vest>
+      <armed type="bool">1</armed>
+      <fuselage-extra type="bool">0</fuselage-extra>
+      <rendering>
+        <AT-29>
+            <refl_correction type="double">0.1</refl_correction>
+            <refl-type type="int">2</refl-type>
+            <fresnel-factor type="double">0</fresnel-factor>
+        </AT-29>
+      </rendering>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>
