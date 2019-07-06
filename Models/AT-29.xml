@@ -881,7 +881,7 @@
   <!-- Pushback truck -->
   <model>
     <name>Pushback</name>
-    <path>Models/Airport/Pushback/Forklift.xml</path>
+    <path>Aircraft/AT-29/Models/Exterior/Pushback/Forklift.xml</path>
     <offsets>
       <x-m>-3.1</x-m>
       <y-m>0</y-m>
