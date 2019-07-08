@@ -78032,7 +78032,7 @@ refs 4
 125 0.620822 0.598191
 kids 0
 OBJECT poly
-name "fuselage"
+name "MainWellCovers"
 loc 1.41355 -1.73125 2.89679e-005
 texture "fuselage.png"
 crease 45.000000
@@ -78303,7 +78303,7 @@ refs 4
 30 0.059056 0.470416
 kids 0
 OBJECT poly
-name "fuselage"
+name "MainWellCovers"
 loc 1.41355 -1.73125 2.90871e-005
 texture "fuselage.png"
 crease 45.000000
