@@ -634,6 +634,8 @@
     <object-name>CanopyFrame</object-name>
     <object-name>LFuelTank</object-name>
     <object-name>RFuelTank</object-name>
+    <object-name>RightUsafAc</object-name>
+    <object-name>LeftUsafAc</object-name>
   </animation>
   <!-- Set fuselage group's material livery -->
   <animation>
