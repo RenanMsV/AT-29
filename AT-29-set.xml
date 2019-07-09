@@ -42,6 +42,11 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     </previews>
     <systems>
       <electrical/>
+      <!-- Needed by shadows in ALS and others; http://forum.flightgear.org/viewtopic.php?f=4&t=25157&start=75#p232120 -->
+      <property-rule n="101">
+        <name>AT-29 filters</name>
+        <path>Aircraft/AT-29/Systems/filters.xml</path>
+      </property-rule>
     </systems>
     <sound>
       <path>Aircraft/AT-29/Sounds/tucano-sound.xml</path>

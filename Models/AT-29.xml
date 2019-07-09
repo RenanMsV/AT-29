@@ -880,6 +880,10 @@
       <irradiance-map-strength type="float">.5</irradiance-map-strength>
     </parameters>
   </effect>
+  <!--  ALS ground shadow  -->
+  <model>
+     <path>Aircraft/AT-29/Models/Effects/als_shadow_map/Fuselage/tucano_low.xml</path>
+  </model>
   <!-- Pushback truck -->
   <model>
     <name>Pushback</name>
