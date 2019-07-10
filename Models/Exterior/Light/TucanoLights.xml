@@ -61,7 +61,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
     <condition>
       <and>
-        <property>/sim/model/lights/strobe/state</property>
+        <property>sim/model/lights/strobe/state</property>
         <property>controls/lighting/strobe</property>
       </and>
     </condition>
@@ -77,7 +77,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
     <condition>
       <and>
-        <property>/sim/model/lights/strobe/state</property>
+        <property>sim/model/lights/strobe/state</property>
         <property>controls/lighting/strobe</property>
       </and>
     </condition>
@@ -92,7 +92,7 @@
     <name>StrobeBack</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
-      <property>/controls/lighting/strobe</property>
+      <property>controls/lighting/strobe</property>
     </condition>
     <offsets>
       <x-m>7.08244</x-m>
@@ -130,7 +130,7 @@
   <model>
     <path>Aircraft/AT-29/Models/Exterior/Light/formationlight.ac</path>
     <condition>
-      <property>/controls/lighting/formation-lights</property>
+      <property>controls/lighting/formation-lights</property>
     </condition>
   </model>
   <model>
@@ -138,7 +138,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/beaconlight.xml</path>
     <condition>
       <and>
-        <property>/sim/model/lights/beacon/state</property>
+        <property>sim/model/lights/beacon/state</property>
         <property>controls/lighting/beacon</property>
       </and>
     </condition>
@@ -181,7 +181,7 @@
     <type>rotate</type>
     <object-name>TaxiLightLeft</object-name>
     <object-name>TaxiLightRight</object-name>
-    <property>sim/multiplay/generic/float[2]</property>
+    <property>gear/gear[0]/steering-norm</property>
     <factor>55</factor>
     <axis>
       <x1-m>-3.08</x1-m>

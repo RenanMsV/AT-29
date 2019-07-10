@@ -15,12 +15,12 @@
     <texture>smoke.png</texture>
     <condition>
       <and>
-        <property>sim/multiplay/generic/int[6]</property>
+        <property>controls/switches/smoke</property>
         <not>
           <or>
-            <property>/gear/gear[0]/wow</property>
-            <property>/gear/gear[1]/wow</property>
-            <property>/gear/gear[2]/wow</property>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
           </or>
         </not>
       </and>

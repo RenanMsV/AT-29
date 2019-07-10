@@ -13,7 +13,7 @@
           <test value="1">
                 /ai/submodels/contrails == 1
           </test>
-          <output>/sim/multiplay/generic/int[5]</output>
+          <output>/controls/switches/contrails</output>
      </switch>
 
   </channel>
@@ -27,7 +27,7 @@
                 aero/alpha-rad gt 0.1573
                 velocities/mach gt 0.1
           </test>
-          <output>/sim/multiplay/generic/int[4]</output>
+          <output>/controls/switches/condensation</output>
      </switch>
 
   </channel>

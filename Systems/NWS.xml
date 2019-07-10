@@ -18,12 +18,6 @@
       <output>fcs/steer-cmd-norm</output>
      </scheduled_gain>
 
-   <pure_gain name="Copy">
-     <input>fcs/steer-cmd-norm</input>
-     <gain>1</gain>
-     <output>/sim/multiplay/generic/float[1]</output>
-   </pure_gain>
-
   </channel>
 
 </system>

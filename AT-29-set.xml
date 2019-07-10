@@ -166,22 +166,6 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     </rendering>
     <multiplay>
       <generic>
-        <int n="0" type="int">0</int>
-        <int n="1" type="int">0</int>
-        <int n="2" type="int">0</int>
-        <int n="3" type="int">0</int>
-        <int n="4" type="int">0</int> <!-- Vortex particles.xml -->
-        <int n="5" type="int">0</int> <!-- Contrail particles.xml -->
-        <int n="6" type="int" alias="/controls/smoke">0</int> <!-- Airshow smoke smokeW.xml -->
-        <int n="7" type="int">0</int>
-        <int n="8" type="int">0</int>
-        <int n="9" type="int">0</int>
-        <int n="10" type="int">0</int>
-        <int n="11" type="int">0</int>
-        <int n="12" type="int">0</int>
-        <float n="0" type="float" alias="/engines/engine[0]/n2" /> <!-- beacon light systems/beacon.xml -->
-        <float n="1" type="float" alias="/engines/engine[0]/starter" /> <!-- steer-cmd-norm NWS.xml -->
-        <float n="2" type="float" alias="/gear/gear[0]/steering-norm" /> <!-- steering AT-29.xml -->
       </generic>
     </multiplay>
     <menubar>
@@ -422,7 +406,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <desc>toggle smoke</desc>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/multiplay/generic/int[6]</property>
+          <property>controls/switches/smoke</property>
         </binding>
       </key>
       <key n="115">
