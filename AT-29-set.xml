@@ -275,7 +275,6 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     <gear>
       <brake-parking type="double">1</brake-parking>
     </gear>
-    <smoke type="int" />
   </controls>
   <engines>
     <engine n="0">
