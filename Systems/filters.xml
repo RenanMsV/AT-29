@@ -10,4 +10,11 @@
     	<property>/position/altitude-agl-m</property>
     </output>
   </filter>
+  <filter>
+    <type>gain</type>
+    <gain>0.3048</gain>
+    <input>/position/altitude-agl-ft</input>
+    <reference>6</reference>
+    <output>/position/gear-agl-m</output>
+  </filter>
 </PropertyList>
