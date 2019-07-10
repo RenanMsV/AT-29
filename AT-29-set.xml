@@ -171,8 +171,6 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <float n="0" alias="/controls/switches/contrails"/>
         <float n="1" alias="/controls/switches/condensation"/>
         <float n="2" alias="/sim/model/pushback/position-norm"/>
-        <float n="3" alias="/sim/model/lights/strobe/state"/>
-        <float n="4" alias="/sim/model/lights/beacon/state"/>
         <!-- Bool -->
         <bool n="0" alias="/controls/switches/smoke"/>
         <bool n="1" alias="/controls/lighting/taxi-light"/>
@@ -185,6 +183,8 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <bool n="8" alias="/sim/model/chocks-enabled"/>
         <bool n="9" alias="/sim/model/mono-cockpit-enabled"/>
         <bool n="10" alias="/sim/model/pushback/enabled"/>
+        <float n="11" alias="/sim/model/lights/strobe/state"/>
+        <float n="12" alias="/sim/model/lights/beacon/state"/>
         <!-- String -->
         <!-- Shorts -->
       </generic>

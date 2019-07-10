@@ -61,7 +61,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
     <condition>
       <and>
-        <property>sim/multiplay/generic/float[3]</property>
+        <property>sim/multiplay/generic/bool[11]</property>
         <property>sim/multiplay/generic/bool[4]</property>
       </and>
     </condition>
@@ -77,7 +77,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
     <condition>
       <and>
-        <property>sim/multiplay/generic/float[3]</property>
+        <property>sim/multiplay/generic/bool[11]</property>
         <property>sim/multiplay/generic/bool[4]</property>
       </and>
     </condition>
@@ -138,7 +138,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/beaconlight.xml</path>
     <condition>
       <and>
-        <property>sim/multiplay/generic/float[4]</property>
+        <property>sim/multiplay/generic/bool[12]</property>
         <property>sim/multiplay/generic/bool[5]</property>
       </and>
     </condition>
