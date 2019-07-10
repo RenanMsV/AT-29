@@ -18,7 +18,7 @@
     <texture>condensation.png</texture>
 
     <condition>
-      <property>controls/switches/condensation</property>
+      <property>sim/multiplay/generic/float[1]</property>
       <not-equals>
         <property>fdm/jsbsim/systems/crash-detect/crashed</property>
         <value>1</value>

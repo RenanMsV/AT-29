@@ -415,7 +415,7 @@
     <type>spin</type>
     <condition>
       <not>
-        <property>sim/model/chocks-enabled</property>
+        <property>sim/multiplay/generic/bool[8]</property>
       </not>
     </condition>
     <object-name>Prop</object-name>
@@ -744,7 +744,7 @@
     <condition>
       <and>
         <not>
-          <property>sim/model/mono-cockpit-enabled</property>
+          <property>sim/multiplay/generic/bool[9]</property>
         </not>
         <not>
           <property>sim/current-view/internal</property>
@@ -762,7 +762,7 @@
     <name>ChocksAndProtections</name>
     <path>Aircraft/AT-29/Models/Exterior/Chocks/chocks.xml</path>
     <condition>
-      <property>sim/model/chocks-enabled</property>
+      <property>sim/multiplay/generic/bool[8]</property>
     </condition>
   </model>
   <animation>
@@ -780,7 +780,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>sim/model/chocks-enabled</property>
+        <property>sim/multiplay/generic/bool[8]</property>
       </binding>
     </action>
   </animation>
@@ -897,5 +897,8 @@
       <y-m>0</y-m>
       <z-m>-1.8</z-m>
     </offsets>
+    <condition>
+    	<property>sim/multiplay/generic/bool[10]</property>
+    </condition>
   </model>
 </PropertyList>

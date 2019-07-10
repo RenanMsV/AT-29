@@ -166,6 +166,27 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     </rendering>
     <multiplay>
       <generic>
+        <!-- Int -->
+        <!-- Float -->
+        <float n="0" alias="/controls/switches/contrails"/>
+        <float n="1" alias="/controls/switches/condensation"/>
+        <float n="2" alias="/sim/model/pushback/position-norm"/>
+        <float n="3" alias="/sim/model/lights/strobe/state"/>
+        <float n="4" alias="/sim/model/lights/beacon/state"/>
+        <!-- Bool -->
+        <bool n="0" alias="/controls/switches/smoke"/>
+        <bool n="1" alias="/controls/lighting/taxi-light"/>
+        <bool n="2" alias="/controls/lighting/landing-lights"/>
+        <bool n="3" alias="/controls/lighting/nav-lights"/>
+        <bool n="4" alias="/controls/lighting/strobe"/>
+        <bool n="5" alias="/controls/lighting/beacon"/>
+        <bool n="6" alias="/controls/lighting/search-lights"/>
+        <bool n="7" alias="/controls/lighting/formation-lights"/>
+        <bool n="8" alias="/sim/model/chocks-enabled"/>
+        <bool n="9" alias="/sim/model/mono-cockpit-enabled"/>
+        <bool n="10" alias="/sim/model/pushback/enabled"/>
+        <!-- String -->
+        <!-- Shorts -->
       </generic>
     </multiplay>
     <menubar>
@@ -264,6 +285,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <taxi-light type="bool">false</taxi-light>
       <nav-lights type="bool">false</nav-lights>
       <formation-lights type="bool">false</formation-lights>
+      <search-lights type="bool">false</search-lights>
       <instruments-norm type="double">0</instruments-norm>
     </lighting>
     <armament>
