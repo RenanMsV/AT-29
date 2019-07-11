@@ -99,7 +99,7 @@
     <type>rotate</type>
     <object-name>NoseGear</object-name>
     <object-name>NoseTire</object-name>
-    <property>gear/gear[0]/steering-norm</property>
+    <property>sim/multiplay/generic/float[3]</property>
     <factor>55</factor>
     <axis>
       <x1-m>-3.08</x1-m>
