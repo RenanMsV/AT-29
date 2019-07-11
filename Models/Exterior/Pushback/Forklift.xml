@@ -56,7 +56,7 @@
        <value>0.99</value>
      </greater-than>
    </condition>
-   <property>gear/gear[0]/steering-norm</property>
+   <property>sim/multiplay/generic/float[3]</property>
    <factor>-70</factor>
    <center>
      <x-m>0</x-m>
