@@ -15,13 +15,9 @@
     <texture>smoke.png</texture>
     <condition>
       <and>
-        <property>sim/multiplay/generic/int[6]</property>
+        <property>sim/multiplay/generic/bool[0]</property>
         <not>
-          <or>
-            <property>/gear/gear[0]/wow</property>
-            <property>/gear/gear[1]/wow</property>
-            <property>/gear/gear[2]/wow</property>
-          </or>
+          <property>sim/multiplay/generic/bool[13]</property>
         </not>
       </and>
     </condition>

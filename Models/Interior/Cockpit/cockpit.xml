@@ -6,7 +6,7 @@
     <object-name>AD_LOD_100_M</object-name>
     <object-name>MonoBox</object-name>
     <condition>
-      <property>/sim/model/mono-cockpit-enabled</property>
+      <property>sim/multiplay/generic/bool[9]</property>
     </condition>
   </animation>
   <animation>
@@ -14,7 +14,7 @@
     <object-name>AD_LOD_100</object-name>
     <condition>
       <not>
-        <property>/sim/model/mono-cockpit-enabled</property>
+        <property>sim/multiplay/generic/bool[9]</property>
       </not>
     </condition>
   </animation>
@@ -28,11 +28,11 @@
       <binding>
         <condition>
           <not>
-            <property>/sim/model/chocks-enabled</property>
+            <property>sim/multiplay/generic/bool[8]</property>
           </not>
         </condition>
         <command>property-toggle</command>
-        <property>/controls/engines/engine[0]/starter</property>
+        <property>controls/engines/engine[0]/starter</property>
       </binding>
       <binding>
         <command>nasal</command>
@@ -46,7 +46,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CZ_LOD_100</object-name>
-    <property>/controls/engines/engine[0]/starter</property>
+    <property>controls/engines/engine[0]/starter</property>
     <factor>45</factor>
     <center>
       <x-m>-0.98869</x-m>
@@ -66,14 +66,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/engines/engine[0]/fuel-pump</property>
+        <property>controls/engines/engine[0]/fuel-pump</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>DA_LOD_100</object-name>
-    <property>/controls/engines/engine[0]/fuel-pump</property>
+    <property>controls/engines/engine[0]/fuel-pump</property>
     <factor>45</factor>
     <center>
       <x-m>-0.98869</x-m>
@@ -93,17 +93,17 @@
       <repeatable>false</repeatable>
       <binding>
         <condition>
-          <property>/sim/input/selected/engine[0]</property>
+          <property>sim/input/selected/engine[0]</property>
         </condition>
         <command>property-toggle</command>
-        <property>/controls/engines/engine[0]/cutoff</property>
+        <property>controls/engines/engine[0]/cutoff</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>DE_LOD_100</object-name>
-    <property>/controls/engines/engine[0]/cutoff</property>
+    <property>controls/engines/engine[0]/cutoff</property>
     <offset-deg>-55</offset-deg>
     <factor>55</factor>
     <center>
@@ -124,14 +124,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/fuel-cutoff-cover</property>
+        <property>controls/switches/cockpit/fuel-cutoff-cover</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>DF_LOD_100</object-name>
-    <property>/controls/switches/cockpit/fuel-cutoff-cover</property>
+    <property>controls/switches/cockpit/fuel-cutoff-cover</property>
     <factor>45</factor>
     <center>
       <x-m>-0.62342</x-m>
@@ -151,7 +151,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/throttle</property>
+        <property>controls/engines/engine[0]/throttle</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -161,7 +161,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/throttle</property>
+        <property>controls/engines/engine[0]/throttle</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -171,7 +171,7 @@
     <type>rotate</type>
     <object-name>BP_LOD_100</object-name>
     <object-name>BQ_LOD_100</object-name>
-    <property>/controls/engines/engine[0]/throttle</property>
+    <property>controls/engines/engine[0]/throttle</property>
     <offset-deg>24</offset-deg>
     <factor>-25</factor>
     <center>
@@ -189,7 +189,7 @@
     <type>rotate</type>
     <object-name>BW_LOD_100</object-name>
     <object-name>stick_button</object-name>
-    <property>/controls/flight/aileron</property>
+    <property>controls/flight/aileron</property>
     <offset-deg>-12.5</offset-deg>
     <factor>-11</factor>
     <center>
@@ -205,7 +205,7 @@
     <type>rotate</type>
     <object-name>BW_LOD_100</object-name>
     <object-name>stick_button</object-name>
-    <property>/controls/flight/elevator</property>
+    <property>controls/flight/elevator</property>
     <offset-deg>0</offset-deg>
     <factor>-12</factor>
     <center>
@@ -251,7 +251,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BS_LOD_100</object-name>
-    <property>/controls/gear/gear-down</property>
+    <property>controls/gear/gear-down</property>
     <offset-deg>0</offset-deg>
     <factor>45</factor>
     <center>
@@ -288,10 +288,10 @@
     <condition>
       <and>
         <equals>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>1</value>
         </equals>
-        <property>/sim/failure-manager/controls/gear/serviceable</property>
+        <property>sim/failure-manager/controls/gear/serviceable</property>
       </and>
     </condition>
   </animation>
@@ -300,7 +300,7 @@
     <object-name>gear_status_light_r</object-name>
     <condition>
       <not>
-        <property>/sim/failure-manager/controls/gear/serviceable</property>
+        <property>sim/failure-manager/controls/gear/serviceable</property>
       </not>
     </condition>
   </animation>
@@ -311,11 +311,11 @@
       <and>
         <not>
           <equals>
-            <property>/gear/gear[0]/position-norm</property>
+            <property>gear/gear[0]/position-norm</property>
             <value>1</value>
           </equals>
         </not>
-        <property>/sim/failure-manager/controls/gear/serviceable</property>
+        <property>sim/failure-manager/controls/gear/serviceable</property>
       </and>
     </condition>
   </animation>
@@ -359,7 +359,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BR_LOD_100</object-name>
-    <property>/controls/flight/flaps</property>
+    <property>controls/flight/flaps</property>
     <offset-deg>0</offset-deg>
     <factor>14</factor>
     <center>
@@ -381,14 +381,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/pitot-heat</property>
+        <property>controls/switches/cockpit/pitot-heat</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CW_LOD_100</object-name>
-    <property>/controls/switches/cockpit/pitot-heat</property>
+    <property>controls/switches/cockpit/pitot-heat</property>
     <factor>45</factor>
     <center>
       <x-m>-1.04782</x-m>
@@ -408,14 +408,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/anti-ice</property>
+        <property>controls/switches/cockpit/anti-ice</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CX_LOD_100</object-name>
-    <property>/controls/switches/cockpit/anti-ice</property>
+    <property>controls/switches/cockpit/anti-ice</property>
     <factor>45</factor>
     <center>
       <x-m>-1.04782</x-m>
@@ -435,14 +435,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/deice-boots</property>
+        <property>controls/switches/cockpit/deice-boots</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CY_LOD_100</object-name>
-    <property>/controls/switches/cockpit/deice-boots</property>
+    <property>controls/switches/cockpit/deice-boots</property>
     <factor>45</factor>
     <center>
       <x-m>-1.04782</x-m>
@@ -462,14 +462,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/tank-selector</property>
+        <property>controls/switches/cockpit/tank-selector</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>DD_LOD_100</object-name>
-    <property>/controls/switches/cockpit/tank-selector</property>
+    <property>controls/switches/cockpit/tank-selector</property>
     <offset-deg>-55</offset-deg>
     <factor>55</factor>
     <center>
@@ -490,14 +490,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/nav-lights</property>
+        <property>controls/lighting/nav-lights</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CG_LOD_100</object-name>
-    <property>/controls/lighting/nav-lights</property>
+    <property>controls/lighting/nav-lights</property>
     <factor>45</factor>
     <center>
       <x-m>-1.03795</x-m>
@@ -517,14 +517,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/beacon</property>
+        <property>controls/lighting/beacon</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CH_LOD_100</object-name>
-    <property>/controls/lighting/beacon</property>
+    <property>controls/lighting/beacon</property>
     <factor>45</factor>
     <center>
       <x-m>-1.03795</x-m>
@@ -544,14 +544,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/formation-lights</property>
+        <property>controls/lighting/formation-lights</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CI_LOD_100</object-name>
-    <property>/controls/lighting/formation-lights</property>
+    <property>controls/lighting/formation-lights</property>
     <factor>45</factor>
     <center>
       <x-m>-1.03795</x-m>
@@ -571,14 +571,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/strobe</property>
+        <property>controls/lighting/strobe</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CJ_LOD_100</object-name>
-    <property>/controls/lighting/strobe</property>
+    <property>controls/lighting/strobe</property>
     <factor>45</factor>
     <center>
       <x-m>-1.03795</x-m>
@@ -598,14 +598,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/ident</property>
+        <property>controls/switches/cockpit/ident</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CK_LOD_100</object-name>
-    <property>/controls/switches/cockpit/ident</property>
+    <property>controls/switches/cockpit/ident</property>
     <factor>45</factor>
     <center>
       <x-m>-0.97414</x-m>
@@ -625,14 +625,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/nav-gps</property>
+        <property>controls/switches/cockpit/nav-gps</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>DG_LOD_100</object-name>
-    <property>/controls/switches/cockpit/nav-gps</property>
+    <property>controls/switches/cockpit/nav-gps</property>
     <factor>45</factor>
     <center>
       <x-m>-0.75973</x-m>
@@ -652,41 +652,41 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights</property>
+        <property>controls/lighting/landing-lights</property>
       </binding>
       <binding>
         <condition>
           <not>
-            <property>/controls/lighting/taxi-light</property>
+            <property>controls/lighting/taxi-light</property>
           </not>
         </condition>
         <command>property-toggle</command>
-        <property>/sim/rendering/als-secondary-lights/use-landing-light-ext</property>
+        <property>sim/rendering/als-secondary-lights/use-landing-light-ext</property>
       </binding>
       <binding>
         <condition>
           <not>
-            <property>/controls/lighting/taxi-light</property>
+            <property>controls/lighting/taxi-light</property>
           </not>
         </condition>
         <command>property-toggle</command>
-        <property>/sim/rendering/als-secondary-lights/use-landing-light</property>
+        <property>sim/rendering/als-secondary-lights/use-landing-light</property>
       </binding>
       <binding>
         <condition>
           <not>
-            <property>/controls/lighting/taxi-light</property>
+            <property>controls/lighting/taxi-light</property>
           </not>
         </condition>
         <command>property-toggle</command>
-        <property>/sim/rendering/als-secondary-lights/use-alt-landing-light</property>
+        <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CU_LOD_100</object-name>
-    <property>/controls/lighting/landing-lights</property>
+    <property>controls/lighting/landing-lights</property>
     <factor>45</factor>
     <center>
       <x-m>-1.09326</x-m>
@@ -706,41 +706,41 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/taxi-light</property>
+        <property>controls/lighting/taxi-light</property>
       </binding>
       <binding>
         <condition>
           <not>
-            <property>/controls/lighting/landing-lights</property>
+            <property>controls/lighting/landing-lights</property>
           </not>
         </condition>
         <command>property-toggle</command>
-        <property>/sim/rendering/als-secondary-lights/use-landing-light-ext</property>
+        <property>sim/rendering/als-secondary-lights/use-landing-light-ext</property>
       </binding>
       <binding>
         <condition>
           <not>
-            <property>/controls/lighting/landing-lights</property>
+            <property>controls/lighting/landing-lights</property>
           </not>
         </condition>
         <command>property-toggle</command>
-        <property>/sim/rendering/als-secondary-lights/use-landing-light</property>
+        <property>sim/rendering/als-secondary-lights/use-landing-light</property>
       </binding>
       <binding>
         <condition>
           <not>
-            <property>/controls/lighting/landing-lights</property>
+            <property>controls/lighting/landing-lights</property>
           </not>
         </condition>
         <command>property-toggle</command>
-        <property>/sim/rendering/als-secondary-lights/use-alt-landing-light</property>
+        <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CV_LOD_100</object-name>
-    <property>/controls/lighting/taxi-light</property>
+    <property>controls/lighting/taxi-light</property>
     <factor>45</factor>
     <center>
       <x-m>-1.09326</x-m>
@@ -760,14 +760,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/master-batt-cover</property>
+        <property>controls/switches/cockpit/master-batt-cover</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CB_LOD_100</object-name>
-    <property>/controls/switches/cockpit/master-batt-cover</property>
+    <property>controls/switches/cockpit/master-batt-cover</property>
     <factor>60</factor>
     <center>
       <x-m>-1.1406</x-m>
@@ -787,14 +787,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/master-batt</property>
+        <property>controls/switches/cockpit/master-batt</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CC_LOD_100</object-name>
-    <property>/controls/switches/cockpit/master-batt</property>
+    <property>controls/switches/cockpit/master-batt</property>
     <factor>45</factor>
     <center>
       <x-m>-1.12791</x-m>
@@ -814,14 +814,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/genr-cover</property>
+        <property>controls/switches/cockpit/genr-cover</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CE_LOD_100</object-name>
-    <property>/controls/switches/cockpit/genr-cover</property>
+    <property>controls/switches/cockpit/genr-cover</property>
     <factor>60</factor>
     <center>
       <x-m>-1.1406</x-m>
@@ -841,14 +841,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/genr</property>
+        <property>controls/switches/cockpit/genr</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CD_LOD_100</object-name>
-    <property>/controls/switches/cockpit/genr</property>
+    <property>controls/switches/cockpit/genr</property>
     <factor>45</factor>
     <center>
       <x-m>-1.12791</x-m>
@@ -868,14 +868,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/radio-master</property>
+        <property>controls/switches/cockpit/radio-master</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CF_LOD_100</object-name>
-    <property>/controls/switches/cockpit/radio-master</property>
+    <property>controls/switches/cockpit/radio-master</property>
     <factor>45</factor>
     <center>
       <x-m>-1.12791</x-m>
@@ -890,7 +890,7 @@
   <animation>
     <type>knob</type>
     <object-name>BU_LOD_100</object-name>
-    <property>/controls/lighting/instruments-norm</property>
+    <property>controls/lighting/instruments-norm</property>
     <factor>-270</factor>
     <center>
       <x-m>-0.974844</x-m>
@@ -903,13 +903,13 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/instruments-norm</property>
+        <property>controls/lighting/instruments-norm</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -917,13 +917,13 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/instruments-norm</property>
+        <property>controls/lighting/instruments-norm</property>
         <step>.1</step>
         <max>1</max>
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -933,7 +933,7 @@
   <animation>
     <type>knob</type>
     <object-name>gear_knob</object-name>
-    <property>/controls/switches/cockpit/gear-knob</property>
+    <property>controls/switches/cockpit/gear-knob</property>
     <factor>50</factor>
     <center>
       <x-m>-1.1186</x-m>
@@ -947,7 +947,7 @@
     <increase>
       <binding>
         <command>property-cycle</command>
-        <property>/controls/switches/cockpit/gear-knob</property>
+        <property>controls/switches/cockpit/gear-knob</property>
         <value type="double">-3.45</value>
         <value type="double">-1</value>
         <value type="double">0</value>
@@ -957,7 +957,7 @@
     <decrease>
       <binding>
         <command>property-cycle</command>
-        <property>/controls/switches/cockpit/gear-knob</property>
+        <property>controls/switches/cockpit/gear-knob</property>
         <value type="double">1</value>
         <value type="double">0</value>
         <value type="double">-1</value>
@@ -969,7 +969,7 @@
   <animation>
     <type>knob</type>
     <object-name>airflow_knob</object-name>
-    <property>/controls/switches/cockpit/airflow</property>
+    <property>controls/switches/cockpit/airflow</property>
     <factor>-270</factor>
     <center>
       <x-m>-0.68117</x-m>
@@ -982,7 +982,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/airflow</property>
+        <property>controls/switches/cockpit/airflow</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -990,7 +990,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/airflow</property>
+        <property>controls/switches/cockpit/airflow</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1000,7 +1000,7 @@
   <animation>
     <type>knob</type>
     <object-name>cabin_temp_knob</object-name>
-    <property>/controls/switches/cockpit/cabin-temp</property>
+    <property>controls/switches/cockpit/cabin-temp</property>
     <factor>-270</factor>
     <center>
       <x-m>-0.68117</x-m>
@@ -1013,7 +1013,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/cabin-temp</property>
+        <property>controls/switches/cockpit/cabin-temp</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1021,7 +1021,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/cabin-temp</property>
+        <property>controls/switches/cockpit/cabin-temp</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1031,7 +1031,7 @@
   <animation>
     <type>slider</type>
     <object-name>oxygen_flow_switch</object-name>
-    <property>/controls/switches/cockpit/oxygen-flow</property>
+    <property>controls/switches/cockpit/oxygen-flow</property>
     <factor>0.0075</factor>
     <center>
       <x-m>-0.44025</x-m>
@@ -1044,7 +1044,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/oxygen-flow</property>
+        <property>controls/switches/cockpit/oxygen-flow</property>
         <step>1</step>
         <max>1</max>
       </binding>
@@ -1052,7 +1052,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/oxygen-flow</property>
+        <property>controls/switches/cockpit/oxygen-flow</property>
         <step>-1</step>
         <min>-1</min>
       </binding>
@@ -1062,7 +1062,7 @@
   <animation>
     <type>slider</type>
     <object-name>oxygen_ratio_switch</object-name>
-    <property>/controls/switches/cockpit/oxygen-ratio</property>
+    <property>controls/switches/cockpit/oxygen-ratio</property>
     <factor>-0.01</factor>
     <center>
       <x-m>-0.44025</x-m>
@@ -1075,7 +1075,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/oxygen-ratio</property>
+        <property>controls/switches/cockpit/oxygen-ratio</property>
         <step>-1</step>
         <min>0</min>
       </binding>
@@ -1083,7 +1083,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/oxygen-ratio</property>
+        <property>controls/switches/cockpit/oxygen-ratio</property>
         <step>1</step>
         <max>1</max>
       </binding>
@@ -1093,7 +1093,7 @@
   <animation>
     <type>slider</type>
     <object-name>oxygen_supply_switch</object-name>
-    <property>/controls/switches/cockpit/oxygen-supply</property>
+    <property>controls/switches/cockpit/oxygen-supply</property>
     <factor>-0.012</factor>
     <center>
       <x-m>-0.44025</x-m>
@@ -1106,7 +1106,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/oxygen-supply</property>
+        <property>controls/switches/cockpit/oxygen-supply</property>
         <step>-1</step>
         <min>0</min>
       </binding>
@@ -1114,7 +1114,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/oxygen-supply</property>
+        <property>controls/switches/cockpit/oxygen-supply</property>
         <step>1</step>
         <max>1</max>
       </binding>
@@ -1129,14 +1129,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/master-arm-cover</property>
+        <property>controls/switches/cockpit/master-arm-cover</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>CL_LOD_100</object-name>
-    <property>/controls/switches/cockpit/master-arm-cover</property>
+    <property>controls/switches/cockpit/master-arm-cover</property>
     <factor>80</factor>
     <center>
       <x-m>-1.15977</x-m>
@@ -1156,14 +1156,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/master-arm</property>
+        <property>controls/switches/cockpit/master-arm</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>DB_LOD_100</object-name>
-    <property>/controls/switches/cockpit/master-arm</property>
+    <property>controls/switches/cockpit/master-arm</property>
     <factor>60</factor>
     <center>
       <x-m>-1.16183</x-m>
@@ -1183,14 +1183,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/adr</property>
+        <property>controls/switches/cockpit/adr</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>adr_switch</object-name>
-    <property>/controls/switches/cockpit/adr</property>
+    <property>controls/switches/cockpit/adr</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16183</x-m>
@@ -1210,14 +1210,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/armament-lo</property>
+        <property>controls/switches/cockpit/armament-lo</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>armament_lo_switch</object-name>
-    <property>/controls/switches/cockpit/armament-lo</property>
+    <property>controls/switches/cockpit/armament-lo</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16144</x-m>
@@ -1237,14 +1237,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/armament-li</property>
+        <property>controls/switches/cockpit/armament-li</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>armament_li_switch</object-name>
-    <property>/controls/switches/cockpit/armament-li</property>
+    <property>controls/switches/cockpit/armament-li</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16144</x-m>
@@ -1264,14 +1264,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/armament-ctr</property>
+        <property>controls/switches/cockpit/armament-ctr</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>armament_ctr_switch</object-name>
-    <property>/controls/switches/cockpit/armament-ctr</property>
+    <property>controls/switches/cockpit/armament-ctr</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16144</x-m>
@@ -1291,14 +1291,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/armament-ri</property>
+        <property>controls/switches/cockpit/armament-ri</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>armament_ri_switch</object-name>
-    <property>/controls/switches/cockpit/armament-ri</property>
+    <property>controls/switches/cockpit/armament-ri</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16144</x-m>
@@ -1318,14 +1318,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/armament-ro</property>
+        <property>controls/switches/cockpit/armament-ro</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>armament_ro_switch</object-name>
-    <property>/controls/switches/cockpit/armament-ro</property>
+    <property>controls/switches/cockpit/armament-ro</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16144</x-m>
@@ -1345,14 +1345,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/gun-charge-l</property>
+        <property>controls/switches/cockpit/gun-charge-l</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>gun_charge_l_switch</object-name>
-    <property>/controls/switches/cockpit/gun-charge-l</property>
+    <property>controls/switches/cockpit/gun-charge-l</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16408</x-m>
@@ -1372,14 +1372,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/gun-charge-r</property>
+        <property>controls/switches/cockpit/gun-charge-r</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>gun_charge_r_switch</object-name>
-    <property>/controls/switches/cockpit/gun-charge-r</property>
+    <property>controls/switches/cockpit/gun-charge-r</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16408</x-m>
@@ -1399,14 +1399,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/gun-heat</property>
+        <property>controls/switches/cockpit/gun-heat</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>gun_heat_switch</object-name>
-    <property>/controls/switches/cockpit/gun-heat</property>
+    <property>controls/switches/cockpit/gun-heat</property>
     <factor>45</factor>
     <center>
       <x-m>-1.16408</x-m>
@@ -1421,7 +1421,7 @@
   <animation>
     <type>knob</type>
     <object-name>CA_LOD_100</object-name>
-    <property>/controls/switches/cockpit/gage</property>
+    <property>controls/switches/cockpit/gage</property>
     <factor>-1</factor>
     <center>
       <x-m>-1.14468</x-m>
@@ -1434,7 +1434,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/gage</property>
+        <property>controls/switches/cockpit/gage</property>
         <step>1</step>
         <min>0</min>
         <max>359</max>
@@ -1446,7 +1446,7 @@
   <animation>
     <type>knob</type>
     <object-name>CM_LOD_100</object-name>
-    <property>/controls/switches/cockpit/com-1</property>
+    <property>controls/switches/cockpit/com-1</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1459,7 +1459,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/com-1</property>
+        <property>controls/switches/cockpit/com-1</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1467,7 +1467,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/com-1</property>
+        <property>controls/switches/cockpit/com-1</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1477,7 +1477,7 @@
   <animation>
     <type>knob</type>
     <object-name>CN_LOD_100</object-name>
-    <property>/controls/switches/cockpit/com-2</property>
+    <property>controls/switches/cockpit/com-2</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1490,7 +1490,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/com-2</property>
+        <property>controls/switches/cockpit/com-2</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1498,7 +1498,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/com-2</property>
+        <property>controls/switches/cockpit/com-2</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1508,7 +1508,7 @@
   <animation>
     <type>knob</type>
     <object-name>CO_LOD_100</object-name>
-    <property>/controls/switches/cockpit/nav-1</property>
+    <property>controls/switches/cockpit/nav-1</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1521,7 +1521,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/nav-1</property>
+        <property>controls/switches/cockpit/nav-1</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1529,7 +1529,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/nav-1</property>
+        <property>controls/switches/cockpit/nav-1</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1539,7 +1539,7 @@
   <animation>
     <type>knob</type>
     <object-name>CP_LOD_100</object-name>
-    <property>/controls/switches/cockpit/nav-2</property>
+    <property>controls/switches/cockpit/nav-2</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1552,7 +1552,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/nav-2</property>
+        <property>controls/switches/cockpit/nav-2</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1560,7 +1560,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/nav-2</property>
+        <property>controls/switches/cockpit/nav-2</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1570,7 +1570,7 @@
   <animation>
     <type>knob</type>
     <object-name>CQ_LOD_100</object-name>
-    <property>/controls/switches/cockpit/both</property>
+    <property>controls/switches/cockpit/both</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1583,7 +1583,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/both</property>
+        <property>controls/switches/cockpit/both</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1591,7 +1591,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/both</property>
+        <property>controls/switches/cockpit/both</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1601,7 +1601,7 @@
   <animation>
     <type>knob</type>
     <object-name>CS_LOD_100</object-name>
-    <property>/controls/switches/cockpit/adf</property>
+    <property>controls/switches/cockpit/adf</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1614,7 +1614,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/adf</property>
+        <property>controls/switches/cockpit/adf</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1622,7 +1622,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/adf</property>
+        <property>controls/switches/cockpit/adf</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1632,7 +1632,7 @@
   <animation>
     <type>knob</type>
     <object-name>CT_LOD_100</object-name>
-    <property>/controls/switches/cockpit/mrkr</property>
+    <property>controls/switches/cockpit/mrkr</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1645,7 +1645,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/mrkr</property>
+        <property>controls/switches/cockpit/mrkr</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1653,7 +1653,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/mrkr</property>
+        <property>controls/switches/cockpit/mrkr</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1663,7 +1663,7 @@
   <animation>
     <type>knob</type>
     <object-name>CR_LOD_100</object-name>
-    <property>/controls/switches/cockpit/dme</property>
+    <property>controls/switches/cockpit/dme</property>
     <factor>-270</factor>
     <center>
       <x-m>-1.15983</x-m>
@@ -1676,7 +1676,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/dme</property>
+        <property>controls/switches/cockpit/dme</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1684,7 +1684,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/dme</property>
+        <property>controls/switches/cockpit/dme</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1699,14 +1699,14 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/gear/brake-parking</property>
+        <property>controls/gear/brake-parking</property>
       </binding>
     </action>
   </animation>
   <animation>
     <type>rotate</type>
     <object-name>DC_LOD_100</object-name>
-    <property>/controls/gear/brake-parking</property>
+    <property>controls/gear/brake-parking</property>
     <factor>90</factor>
     <center>
       <x-m>-1.17178</x-m>
@@ -1722,7 +1722,7 @@
     <type>translate</type>
     <object-name>BO_LOD_100</object-name>
     <object-name>BN_LOD_100</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor>.08</factor>
     <offset-m>.3</offset-m>
     <center>
@@ -1739,7 +1739,7 @@
     <type>translate</type>
     <object-name>BM_LOD_100</object-name>
     <object-name>BL_LOD_100</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor>-.08</factor>
     <offset-m>.075</offset-m>
     <center>
@@ -1755,7 +1755,7 @@
   <animation>
     <type>knob</type>
     <object-name>BY_LOD_100</object-name>
-    <property>/controls/switches/cockpit/hud-pwr</property>
+    <property>controls/switches/cockpit/hud-pwr</property>
     <factor>-45</factor>
     <center>
       <x-m>-1.10479</x-m>
@@ -1768,7 +1768,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/hud-pwr</property>
+        <property>controls/switches/cockpit/hud-pwr</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1776,7 +1776,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/hud-pwr</property>
+        <property>controls/switches/cockpit/hud-pwr</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1786,7 +1786,7 @@
   <animation>
     <type>knob</type>
     <object-name>BX_LOD_100</object-name>
-    <property>/controls/switches/cockpit/hud-brt</property>
+    <property>controls/switches/cockpit/hud-brt</property>
     <factor>-45</factor>
     <center>
       <x-m>-1.10479</x-m>
@@ -1799,7 +1799,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/hud-brt</property>
+        <property>controls/switches/cockpit/hud-brt</property>
         <step>-.1</step>
         <min>0</min>
       </binding>
@@ -1807,7 +1807,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/hud-brt</property>
+        <property>controls/switches/cockpit/hud-brt</property>
         <step>.1</step>
         <max>1</max>
       </binding>
@@ -1844,7 +1844,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>speed_brake_warning</object-name>
-    <property>/controls/flight/speedbrake</property>
+    <property>controls/flight/speedbrake</property>
     <bias>0.0001</bias>
     <factor>.043</factor>
     <step>1</step>
@@ -1856,7 +1856,7 @@
     <type>material</type>
     <object-name>speed_brake_warning</object-name>
     <condition>
-      <property>/controls/flight/speedbrake</property>
+      <property>controls/flight/speedbrake</property>
     </condition>
     <emission>
       <red>0.5843</red>
@@ -1869,7 +1869,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>master_alert_warning</object-name>
-    <property>/controls/switches/cockpit/master-alert</property>
+    <property>controls/switches/cockpit/master-alert</property>
     <bias>0.0001</bias>
     <factor>.041</factor>
     <step>1</step>
@@ -1885,10 +1885,10 @@
       <button>0</button>
       <binding>
         <condition>
-          <property>/controls/switches/cockpit/master-alert</property>
+          <property>controls/switches/cockpit/master-alert</property>
         </condition>
         <command>property-toggle</command>
-        <property>/controls/switches/cockpit/master-alert</property>
+        <property>controls/switches/cockpit/master-alert</property>
       </binding>
     </action>
   </animation>
@@ -1896,7 +1896,7 @@
     <type>material</type>
     <object-name>master_alert_warning</object-name>
     <condition>
-      <property>/controls/switches/cockpit/master-alert</property>
+      <property>controls/switches/cockpit/master-alert</property>
     </condition>
     <emission>
       <red>0.5843</red>
@@ -1909,7 +1909,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>fuel_low_warning</object-name>
-    <property>/controls/switches/cockpit/fuel-low</property>
+    <property>controls/switches/cockpit/fuel-low</property>
     <bias>0.0001</bias>
     <factor>.041</factor>
     <step>1</step>
@@ -1922,7 +1922,7 @@
     <type>material</type>
     <object-name>fuel_low_warning</object-name>
     <condition>
-      <property>/controls/switches/cockpit/fuel-low</property>
+      <property>controls/switches/cockpit/fuel-low</property>
     </condition>
     <emission>
       <red>0.5843</red>
@@ -1935,7 +1935,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>engine_fire_warning</object-name>
-    <property>/controls/switches/cockpit/engine-fire</property>
+    <property>controls/switches/cockpit/engine-fire</property>
     <bias>0.0001</bias>
     <factor>.041</factor>
     <step>1</step>
@@ -1948,7 +1948,7 @@
     <type>material</type>
     <object-name>engine_fire_warning</object-name>
     <condition>
-      <property>/controls/switches/cockpit/engine-fire</property>
+      <property>controls/switches/cockpit/engine-fire</property>
     </condition>
     <emission>
       <red>0.5843</red>
@@ -2040,7 +2040,7 @@
   <animation>
     <type>knob</type>
     <object-name>BZ_LOD_100</object-name>
-    <property>/controls/switches/cockpit/baro</property>
+    <property>controls/switches/cockpit/baro</property>
     <factor>-1</factor>
     <center>
       <x-m>-1.14191</x-m>
@@ -2053,7 +2053,7 @@
     <increase>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/baro</property>
+        <property>controls/switches/cockpit/baro</property>
         <step>-1</step>
         <min>0</min>
         <max>359</max>
@@ -2068,7 +2068,7 @@
     <decrease>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/cockpit/baro</property>
+        <property>controls/switches/cockpit/baro</property>
         <step>1</step>
         <min>0</min>
         <max>359</max>

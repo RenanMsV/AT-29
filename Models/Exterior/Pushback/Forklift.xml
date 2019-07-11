@@ -49,22 +49,14 @@
  </animation>
 
  <animation>
-   <type>select</type>
-   <condition>
-     <property>sim/model/pushback/enabled</property>
-     <property>gear/gear[0]/wow</property>
-   </condition>
- </animation>
-
- <animation>
    <type>rotate</type>
    <condition>
      <greater-than>
-       <property>sim/model/pushback/position-norm</property>
+       <property>sim/multiplay/generic/float[2]</property>
        <value>0.99</value>
      </greater-than>
    </condition>
-   <property>gear/gear[0]/steering-norm</property>
+   <property>sim/multiplay/generic/float[3]</property>
    <factor>-70</factor>
    <center>
      <x-m>0</x-m>
@@ -81,7 +73,7 @@
   <!-- change heading of the pushback when driving the arc -->
   <animation>
     <type>rotate</type>
-    <property>sim/model/pushback/position-norm</property>
+    <property>sim/multiplay/generic/float[2]</property>
     <factor>-60</factor>
     <offset-deg>60</offset-deg>
     <center>
@@ -111,7 +103,7 @@
   <!-- precalculated sin and asin to move the pushback on a unknown deg arc, unknown m radius -->
   <animation>
     <type>translate</type>
-    <property>sim/model/pushback/position-norm</property>
+    <property>sim/multiplay/generic/float[2]</property>
     <interpolation>
       <entry><ind>1.000000</ind><dep>0.000000</dep></entry>
       <entry><ind>0</ind><dep>5.836134</dep></entry>
@@ -124,7 +116,7 @@
   </animation>
     <animation>
      <type>translate</type>
-     <property>sim/model/pushback/position-norm</property>
+     <property>sim/multiplay/generic/float[2]</property>
      <interpolation>
      <entry><ind>1.000000</ind><dep>0.000000</dep></entry>
      <entry><ind>0</ind><dep>0.690752</dep></entry>

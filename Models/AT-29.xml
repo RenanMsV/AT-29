@@ -99,7 +99,7 @@
     <type>rotate</type>
     <object-name>NoseGear</object-name>
     <object-name>NoseTire</object-name>
-    <property>sim/multiplay/generic/float[2]</property>
+    <property>sim/multiplay/generic/float[3]</property>
     <factor>55</factor>
     <axis>
       <x1-m>-3.08</x1-m>
@@ -415,7 +415,7 @@
     <type>spin</type>
     <condition>
       <not>
-        <property>/sim/model/chocks-enabled</property>
+        <property>sim/multiplay/generic/bool[8]</property>
       </not>
     </condition>
     <object-name>Prop</object-name>
@@ -744,7 +744,7 @@
     <condition>
       <and>
         <not>
-          <property>sim/model/mono-cockpit-enabled</property>
+          <property>sim/multiplay/generic/bool[9]</property>
         </not>
         <not>
           <property>sim/current-view/internal</property>
@@ -762,14 +762,14 @@
     <name>ChocksAndProtections</name>
     <path>Aircraft/AT-29/Models/Exterior/Chocks/chocks.xml</path>
     <condition>
-      <property>/sim/model/chocks-enabled</property>
+      <property>sim/multiplay/generic/bool[8]</property>
     </condition>
   </model>
   <animation>
     <type>select</type>
     <object-name>gunchocks</object-name>
     <condition>
-      <property>/sim/model/livery/armed</property> <!--Hide gun chocks if not military-->
+      <property>sim/model/livery/armed</property> <!--Hide gun chocks if not military-->
     </condition>
   </animation>
   <animation>
@@ -780,7 +780,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/sim/model/chocks-enabled</property>
+        <property>sim/multiplay/generic/bool[8]</property>
       </binding>
     </action>
   </animation>
@@ -856,7 +856,7 @@
   <model>
     <path>Aircraft/AT-29/Models/Exterior/Optional/USAF/usaf_ac.xml</path>
     <condition>
-      <property>/sim/model/livery/fuselage-extra</property>
+      <property>sim/model/livery/fuselage-extra</property>
     </condition>
   </model>
   <!-- ALS ShadowMap Effect -->
@@ -897,5 +897,8 @@
       <y-m>0</y-m>
       <z-m>-1.8</z-m>
     </offsets>
+    <condition>
+    	<property>sim/multiplay/generic/bool[10]</property>
+    </condition>
   </model>
 </PropertyList>

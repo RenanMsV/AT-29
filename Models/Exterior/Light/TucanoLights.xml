@@ -4,7 +4,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
       <and>
-        <property>controls/lighting/taxi-light</property>
+        <property>sim/multiplay/generic/bool[1]</property>
         <property>gear/gear[0]/position-norm</property>
       </and>
     </condition>
@@ -20,7 +20,7 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
       <and>
-        <property>controls/lighting/taxi-light</property>
+        <property>sim/multiplay/generic/bool[1]</property>
         <property>gear/gear[0]/position-norm</property>
       </and>
     </condition>
@@ -34,7 +34,7 @@
     <name>LandingLightLeft</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
-      <property>controls/lighting/landing-lights</property>
+      <property>sim/multiplay/generic/bool[2]</property>
     </condition>
     <offsets>
       <x-m>-0.535162</x-m>
@@ -47,7 +47,7 @@
     <name>LandingLightRight</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
-      <property>controls/lighting/landing-lights</property>
+      <property>sim/multiplay/generic/bool[2]</property>
     </condition>
     <offsets>
       <x-m>-0.535162</x-m>
@@ -61,8 +61,8 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
     <condition>
       <and>
-        <property>/sim/model/lights/strobe/state</property>
-        <property>controls/lighting/strobe</property>
+        <property>sim/multiplay/generic/bool[11]</property>
+        <property>sim/multiplay/generic/bool[4]</property>
       </and>
     </condition>
     <offsets>
@@ -77,8 +77,8 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/strobelight.xml</path>
     <condition>
       <and>
-        <property>/sim/model/lights/strobe/state</property>
-        <property>controls/lighting/strobe</property>
+        <property>sim/multiplay/generic/bool[11]</property>
+        <property>sim/multiplay/generic/bool[4]</property>
       </and>
     </condition>
     <offsets>
@@ -92,7 +92,7 @@
     <name>StrobeBack</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
-      <property>/controls/lighting/strobe</property>
+      <property>sim/multiplay/generic/bool[4]</property>
     </condition>
     <offsets>
       <x-m>7.08244</x-m>
@@ -105,7 +105,7 @@
     <name>NavLeft</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/navlightred.xml</path>
     <condition>
-      <property>controls/lighting/nav-lights</property>
+      <property>sim/multiplay/generic/bool[3]</property>
     </condition>
     <offsets>
       <x-m>-0.052353</x-m>
@@ -118,7 +118,7 @@
     <name>NavRight</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/navlightgreen.xml</path>
     <condition>
-      <property>controls/lighting/nav-lights</property>
+      <property>sim/multiplay/generic/bool[3]</property>
     </condition>
     <offsets>
       <x-m>-0.052353</x-m>
@@ -130,7 +130,7 @@
   <model>
     <path>Aircraft/AT-29/Models/Exterior/Light/formationlight.ac</path>
     <condition>
-      <property>/controls/lighting/formation-lights</property>
+      <property>sim/multiplay/generic/bool[7]</property>
     </condition>
   </model>
   <model>
@@ -138,8 +138,8 @@
     <path>Aircraft/AT-29/Models/Exterior/Light/beaconlight.xml</path>
     <condition>
       <and>
-        <property>/sim/model/lights/beacon/state</property>
-        <property>controls/lighting/beacon</property>
+        <property>sim/multiplay/generic/bool[12]</property>
+        <property>sim/multiplay/generic/bool[5]</property>
       </and>
     </condition>
     <offsets>
@@ -152,7 +152,7 @@
     <name>SearchLeft</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
-      <property>controls/lighting/search-lights</property>
+      <property>sim/multiplay/generic/bool[6]</property>
     </condition>
     <offsets>
       <x-m>-1.87073</x-m>
@@ -165,7 +165,7 @@
     <name>SearchRight</name>
     <path>Aircraft/AT-29/Models/Exterior/Light/flashlight.xml</path>
     <condition>
-      <property>controls/lighting/search-lights</property>
+      <property>sim/multiplay/generic/bool[6]</property>
     </condition>
     <offsets>
       <x-m>-1.87073</x-m>
@@ -181,7 +181,7 @@
     <type>rotate</type>
     <object-name>TaxiLightLeft</object-name>
     <object-name>TaxiLightRight</object-name>
-    <property>sim/multiplay/generic/float[2]</property>
+    <property>gear/gear[0]/steering-norm</property>
     <factor>55</factor>
     <axis>
       <x1-m>-3.08</x1-m>

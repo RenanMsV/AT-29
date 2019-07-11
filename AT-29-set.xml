@@ -166,22 +166,29 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     </rendering>
     <multiplay>
       <generic>
-        <int n="0" type="int">0</int>
-        <int n="1" type="int">0</int>
-        <int n="2" type="int">0</int>
-        <int n="3" type="int">0</int>
-        <int n="4" type="int">0</int> <!-- Vortex particles.xml -->
-        <int n="5" type="int">0</int> <!-- Contrail particles.xml -->
-        <int n="6" type="int" alias="/controls/smoke">0</int> <!-- Airshow smoke smokeW.xml -->
-        <int n="7" type="int">0</int>
-        <int n="8" type="int">0</int>
-        <int n="9" type="int">0</int>
-        <int n="10" type="int">0</int>
-        <int n="11" type="int">0</int>
-        <int n="12" type="int">0</int>
-        <float n="0" type="float" alias="/engines/engine[0]/n2" /> <!-- beacon light systems/beacon.xml -->
-        <float n="1" type="float" alias="/engines/engine[0]/starter" /> <!-- steer-cmd-norm NWS.xml -->
-        <float n="2" type="float" alias="/gear/gear[0]/steering-norm" /> <!-- steering AT-29.xml -->
+        <!-- Int -->
+        <!-- Float -->
+        <float n="0" alias="/controls/switches/contrails"/> <!-- particles.xml -->
+        <float n="1" alias="/controls/switches/condensation"/> <!-- condensation-left.xml / right -->
+        <float n="2" alias="/sim/model/pushback/position-norm"/> <!-- Forklift.xml -->
+        <float n="3" alias="/gear/gear[0]/steering-norm"/> <!-- Forklift.xml -->
+        <!-- Bool -->
+        <bool n="0" alias="/controls/switches/smoke"/> <!-- smokeW.xml -->
+        <bool n="1" alias="/controls/lighting/taxi-light"/> <!-- TucanoLights.xml -->
+        <bool n="2" alias="/controls/lighting/landing-lights"/> <!-- TucanoLights.xml -->
+        <bool n="3" alias="/controls/lighting/nav-lights"/> <!-- TucanoLights.xml -->
+        <bool n="4" alias="/controls/lighting/strobe"/> <!-- TucanoLights.xml -->
+        <bool n="5" alias="/controls/lighting/beacon"/> <!-- TucanoLights.xml -->
+        <bool n="6" alias="/controls/lighting/search-lights"/> <!-- TucanoLights.xml -->
+        <bool n="7" alias="/controls/lighting/formation-lights"/> <!-- TucanoLights.xml -->
+        <bool n="8" alias="/sim/model/chocks-enabled"/> <!-- Models/AT-29.xml -->
+        <bool n="9" alias="/sim/model/mono-cockpit-enabled"/> <!-- Models/AT-29.xml -->
+        <bool n="10" alias="/sim/model/pushback/enabled"/> <!-- Forklift.xml -->
+        <bool n="11" alias="/sim/model/lights/strobe/state"/> <!-- TucanoLights -->
+        <bool n="12" alias="/sim/model/lights/beacon/state"/> <!-- TucanoLights -->
+        <bool n="13" alias="/fdm/jsbsim/gear/wow"/> <!-- smokeW.xml -->
+        <!-- String -->
+        <!-- Shorts -->
       </generic>
     </multiplay>
     <menubar>
@@ -280,6 +287,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
       <taxi-light type="bool">false</taxi-light>
       <nav-lights type="bool">false</nav-lights>
       <formation-lights type="bool">false</formation-lights>
+      <search-lights type="bool">false</search-lights>
       <instruments-norm type="double">0</instruments-norm>
     </lighting>
     <armament>
@@ -291,7 +299,6 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
     <gear>
       <brake-parking type="double">1</brake-parking>
     </gear>
-    <smoke type="int" />
   </controls>
   <engines>
     <engine n="0">
@@ -422,7 +429,7 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <desc>toggle smoke</desc>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/multiplay/generic/int[6]</property>
+          <property>controls/switches/smoke</property>
         </binding>
       </key>
       <key n="115">

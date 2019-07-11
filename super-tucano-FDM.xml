@@ -325,7 +325,6 @@
  <system file="NWS"/>
  <system file="alpha_buffet"/>
  <system file="crash-detect"/>
- <system file="beacon"/>
  <system file="speedbrakes"/>
  <system file="canopy"/>
  <system file="particles"/>

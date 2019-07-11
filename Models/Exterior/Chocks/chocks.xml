@@ -6,11 +6,11 @@
 	<X>
 	<expression>
 		<product>
-			<property>/environment/windsock/wind-speed-kt</property>
+			<property>environment/windsock/wind-speed-kt</property>
 			<cos>
 				<difference>
-					<property>/environment/wind-from-heading-deg</property>
-					<property>/orientation/heading-deg</property>
+					<property>environment/wind-from-heading-deg</property>
+					<property>orientation/heading-deg</property>
 				</difference>
 			</cos>	
 		</product>
@@ -19,11 +19,11 @@
 	<Y>
 	<expression>
 		<product>
-			<property>/environment/windsock/wind-speed-kt</property>
+			<property>environment/windsock/wind-speed-kt</property>
 			<sin>
 				<difference>
-					<property>/environment/wind-from-heading-deg</property>
-					<property>/orientation/heading-deg</property>
+					<property>environment/wind-from-heading-deg</property>
+					<property>orientation/heading-deg</property>
 				</difference>
 			</sin>	
 		</product>
@@ -39,11 +39,11 @@
 	  <factor>1</factor>
 	  <expression>
 			<product>
-				<property>/environment/windsock/wind-speed-kt</property>
+				<property>environment/windsock/wind-speed-kt</property>
 				<sin>
 					<difference>
-						<property>/environment/wind-from-heading-deg</property>
-						<property>/orientation/heading-deg</property>
+						<property>environment/wind-from-heading-deg</property>
+						<property>orientation/heading-deg</property>
 					</difference>
 				</sin>	
 			</product>
@@ -66,11 +66,11 @@
 	  <factor>1</factor>
 	  <expression>
 			<product>
-				<property>/environment/windsock/wind-speed-kt</property>
+				<property>environment/windsock/wind-speed-kt</property>
 				<cos>
 					<difference>
-						<property>/environment/wind-from-heading-deg</property>
-						<property>/orientation/heading-deg</property>
+						<property>environment/wind-from-heading-deg</property>
+						<property>orientation/heading-deg</property>
 					</difference>
 				</cos>	
 			</product>
@@ -93,8 +93,8 @@
 	  <factor>1</factor>
 	  <expression>
 	  	<product>
-        <property>/environment/wind-from-down-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
+        <property>environment/wind-from-down-fps</property>
+        <property>environment/windsock/wind-speed-kt</property>
       </product>
 	  </expression>
 	  <center>
@@ -117,11 +117,11 @@
 	  <factor>1</factor>
 	  <expression>
 			<product>
-				<property>/environment/windsock/wind-speed-kt</property>
+				<property>environment/windsock/wind-speed-kt</property>
 				<sin>
 					<difference>
-						<property>/environment/wind-from-heading-deg</property>
-						<property>/orientation/heading-deg</property>
+						<property>environment/wind-from-heading-deg</property>
+						<property>orientation/heading-deg</property>
 					</difference>
 				</sin>	
 			</product>
@@ -144,11 +144,11 @@
 	  <factor>1</factor>
 	  <expression>
 			<product>
-				<property>/environment/windsock/wind-speed-kt</property>
+				<property>environment/windsock/wind-speed-kt</property>
 				<cos>
 					<difference>
-						<property>/environment/wind-from-heading-deg</property>
-						<property>/orientation/heading-deg</property>
+						<property>environment/wind-from-heading-deg</property>
+						<property>orientation/heading-deg</property>
 					</difference>
 				</cos>	
 			</product>
@@ -171,8 +171,8 @@
 	  <factor>1</factor>
 	  <expression>
 	  	<product>
-        <property>/environment/wind-from-down-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
+        <property>environment/wind-from-down-fps</property>
+        <property>environment/windsock/wind-speed-kt</property>
       </product>
 	  </expression>
 	  <center>
@@ -195,11 +195,11 @@
 	  <factor>1</factor>
 	  <expression>
 			<product>
-				<property>/environment/windsock/wind-speed-kt</property>
+				<property>environment/windsock/wind-speed-kt</property>
 				<sin>
 					<difference>
-						<property>/environment/wind-from-heading-deg</property>
-						<property>/orientation/heading-deg</property>
+						<property>environment/wind-from-heading-deg</property>
+						<property>orientation/heading-deg</property>
 					</difference>
 				</sin>	
 			</product>
@@ -222,11 +222,11 @@
 	  <factor>1</factor>
 	  <expression>
 			<product>
-				<property>/environment/windsock/wind-speed-kt</property>
+				<property>environment/windsock/wind-speed-kt</property>
 				<cos>
 					<difference>
-						<property>/environment/wind-from-heading-deg</property>
-						<property>/orientation/heading-deg</property>
+						<property>environment/wind-from-heading-deg</property>
+						<property>orientation/heading-deg</property>
 					</difference>
 				</cos>	
 			</product>
@@ -249,8 +249,8 @@
 	  <factor>1</factor>
 	  <expression>
 	  	<product>
-        <property>/environment/wind-from-down-fps</property>
-        <property>/environment/windsock/wind-speed-kt</property>
+        <property>environment/wind-from-down-fps</property>
+        <property>environment/windsock/wind-speed-kt</property>
       </product>
 	  </expression>
 	  <center>
