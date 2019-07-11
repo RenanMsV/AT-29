@@ -183,8 +183,8 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <bool n="8" alias="/sim/model/chocks-enabled"/>
         <bool n="9" alias="/sim/model/mono-cockpit-enabled"/>
         <bool n="10" alias="/sim/model/pushback/enabled"/>
-        <float n="11" alias="/sim/model/lights/strobe/state"/>
-        <float n="12" alias="/sim/model/lights/beacon/state"/>
+        <bool n="11" alias="/sim/model/lights/strobe/state"/>
+        <bool n="12" alias="/sim/model/lights/beacon/state"/>
         <!-- String -->
         <!-- Shorts -->
       </generic>
