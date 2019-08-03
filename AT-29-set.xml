@@ -138,6 +138,10 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
         <name>o (lower case o)</name>
         <desc>Toggle smoke</desc>
       </key>
+      <key>
+        <name>e (lower case e)</name>
+        <desc>Fire Guns (.50cal)</desc>
+      </key>
     </help>
     <rendering>
       <redout>
@@ -388,6 +392,20 @@ David Culp, Alpha Simulations, Piglet, pjedvaj, RenanMsV, Kaito
           <command>property-toggle</command>
           <property>fdm/jsbsim/systems/canopy/command</property>
         </binding>
+      </key>
+      <key n="101">
+        <name>e</name>
+        <desc>fire guns .50cal</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>fdm/jsbsim/systems/armament/guns/trigger</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>fdm/jsbsim/systems/armament/guns/trigger</property>
+          </binding>
+        </mod-up>
       </key>
       <key n="103">
         <name>g</name>

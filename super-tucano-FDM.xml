@@ -330,6 +330,7 @@
  <system file="particles"/>
  <system file="fuel"/>
  <system file="pushback"/>
+ <system file="armament"/>
 
  <flight_control name="FCS: tucano"/>
 

@@ -3,6 +3,46 @@
 <system name="armament">
 
   <property value="0">systems/armament/release</property>
+  <property value="0">systems/armament/guns/trigger</property>
+
+  <channel name="guns50cal">
+
+    <!-- .50cal trigger left -->
+    <switch name="/controls/armament/trigger-gun-l">
+      <default value="0"/>
+      <test logic="AND" value="1">
+        systems/armament/guns/trigger EQ 1
+        /ai/submodels/submodel[0]/count GT 0
+        /controls/switches/cockpit/gun-heat EQ 1
+        /controls/switches/cockpit/gun-charge-l EQ 1
+        /controls/switches/cockpit/master-arm EQ 1
+      </test>
+      <output>/controls/armament/trigger</output>
+    </switch>
+
+    <!-- .50cal trigger right -->
+    <switch name="/controls/armament/trigger-gun-r">
+      <default value="0"/>
+      <test logic="AND" value="1">
+        systems/armament/guns/trigger EQ 1
+        /ai/submodels/submodel[1]/count GT 0
+        /controls/switches/cockpit/gun-heat EQ 1
+        /controls/switches/cockpit/gun-charge-r EQ 1
+        /controls/switches/cockpit/master-arm EQ 1
+      </test>
+      <output>/controls/armament/trigger</output>
+    </switch>
+
+    <summer name="systems/armament/guns/ammo-summ">
+      <input>/ai/submodels/submodel[0]/count</input>
+      <input>/ai/submodels/submodel[1]/count</input>
+      <clipto>
+        <min>0</min>
+        <max>500</max>
+      </clipto>
+    </summer>
+
+  </channel>
 
   <channel name="Armament">
 
@@ -119,6 +159,15 @@
                 systems/armament/station2/released == 1
           </test>
           <output>propulsion/tank[1]/contents-lbs</output>
+     </switch>
+
+     <!-- station 3 -->
+     <switch name="systems/armament/station3/fuel-level-control">
+          <default value="propulsion/tank[3]/contents-lbs"/>
+          <test value="0">
+                systems/armament/station3/released == 1
+          </test>
+          <output>propulsion/tank[3]/contents-lbs</output>
      </switch>
 
      <!-- station 4 -->

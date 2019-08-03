@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <submodel>
+    <name>50inhit impact</name>
+    <model>Aircraft/AT-29/Models/Exterior/Armament/Weapons/FNM3P/hitpoint/impact.xml</model>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <delay>0</delay>
+    <count>-1</count>
+    <x-offset>0</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <eda>10</eda>
+    <wind>true</wind>
+    <buoyancy>33</buoyancy>
+    <life>0.7</life>
+  </submodel>
+
+  <submodel>
+    <name>50inhit smoke</name>
+    <model>Aircraft/AT-29/Models/Exterior/Armament/Weapons/FNM3P/hitpoint/smoke.xml</model>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <delay>0</delay>
+    <count>-1</count>
+    <x-offset>0</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <eda>10</eda>
+    <wind>true</wind>
+    <buoyancy>33</buoyancy>
+    <life>5</life>
+  </submodel>
+
+</PropertyList>

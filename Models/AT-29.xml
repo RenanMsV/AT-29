@@ -901,4 +901,17 @@
     	<property>sim/multiplay/generic/bool[10]</property>
     </condition>
   </model>
+  <!-- Gun muzzle flash -->
+  <model>
+    <path>Aircraft/AT-29/Models/Exterior/Armament/Weapons/FNM3P/muzzleflash/blaze_l.xml</path>
+    <condition>
+      <property>controls/armament/trigger-gun-l</property>
+    </condition>
+  </model>
+  <model>
+    <path>Aircraft/AT-29/Models/Exterior/Armament/Weapons/FNM3P/muzzleflash/blaze_r.xml</path>
+    <condition>
+      <property>controls/armament/trigger-gun-r</property>
+    </condition>
+  </model>
 </PropertyList>
