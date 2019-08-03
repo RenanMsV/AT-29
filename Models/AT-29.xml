@@ -901,6 +901,10 @@
     	<property>sim/multiplay/generic/bool[10]</property>
     </condition>
   </model>
+  <!-- .50 in FN M3P wing mounted -->
+  <model>
+    <path>Aircraft/AT-29/Models/Exterior/Armament/Weapons/FNM3P/FNM3P.xml</path>
+  </model>
   <!-- Gun muzzle flash -->
   <model>
     <path>Aircraft/AT-29/Models/Exterior/Armament/Weapons/FNM3P/muzzleflash/blaze_l.xml</path>
